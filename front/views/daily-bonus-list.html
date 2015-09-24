@@ -1,0 +1,112 @@
+<div class="row" style="margin-bottom: 1em;">
+    <div class="col-sm-3 col-sm-offset-2"><small translate>today is bonus day number {{ difference }}</small></div>
+    <div class="col-sm-1"><small translate>Bonus</small></div>
+    <div class="col-sm-4">
+        <select class="form-control form-control-sm" ng-options="item.label() for item in all_bonuses" ng-model="selected_bonus">
+        </select>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 1em; ">
+  <div class="col-sm-2 col-sm-offset-2"><small>#treasure hunter</small></div>
+  <div class="col-sm-2">
+    <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_th" ng-change="change_nb_th()"/>
+  </div>
+  <span class="col-sm-2"><small translate>Limit stage list </small></span>
+    <span class="col-sm-2">
+        <input type="number" class="form-control form-control-sm" min="1" max="24" ng-model="limit_stage_list" ng-init="limit_stage_list = 6"/>
+    </span>
+</div>
+
+<div class="row" style="margin-bottom: 1em;">
+    <div class="col-sm-2 col-sm-offset-2"><small>#negotiator activation</small></div>
+    <div class="col-sm-2">
+        <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_ng" ng-change="change_nb_ng()"/>
+    </div>
+    <div class="col-sm-2"><small>#negotiator pro activation</small></div>
+    <div class="col-sm-2">
+        <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_ng_pro" ng-change="change_nb_ng_pro()"/>
+    </div>
+</div>
+
+<div class="row" ng-if="selected_bonus.name == 'Items drop rate x 2'">
+    <span class="col-sm-2 col-sm-offset-2"><small translate>Only items you need</small></span>
+    <span class="col-sm-2">
+        <input type="checkbox" ng-model="filters.only_needed_items"/>
+    </span>
+</div>
+
+<!--div class="row" ng-if="selected_bonus.name == 'Monsters drop rate x 2'">
+    <span class="col-sm-2 col-sm-offset-2"><small translate>Only monsters you need</small></span>
+    <span class="col-sm-2">
+        <input type="checkbox" ng-model="filters.only_needed_monsters"/>
+    </span>
+</div-->
+
+<p class="alert alert-warning" ng-if="selected_bonus.name == 'nothing'">
+  No bonus this day
+</p>
+
+<div class="row" ng-if="selected_bonus.name == 'Items drop rate x 2'">
+  <div class="col-sm-8 col-sm-offset-2">
+  <table class="table table-condensed table-striped" sticky-table-header>
+      <thead>
+      <tr>
+          <th></th>
+          <th>
+              <table style="width: 100%;">
+                  <tr>
+                    <th style="width: 25%;">stage</th>
+                    <th style="width: 25%;"><button class="btn btn-default btn-xs" ng-click="order_opts = { name: 'expected',        reverse: false }">nb per run</button></th>
+                    <th style="width: 25%;"><button class="btn btn-default btn-xs" ng-click="order_opts = { name: 'stamina_cost',    reverse: true }">for 1 drop</button></th>
+                    <th style="width: 25%;"><button class="btn btn-default btn-xs" ng-click="order_opts = { name: 'for_100_stamina', reverse: false }">for 100 stam.</button></th>
+                  </tr>
+              </table>
+          </th>
+          <th>Current need</th>
+      </tr>
+      </thead>
+    <tr ng-repeat="item in items | filter: filter_no_drop | filter: filter_only_needs | orderBy: 'name'">
+      <td>{{ item.name }}</td>
+      <td>
+    <table style="width: 100%">
+      <tr ng-repeat="stage in item.stages | filter: filter_zero_exp | orderBy: sort_fn:order_opts.reverse | limitTo: limit_stage_list">
+        <td style="width: 25%;">{{ stage.stage_ref }}</td>
+        <td style="width: 25%;" class="text-right">{{ stage.expected() | number:2 }} / run</td>
+        <td style="width: 25%;" class="text-right"><small>{{ stage.stamina_cost() | number:2 }} stam.</small></td>
+        <td style="width: 25%;" class="text-right"><small>{{ stage.for_100_stamina() | number: 2 }} drop</small></td>
+      </tr>
+    </table>
+      </td>
+      <td class="text-center">{{ item.needed() | positive_or_zero | number }}</td>
+    </tr>
+  </table>
+  </div>
+</div>
+
+<div class="row" ng-if="selected_bonus.name == 'Monsters drop rate x 2'">
+  <div class="col-sm-8 col-sm-offset-2">
+  <table class="table table-condensed table-striped" sticky-table-header>
+      <thead>
+    <tr>
+      <th>Name</th>
+      <th>Levels</th>
+      <th>Current SB</th>
+    </tr>
+    </thead>
+    <tr ng-repeat="values in characters | filter: filter_no_drop | orderBy: 'name'">
+      <td>{{ values.name }}</td>
+      <td>
+        <table style="width: 100%">
+          <tr ng-repeat="stage in values.stages | filter: filter_zero_exp | orderBy: sort_expected:true">
+            <td style="width: 33%;">{{ stage.stage_ref }}:</td> 
+            <td style="width: 20%;" class="text-right">{{ stage.expected() * 100 | number:1 }}%</td> 
+        <td class="text-right"><small>{{ stage.stamina_cost() | number:0 }} stamina</small></td>
+      </tr>
+        </table>
+      </td>
+      <td class="text-center">{{ values.current_sb() }} %</td>
+    </tr>
+  </table>
+  </div>
+</div>

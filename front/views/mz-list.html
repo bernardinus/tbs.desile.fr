@@ -1,0 +1,24 @@
+<table class="table">
+  <tr>
+    <th></th>
+    <th translate>Stamina</th>
+    <th translate>Average XP</th>
+    <th translate>Exp / day</th>
+    <th translate>edit</th>
+  </tr>
+  <tr ng-repeat="zone in mz">
+        <td>{{ zone.name }}</td>
+        <td class="text-center">{{ zone.stamina }}</td>
+        <td class="text-center">
+            {{ (mz_exp[zone.ref] || [0]) | average | number: 0 }}
+        </td>
+    <td class="text-center">
+      {{ ((mz_exp[zone.ref] || [0]) | average) * ((24 * 12) / zone.stamina) | number:0 }}
+    </td>
+        <td class="text-center">
+            <button class="btn btn-default btn-xs" ng-click="edit(zone.ref)">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            </button>
+        </td>
+    </tr>
+</table>

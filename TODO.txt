@@ -1,0 +1,59 @@
+++ New Version ++
+
+- energy count down
+btw Matthieu, I checked and the issue on the "You cant wait X years..." countdown is repeatable
+Martym 3 minutes ago - Martym: if the message says "you can wait X years, 0 month and Y days" and you reduce the PoT by 5 energies, the next message says "you can wait X years, 0 month and Y-3 days"
+Martym 2 minutes ago - Martym: whatever the value of X, if Y>3
+
+- skill boost
+Elelyon 4 minutes ago - Elelyon: @Matthieu I remember looking it before, the only issue seems to be that it doesn't take into account that your SB increases, naturally increasing the activation rate, and thus boost rate / lower # of runs. But it's good as a rough tool
+ there's two ways to implement it, a rough, fast method is: in the calculation, set create a "waypoint" where SB is recalculated after X # of runs. I.e., after 100 runs, recalc base SB given how many expected boosts
+Elelyon A moment ago - Elelyon: obviously you approach the optimal solution when you calculate after every run but that's not practical
+ the other way is to actually make a simulator (taking into account 2 SB boosts max per run)...again not practical for you to do
+ 
+
+- TH rounding changed
+- And added rounding to one decimal, same as monster capture?
+
+++ Features ++
+
+- schedule
+    switch day / week
+
+- daily bonus :
+    tri ne marche pas.
+
+- xp-list
+    changer le cap job en fonction du nombre de job et/ou aventurier
+    ajouter aide
+
+- cps : 
+    ne pas mettre que les stages ou les monstres tombent
+    filtre seulement les stages avec expected > 0
+    en gras les stages avec dailybonus
+
+- skill-boost
+    4 jobs fixes pour le ^, le reste dans les 12 du SS
+
+- item-drops + drops + characters-drops 
+    meilleure façon de synthétiser le tout, exemple du 5-8 qui ne donne que des sentient flames
+    alors que le 5-10 donne des flames + des tails + whitewyrm 
+
+++ Pour plus tard ++
+- plan des stages
+
+++ Bugs ++
+
+- characters list : nombres de tirage pour les coins
+- chapter : le tri est cassé
+
+## Voir aussi
+
+- du pourcentage compliqué
+http://terrabattleforum.com/threads/suivi-de-progression.4388/page-15#post-57042
+- noms localisés
+http://terrabattleforum.com/threads/suivi-de-progression.4388/page-10#post-49383
+- mettre les rare en gras dans les bonus
+http://terrabattleforum.com/threads/suivi-de-progression.4388/page-11#post-51392
+- probleme input iphone
+http://terrabattleforum.com/threads/suivi-de-progression.4388/page-11#post-52131

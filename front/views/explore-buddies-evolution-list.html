@@ -1,0 +1,8 @@
+<a class="btn btn-default" href="#/explore/buddies-graph">Evolution Graph</a>
+<ul>
+    <li ng-repeat="evol in evolutions | orderBy: 'from_name'" ng-if="evol.from_name != 'text' && evol.to_name != 'text'">
+        <a href="#/explore/buddy-evolution/{{ evol.from_ref}}/{{ evol.to_ref }}">
+            {{ evol.from_name}} <small>({{ evol.from_rarity }})</small> &#8669; {{ evol.to_name }} <small>({{ evol.to_rarity }})</small>
+        </a>
+    </li>
+</ul>

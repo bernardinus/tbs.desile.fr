@@ -1,0 +1,14 @@
+<h1>{{ details.buddy_name }}</h1>
+<p>{{ details.rarity }} Class</p>
+<p>Skill: {{details.skill_name}} : {{ details.desc }} <small>({{details.better_desc}})</small></p>
+<p>Skill attr: {{ details.skill_attr }}</p>
+<p>Range: {{ details.range_range }}</p>
+<p>Type: {{ details.type }}</p>
+
+<p>Max Level: {{ details.max_level }}</p>
+<p style="text-indent: 2em;">{{ details.desc }}</p>
+
+<p ng-if="past">Can be evolved from <a href="#/explore/buddy/{{ past.from_ref}}">{{ past.from_name }}</a></p>
+
+<p ng-if="future">Can evolve to <a href="#/explore/buddy/{{ future.to_ref}}">{{ future.to_name }}</a></p>
+<p ng-if="! future">Can not evolve</p>

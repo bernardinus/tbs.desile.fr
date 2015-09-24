@@ -1,0 +1,21 @@
+<style>
+    .current-event { color: green; }
+    .future-event  { color: red;   }
+    .past-event    { color: blue;  }
+</style>
+
+<h2>Current</h2>
+<div ng-repeat="event in events | filter: filterIsCurrent | orderBy: ['start_date', 'key']">
+    <h4 class="current-event" title="{{ event.key }}">
+        {{ event.name }}
+    </h4>
+    <p style="text-indent: 2em;">From {{ event.start_date.format("dddd, MMMM Do YYYY") }} to {{ event.end_date.format("dddd, MMMM Do YYYY") }}</p>
+</div>
+
+<h2>Future</h2>
+<div ng-repeat="event in events | filter: filterIsFuture | orderBy: ['start_date', 'key']">
+    <h4 class="future-event" title="{{ event.key }}">
+        {{ event.name }}
+    </h4>
+    <p style="text-indent: 2em;">From {{ event.start_date.format("dddd, MMMM Do YYYY") }} to {{ event.end_date.format("dddd, MMMM Do YYYY") }}</p>
+</div>

@@ -1,0 +1,16 @@
+<style>td.offset { font-weight: bold; color: red; }</style>
+
+<table class="table table-striped table-condensed">
+  <tr>
+    <th></th>
+    <th></th>
+    <!--th>Hunting zone</th-->
+    <th>Daily Bonus</th>
+  </tr>
+  <tr ng-repeat="tz in timezones">
+    <td ng-class="{offset: isGMTOffset(tz) }">{{ gmt_name(tz.gmt) }}</td>
+    <td>{{ tz.date().toLocaleString() }}</td>
+    <!--td>{{ tz.hz() }}</td-->
+    <td ng-class="{ 'tz-item': is_item_bonus(tz.db().label()), 'tz-monster': is_monster_bonus(tz.db().label()) }">{{ tz.db().label() }}</td>
+  </tr>
+</table>

@@ -1,0 +1,38 @@
+<p class="row">
+  <select class="form-control form-control-sm" ng-model="potential_level" ng-change="change_potential_level(potential_level)">
+    <option value="70">70</option>
+    <option value="45">45</option>
+    <option value="25">25</option>
+  </select>
+</p>
+<hr/>
+<table class="table table-striped table-condensed">
+  <tr>
+    <th>Name</th>
+    <th>Levels</th>
+    <th>Current Levels</th>
+    <th>First pincer</th>
+    <th>Steady pincer</th>
+    <th>Steady pincer + chain</th>
+    <th>Skills</th>
+  </tr>
+  <tr ng-repeat="potential in potentials | orderBy: 'first_pincer':true | limitTo: 24">
+    <td class="element-{{ potential.element_ref }}">
+	<div class="element-weapon-container">
+	  <span class="weapon weapon-{{ potential.weapon_ref }}"></span>
+	</div>
+	<span style="padding-left: 16px;">{{ potential.character_name }}</span>
+	<span class="pull-right "> Job {{ potential.level }}</span>
+    </td>
+    <td class="text-center">{{ potential.pot_level }}</td>
+    <td class="text-center">{{ potential.actual_level() }}</td>
+    <td class="text-center">{{ potential.first_pincer }}</td>
+    <td class="text-center">{{ potential.steady_pincer }}</td>
+    <td class="text-center">{{ potential.steady_pincer_plus_chain }}</td>
+    <td>
+      <ul>
+	<li ng-repeat="skill in potential.skills track by $index">{{ skill }}</li>
+      </ul>
+    </td>
+  </tr>
+</table>

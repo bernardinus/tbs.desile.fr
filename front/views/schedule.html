@@ -1,0 +1,29 @@
+<p>Timezone is {{ client_timezone }}.</p>
+
+<div class="row" style="margin-bottom: 1em;">
+    <div ui-calendar="uiConfig.calendar" class="col-sm-12 calendar" ng-model="events" id="calendar"></div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-1">MZ1</div>
+    <div class="col-sm-1"><input type="checkbox" ng-model="filters.mz1" ng-change="reloadSource()"/></div>
+    <div class="col-sm-1">MZ2</div>
+    <div class="col-sm-1"><input type="checkbox" ng-model="filters.mz2" ng-change="reloadSource()"/></div>
+    <div class="col-sm-1">MZ3</div>
+    <div class="col-sm-1"><input type="checkbox" ng-model="filters.mz3" ng-change="reloadSource()"/></div>
+    <div class="col-sm-1">MZ4</div>
+    <div class="col-sm-1"><input type="checkbox" ng-model="filters.mz4" ng-change="reloadSource()"/></div>
+    <div class="col-sm-1">MZ5</div>
+    <div class="col-sm-1"><input type="checkbox" ng-model="filters.mz5" ng-change="reloadSource()"/></div>
+    <div class="col-sm-1">MZ6</div>
+    <div class="col-sm-1"><input type="checkbox" ng-model="filters.mz6" ng-change="reloadSource()"/></div>
+</div>
+
+
+
+<div class="row" style="margin-bottom: 1em;">
+    <div class="col-sm-1">Only King</div>
+    <div class="col-sm-1"><input type="checkbox" ng-model="filters.only_king" ng-change="reloadSource()"/></div>
+</div>

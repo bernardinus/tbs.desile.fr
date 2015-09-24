@@ -1,0 +1,299 @@
+<accordion>
+    <accordion-group is-open="status.open" ng-init="status = { open: true }">
+        <accordion-heading>
+            Filters <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': ! status.open}"></i>
+        </accordion-heading>
+        <p class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <span class="col-sm-6"> <small translate>Adventurer and/or Monster</small> </span>
+                    <span class="col-sm-6">
+                        <select class="form-control form-control-sm" ng-model="filters.adventurer">
+                            <option value="" translate>Both</option>
+                            <option value="1" translate>Adventurer</option>
+                            <option value="0" translate>Monster</option>
+                        </select> </span>
+                </div>
+                <div class="row" style="margin-top: 1em;">
+                    <span class="col-sm-6"><small translate>Element</small></span>
+                    <span class="col-sm-6">
+                        <select class="form-control input-sm" ng-model="filters.element_ref">
+                            <option value="" translate>no element filter</option>
+                            <option value="Dark" translate>Darkness</option>
+                            <option value="Fire" translate>Fire</option>
+                            <option value="Ice" translate>Ice</option>
+                            <option value="Thunder" translate>Lightning</option>
+                            <option value="None" translate>Physical</option>
+                        </select> </span>
+                </div>
+                <div class="row" style="margin-top: 1em;">
+                    <span class="col-sm-6"><small translate>Weapon</small></span>
+                    <span class="col-sm-6">
+                        <select class="form-control input-sm" ng-model="filters.weapon_ref">
+                            <option value="" translate>no weapon filter</option>
+                            <option value="Arrow" translate>Arrow</option>
+                            <option value="Spear" translate>Spear</option>
+                            <option value="Sword" translate>Sword</option>
+                            <option value="Magic" translate>Staff</option>
+                        </select> </span>
+                </div>
+            </div>
+            <span class="col-sm-3"><small translate>Class</small></span>
+            <span class="col-sm-3">
+                <select class="form-control form-control-sm" ng-model="filters.classes" multiple="multiple" style="height: 11em;">
+                    <option value="" translate>All</option>
+                    <option value="Z">Z</option>
+                    <option value="SS">SS</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select> </span>
+        </p>
+
+        <p class="row">
+            <span class="col-sm-3"><small translate>Only characters you have</small></span>
+            <span class="col-sm-3">
+                <input type="checkbox" ng-model="filters.only_have"/>
+            </span>
+        </p>
+        <p class="row">
+            <span class="col-sm-2"><small translate>Only P.o.T</small></span>
+            <span class="col-sm-2">
+                <input type="checkbox" ng-model="filters.pot_100" ng-change="toggle_filter_pot()"/>
+            </span>
+            <span class="col-sm-2"><small translate>Only P.o.F</small></span>
+            <span class="col-sm-2">
+                <input type="checkbox" ng-model="filters.pof_100" ng-change="toggle_filter_pof()"/>
+            </span>
+            <span class="col-sm-2"><small translate>not 100% yet</small></span>
+            <span class="col-sm-2">
+                <input type="checkbox" ng-model="filters.not_100" ng-change="toggle_filter_not_100()"/>
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-sm-3"><small translate>Only droppable</small></span>
+            <span class="col-sm-3">
+                <input type="checkbox" ng-model="filters.only_droppable" />
+            </span>
+            <span class="col-sm-3"></span>
+            <span class="col-sm-3">
+                <button class="btn btn-default" ng-click="reset_filters()" translate>
+                    reset filters
+                </button
+            </span>
+        </p>
+    </accordion-group>
+</accordion>
+
+<table class="table table-striped table-condensed" id="characters" sticky-table-header>
+    <thead>
+        <tr>
+            <th class="col-sm-2" translate>Name</th>
+            <th class="col-sm-1" translate>Have ?</th>
+            <th class="col-sm-1">
+            <button class="btn btn-default btn-xs" ng-click="change_sort('boost')" translate>
+                Skill Boost
+            </button></th>
+            <th class="col-sm-1" translate>Job unlocked</th>
+            <th class="col-sm-1">
+            <button class="btn btn-default btn-xs" ng-click="change_sort('job1_level')" translate>
+                J1 level
+            </button></th>
+            <th class="col-sm-1">
+            <button class="btn btn-default btn-xs" ng-click="change_sort('job2_level')" translate>
+                J2 level
+            </button></th>
+            <th class="col-sm-1">
+            <button class="btn btn-default btn-xs" ng-click="change_sort('job3_level')" translate>
+                J3 level
+            </button></th>
+            <th class="col-sm-1" translate>P.o.T</th>
+            <th class="col-sm-1" translate>P.o.F</th>
+            <th class="col-sm-2">
+            <button class="btn btn-default btn-xs" ng-click="change_sort('needed_roll')" translate>
+                Coin
+                <br/>
+                needed
+            </button></th>
+            <th class="col-sm-2">
+            <button class="btn btn-default btn-xs" ng-click="change_sort('needed_energy')" translate>
+                Energy
+                <br/>
+                needed
+            </button></th>
+            <th class="col-sm-1" translate>Drop from</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="character in characters | filter: filter_all_filters | orderBy: sort_opts.pred:sort_opts.desc">
+            <td class="char-have-{{ have_character[character.ref] && have_character[character.ref] == true }}"><span class="class-{{ character.class_ref }}">{{ character.class_ref }}</span> - {{ character.name | translate }} </td>
+            <td class="text-center">
+            <input type="checkbox"
+                old-ng-model="have_character[character.ref]"
+                ng-model="character.have"
+                ng-model-options="{ getterSetter: true }"
+                ng-change="toggle(character.ref)" />
+            </td>
+            <td><!-- Boost -->
+            <input type="number"
+                class="form-control text-right input-sm skill-boost-{{ boost[character.ref] }}"
+                old-ng-model="boost[character.ref]"
+                ng-model="character.boost"
+                ng-model-options="{ getterSetter: true, updateOn: settings.update_on }"
+                ng-change="boost_change(character.ref)"
+                min="0" max="100" step="{{ get_increment(character.adventurer) }}"
+                ng-if="have_character[character.ref]" />
+            </td>
+            <td ng-if="other != true"><!-- Job unlocked -->
+            <input type="number"
+            class="form-control text-right input-sm"
+            old-ng-model="job_level[character.ref]"
+            ng-model="character.job_level"
+            ng-model-options="{ getterSetter: true }"
+            ng-change="job_change(character.ref)"
+            ng-if="have_character[character.ref] && character.max_job > 1"
+            min="1" max="{{ character.max_job }}"/>
+            <input type="number"
+            class="form-control text-right input-sm"
+            ng-if="have_character[character.ref] && character.max_job == 1"
+            value='1'
+            disabled="disabled" />
+            </td>
+            <td class="element-{{ character.element1_ref }}"><!-- job 1 level -->
+            <div class="element-weapon-container">
+                <input type="number"
+                class="form-control text-right input-sm level-{{ job1_level[character.ref] }}"
+                old-ng-model="job1_level[character.ref]"
+                ng-model="character.job1_level"
+                ng-model-options="{ getterSetter: true, updateOn: settings.update_on }"
+                ng-change="job_level_change(1, character.ref)"
+                ng-if="have_character[character.ref]"
+                min="1" max="{{ max_level }}" />
+                <span class="weapon weapon-{{ character.weapon1_ref }}" ng-if="have_character[character.ref]"></span>
+            </div></td>
+            <td ng-if="other != true" class="element-{{ character.element2_ref }}"><!-- job 2 level -->
+            <div class="element-weapon-container">
+                <input type="number"
+                class="form-control text-right input-sm level-{{ job2_level[character.ref] }}"
+                old-ng-model="job2_level[character.ref]"
+                ng-model="character.job2_level"
+                ng-model-options="{ getterSetter: true, updateOn: settings.update_on }"
+                ng-change="job_level_change(2, character.ref)"
+                ng-if="character.max_job > 1 && have_character[character.ref] && job_level[character.ref] > 1"
+                min="1" max="{{ max_level }}"/>
+                <span class="weapon weapon-{{ character.weapon2_ref }}" ng-if="character.max_job > 1 && have_character[character.ref] && job_level[character.ref] > 1"></span>
+            </div></td>
+            <td ng-if="other != true" class="element-{{ character.element3_ref }}">
+            <div class="element-weapon-container">
+                <!-- job 3 level -->
+                <input type="number"
+                class="form-control text-right input-sm level-{{ job3_level[character.ref] }}"
+                old-ng-model="job3_level[character.ref]"
+                ng-model="character.job3_level"
+                ng-model-options="{ getterSetter: true, updateOn: settings.update_on }"
+                ng-change="job_level_change(3, character.ref)"
+                ng-if="character.max_job > 2 && character.have() && character.job_level() > 2"
+                min="1" max="{{ max_level }}"/>
+                <span class="weapon weapon-{{ character.weapon3_ref }}" ng-if="character.max_job > 2 && character.have() && character.job_level() > 2"></span>
+            </div></td>
+            <td class="text-center"><span class="glyphicon glyphicon-ok"
+            aria-hidden="true"
+            ng-if="character.pact_of_truth == 1"></span><span class="glyphicon glyphicon-remove"
+            aria-hidden="true"
+            ng-if="character.pact_of_truth == 0"></span></td>
+            <td class="text-center"><span class="glyphicon glyphicon-ok"
+            aria-hidden="true"
+            ng-if="character.pact_of_fellowship == 1"></span><span class="glyphicon glyphicon-remove"
+            aria-hidden="true"
+            ng-if="character.pact_of_fellowship == 0"></span></td>
+            <td class="text-center"> {{ character.needed_roll() | number}} </td>
+            <td class="text-center"> {{ character.needed_energy() | number}} </td>
+            <td class="text-center">
+            <button class="btn btn-default btn-xs"
+            ng-if="char_drop[character.ref] && char_drop[character.ref].length != 0"
+            ng-click="drop_from(character.ref)"
+            ng-mouseenter="drop_from_pop(character.ref)"
+            popover="{{ popover_ }}"
+            popover-placement="left"
+            popover-trigger="mouseenter">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+            </button><span class="glyphicon glyphicon-remove" aria-hidden="true"
+            ng-if="! char_drop[character.ref] || char_drop[character.ref].length == 0"></span></td>
+        </tr>
+    <tbody>
+        <tfoot>
+            <!-- stat -->
+            <tr>
+                <th></th>
+                <th><!-- have --> {{ characters | filter: filter_all_filters | agg_have:true }}
+                /
+                {{ characters | filter: filter_all_filters | agg_have:-1 }} </th>
+                <th><!-- sb% --><small>avg:</small> {{ characters | filter: filter_all_filters | sb_average | number:0 }} </th>
+                <th ng-if="other != true"><!-- job unlocked --> {{ characters | filter: filter_all_filters | job_count }}
+                /
+                {{ characters | filter: filter_all_filters | job_total }} </th>
+                <th><!-- level j1 --><small>avg:</small> {{ characters | filter: filter_all_filters | job1_average | number:0 }} </th>
+                <th ng-if="other != true"><!-- level j2 --><small>avg:</small> {{ characters | filter: filter_all_filters | job2_average | number:0 }} </th>
+                <th ng-if="other != true"><!-- level j3 --><small>avg:</small> {{ characters | filter: filter_all_filters | job3_average | number:0 }} </th>
+                <th><!-- pot --></th>
+                <th><!-- pof --></th>
+                <th>{{ characters | filter: filter_all_filters | total_coins | number }}</th>
+                <th>{{ characters | filter: filter_all_filters | total_energy | number }}</th>
+                <th></th>
+            </tr>
+        </tfoot>
+</table>
+
+<div class="row" style="margin-top: 1em; margin-bottom: 1em;">
+    <div class="col-sm-3">
+    <form action="api/index.php/screenshot" method="POST" id="form_screenshot">
+        <input type="hidden" name="user_data" id="user_data" value="" />
+        <input type="button" class="btn btn-default col-sm-12" value="{{ 'Picture : all characters' | translate }}" ng-click="screenshot('both')"/>
+    </form>
+    </div>
+    <div class="col-sm-3">
+    <form action="api/index.php/screenshot" method="POST" id="form_screenshot">
+        <input type="hidden" name="user_data" id="user_data" value="" />
+        <input type="button" class="btn btn-default col-sm-12" value="{{ 'Picture : only adventurers' | translate }}" ng-click="screenshot('adv')"/>
+    </form>
+    </div>
+    <div class="col-sm-3">
+    <form action="api/index.php/screenshot" method="POST" id="form_screenshot">
+        <input type="hidden" name="user_data" id="user_data" value="" />
+        <input type="button" class="btn btn-default col-sm-12" value="{{ 'Picture : only monsters' | translate }}" ng-click="screenshot('mon')"/>
+    </form>
+    </div>
+    <div class="col-sm-3">
+        <button ng-click="export_txt()" class="btn btn-default col-sm-12" translate>Text : only adventurers</button>
+    </div>
+</div>
+
+<span ng-if="total_coins(characters, have_character, boost) > 0">
+    <p translate>
+        - To collect {{ __total_coins() | number }} coins, you can do {{ __total_coins() / coins_cc3 | ceil | number }} runs in Hunting Zone 3 "Attack of the Coin Creeps"
+    </p>
+    <ul>
+        <li>
+            <span translate>{{ __total_coins() / (coins_cc3 * 2 * nb_run_per_day(20)) | ceil  }} week-end</span>
+            <small>(~{{ date_in_x_weeks(__total_coins() / (coins_cc3 * 2 * nb_run_per_day(20))) }})</small>
+        </li>
+        <li ng-if="have_character['zeera']">
+            <span translate>{{ __total_coins() / (coins_cc3 * 1.15 * 2 * nb_run_per_day(20)) | ceil  }} week-end (with Zeera j3@65)</span>
+            <small>(~{{ date_in_x_weeks(__total_coins() / (coins_cc3 * 1.15 * 2 * nb_run_per_day(20))) }})</small>
+        </li>
+        <li>
+            <span translate>{{ __total_coins() / (coins_cc3 * 3 * nb_run_per_day(20)) | ceil  }} week-end (with timezone change)</span>
+            <small>(~{{ date_in_x_weeks(__total_coins() / (coins_cc3 * 3 * nb_run_per_day(20))) }})</small>
+        </li>
+        <li ng-if="have_character['zeera']">
+            <span translate>{{ __total_coins() / (coins_cc3 * 1.15 * 3 * nb_run_per_day(20)) | ceil  }} week-end (with timezone change and Zeera j3@65)</span>
+            <small>(~{{ date_in_x_weeks(__total_coins() / (coins_cc3 * 1.15 * 3 * nb_run_per_day(20)))}})</small>
+        </li>
+    </ul> </span>
+
+<p ng-if="total_energy(characters, have_character, boost) > 0" translate>
+    - To collect {{ __total_energy() | number }} energy, you can wait {{ __total_energy_duration() }}.
+</p>

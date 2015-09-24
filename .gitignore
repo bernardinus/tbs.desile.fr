@@ -1,0 +1,29 @@
+node_modules
+dist
+.tmp
+.sass-cache
+
+front/api/temp/*
+# bower
+front/components
+
+back
+
+data.db
+dummy*.db
+back/data/*/character-icons
+
+# Copyrighted material
+front/pictures
+
+# MacOSX
+.DS_Store
+
+# Grunt
+dist
+
+# Composer
+vendor
+
+# Aptana
+.project

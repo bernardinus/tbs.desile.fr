@@ -1,0 +1,150 @@
+<form class="form-horizontal" role="form">
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Username (for screenshot)</label>
+        <div class="col-sm-6">
+            <input class="form-control text-right" placeholder="Username" type="text"
+            ng-model="username" ng-change="change_username()" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Starting date</label>
+        <div class="col-sm-6">
+            <input class="form-control text-right" placeholder="YYYY-MM-DD" type="date"
+            ng-model="starting_date" ng-change="change_starting_date()" />
+        </div>
+        <p class="help-block">
+            {{ count_days() }}
+        </p>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Only adventurers by default</label>
+        <div class="col-sm-1">
+            <input type="checkbox" class="-form-control" ng-model="adv_default" ng-change="change_adv_default()" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Only characters you have by default</label>
+        <div class="col-sm-1">
+            <input type="checkbox" class="-form-control" ng-model="have_default" ng-change="change_have_default()" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Only items you need by default</label>
+        <div class="col-sm-1">
+            <input type="checkbox" class="-form-control" ng-model="items_needed_default" ng-change="change_items_needed_default()" />
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Items you need in the future by default</label>
+        <div class="col-sm-1">
+            <input type="checkbox" class="-form-control" ng-model="items_needed_future_default" ng-change="change_items_needed_future_default()" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Coins in CC3</label>
+        <div class="col-sm-6">
+            <input class="form-control" placeholder="Coins in CC3" type="number" min="70"
+            ng-model="coins_cc3" ng-change="change_coins_cc3()" ng-model-options="{ updateOn: 'blur' }" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label" translate>Locale</label>
+        <div class="col-sm-6">
+            <select class="form-control" ng-change="change_locale(locale)" ng-model="locale">
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+                <option value="fr">FR</option>
+            </select>
+        </div>
+    </div>
+
+    <fieldset>
+        <legend>
+            Default increment for skill boost
+        </legend>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" translate>for adventurers</label>
+            <div class="col-sm-6">
+                <input type="number" min="0" step="0.1" class="form-control text-right" ng-model="increment['adv']" ng-change="change_increment('adv')" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label" translate>for monsters</label>
+            <div class="col-sm-6">
+                <input type="number" min="0" step="0.1" class="form-control text-right" ng-model="increment['mon']" ng-change="change_increment('mon')" />
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            Sort table moment
+        </legend>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" translate>Character list </label>
+            <div class="col-sm-6">
+                <label class="radio-inline">
+                    <input type="radio" ng-model="char_list.update_on" ng-click="update_char_list_upon()" value="default">
+                    default </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="char_list.update_on" ng-click="update_char_list_upon()" value="blur">
+                    blur </label>
+                <ul class="help-block" style="list-style-type: none;">
+                    <li>
+                        'default': Sorting will be done immediatly
+                    </li>
+                    <li>
+                        'blur': Sorting will be done once the input box has lost focus
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label" translate>XP list</label>
+            <div class="col-sm-6">
+                <label class="radio-inline">
+                    <input type="radio" ng-model="xp_list.update_on" ng-click="update_xp_list_upon()" value="default">
+                    default </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="xp_list.update_on" ng-click="update_xp_list_upon()" value="blur">
+                    blur </label>
+                <ul class="help-block" style="list-style-type: none;">
+                    <li>
+                        'default': Sorting will be done immediatly
+                    </li>
+                    <li>
+                        'blur': Sorting will be done once the input box has lost focus
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            Levelling
+        </legend>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" translate>Exclude from levelling</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" rows="3" ng-change="change_exclude_from_levelling()" ng-model="exclude_from_levelling"></textarea>
+            </div>
+            
+        </div>
+        <p class="help-block col-sm-offset-3">
+                Comma separated list of character names you don't want to appear in the Levelling page.<br/>
+                For example: <code>Bahamut, Leviathan, Odin, Zael, Calista, Marilith Λ</code>
+            </p>
+    </fieldset>
+
+</form>

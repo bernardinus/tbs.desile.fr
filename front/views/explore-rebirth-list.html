@@ -1,0 +1,7 @@
+<ul>
+    <li ng-repeat="rebirth in rebirths | orderBy: 'src_name'">
+        <a href="#/explore/rebirth/{{ rebirth.src_ref}}/{{ rebirth.dst_ref }}">
+            {{ rebirth.src_name }} &#8669; {{ rebirth.dst_name }}
+        </a>
+    </li>
+</ul>

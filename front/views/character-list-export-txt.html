@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h3 class="modal-title" translate>Your adventurers</h3>
+</div>
+
+<div class="modal-body" style="">
+    <p ng-repeat="class_ in characters | orderBy: 'order'" ng-if="class_.chars.length > 0">{{ class_.name }}: 
+        <span ng-repeat="char in class_.chars track by $index">
+            {{ char.name }} <small>({{ char.levels }}, {{ char.boost}}%)</small><span ng-if="($index + 1) < class_.chars.length">, </span>
+        </span>
+    </p>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="ok()" translate>OK</button>  
+</div>

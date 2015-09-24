@@ -1,0 +1,84 @@
+<div class="row" style="margin-bottom: 1em;">
+    <div class="col-sm-3 col-sm-offset-2"><small translate>today is bonus day number {{ difference }}</small></div>
+    <div class="col-sm-1"><small translate>Bonus</small></div>
+    <div class="col-sm-4">
+        <select class="form-control form-control-sm" ng-options="item.label() for item in all_bonuses" ng-model="selected_bonus">
+        </select>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 1em; ">
+  <div class="col-sm-2 col-sm-offset-2"><small>#treasure hunter</small></div>
+  <div class="col-sm-2">
+    <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_th" ng-change="change_nb_th()"/>
+  </div>
+  <div class="col-sm-2 "><small>#coin bags</small></div>
+  <div class="col-sm-2">
+    <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_cb" ng-change="change_nb_cb()"/>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 1em;">
+    <div class="col-sm-2 col-sm-offset-2"><small>#negotiator activation</small></div>
+    <div class="col-sm-2">
+        <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_ng" ng-change="change_nb_ng()"/>
+    </div>
+    <div class="col-sm-2"><small>#negotiator pro activation</small></div>
+    <div class="col-sm-2">
+        <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_ng_pro" ng-change="change_nb_ng_pro()"/>
+    </div>
+</div>
+
+<p class="alert alert-warning" ng-if="selected_bonus.name == 'nothing'">
+  No bonus this day
+</p>
+
+<table class="table" sticky-table-header>
+    <thead>
+  <tr>
+    <th>Stage</th>
+    <th>Stamina</th>
+    <th>Coins</th>
+    <th>
+      <table style="width: 100%;">
+    <tr>
+      <th style="width: 20%;"><small>{{ char.name }}</small></th>
+      <th style="width: 10%; text-align: right;"><small>Count</small></th>
+      <th style="width: 10%; text-align: right;"><small>Drop</small></th>
+      <th style="width: 10%; text-align: right;"><small>Coin value</small></th>
+      <th style="width: 14%; text-align: right;"><small>Coins / sta.</small></th>
+      <th style="width: 10%; text-align: right;"><small>Current SB</small></th>
+    </tr>
+      </table>
+    </th>
+    <th>Coin value</th>
+    <th>Coin per stamina</th>
+  </tr>
+  </thead>
+  <tr ng-repeat="stage in cps | orderBy: sort_cps:true">
+    <td>{{ stage.ref }}</td>
+    <td class="text-center">{{ stage.stamina }}</td>
+    <td class="text-center">{{ stage._coins() | number:0 }}</td>
+    <td>
+      <table style="width: 100%;">
+    <tr ng-repeat="char in stage.chars | filter: filter_100sb | orderBy: 'name'">
+      <td style="width: 20%;">{{ char.name }}</td>
+      <td style="width: 10%; text-align: right;">{{ char.count }}</td>
+      <td style="width: 10%; text-align: right;">{{ char.expected() * 100 | number:0 }}%</td>
+      <td style="width: 10%; text-align: right;">{{ char.coin_value() | number:0 }}</td>
+      <td style="width: 14%; text-align: center;">{{ char.cps() | number:0 }}</td>
+      <td style="width: 10%; text-align: right;">
+          <input type="number" min="0" max="100" step="5"
+              ng-model="char.sb" 
+              ng-model-options="{ getterSetter: true }" 
+              ng-if="char.have()"
+              class="form-control form-control-sm" />
+          <span ng-if="! char.have()">{{ char.sb() }} %</span>
+      </td>
+    </tr>
+      </table>
+    </td>
+    <td class="text-center">{{ stage.coin_value() | number:0 }}</td>
+    <td class="text-center">{{ stage.cps() | number:0 }}</td>
+  </tr>
+  </table>

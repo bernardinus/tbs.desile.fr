@@ -1,0 +1,24 @@
+<h3 ng-if="characters.length > 0">Characters you have</h3>
+<div class="row" ng-repeat="chars in characters track by $index" style="margin-top: 0.5em; margin-bottom: 0.5em;">
+    <div class="col-sm-{{ 12 / nb_col }}" ng-repeat="char in chars track by char.ref">
+        <a class="btn btn-default col-sm-12" href="#/skill-boost/{{ char.ref }}">
+            <div class="row">
+                <span class="col-sm-9">{{ char.name }}</span>
+                <span class="col-sm-3">
+                    <small ng-if="char.sb_up">{{ char.sb_up | number:0 }}</small>
+                    <small><i ng-if="char.o_sb_up">{{ char.o_sb_up | number:0 }}</i></small>
+                </span>
+            </div>
+            
+             
+            
+        </a>
+    </div>
+</div>
+
+<h3 ng-if="future_characters.length > 0">Characters you don't have (yet)</h3>
+<div class="row" ng-repeat="chars in future_characters track by $index" style="margin-top: 0.5em; margin-bottom: 0.5em;">
+    <div class="col-sm-{{ 12 / nb_col }}" ng-repeat="char in chars track by char.ref">
+        <a class="btn btn-default col-sm-12" href="#/skill-boost/{{ char.ref }}">{{ char.name }}</a>
+    </div>
+</div>

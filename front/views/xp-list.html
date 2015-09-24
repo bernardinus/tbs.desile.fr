@@ -1,0 +1,194 @@
+<div class="row">
+  <select class="form-control form-control-sm" ng-model="limit_levels" ng-change="change_limit_levels(limit_levels)">
+    <option value="" translate>All</option>
+    <option value="99" translate>Level after 70</option>
+    <option value="6" translate>Metal Zone 6</option>
+    <option value="5" translate>Metal Zone 5</option>
+    <option value="4" translate>Metal Zone 4</option>
+    <option value="3" translate>Metal Zone 3</option>
+    <option value="2" translate>Metal Zone 2</option>
+    <option value="1" translate>Metal Zone 1</option>
+  </select>
+</div>
+
+<hr/>
+
+<div class="row">
+  <div class="col-sm-3"><small translate>Adventurer and/or Monster</small></div>
+  <div class="col-sm-3">
+    <select class="form-control form-control-sm" ng-model="f_adventurer">
+      <option value="" translate>Both</option>
+      <option value="1" translate>Adventurer</option>
+      <option value="0" translate>Monster</option>
+    </select>
+  </div>
+  <div class="col-sm-3"><small translate>Class</small></div>
+  <div class="col-sm-3">
+    <select class="form-control form-control-sm" ng-model="f_class" ng-init="f_class=['']" multiple="multiple">
+      <option value="" translate>All</option>
+      <option value="Z">Z</option>
+      <option value="SS">SS</option>
+      <option value="S">S</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
+  </div>
+</div>
+
+<div ng-if="level_ref == 99 || ! level_ref">
+  <h4 translate>Level after 70</h4>
+  <p class="row">
+    <div class="col-sm-2"><small translate>Stage for levelling after 70</small></div>
+    <div class="col-sm-2">
+      <select class="form-control form-control-sm" ng-model="level60_opts.level" ng-options="stage.ref for stage in stages">
+      </select>
+    </div>
+    <div class="col-sm-2"><small translate>Nb char. in team</small></div>
+    <div class="col-sm-2">
+      <input type="number" class="form-control form-control-sm" min="2" max="6" ng-model="level60_opts.team_size" />
+    </div>
+    <div class="col-sm-2"><small translate>Seasoned Pro</small></div>
+    <div class="col-sm-2">
+      <input type="checkbox" ng-model="level60_opts.seasoned_pro" />
+    </div>
+  </p>
+  
+  <p class="row">
+    <div class="col-sm-2"><small translate>Cap Job 1</small></div>
+    <div class="col-sm-2">
+      <input type="number" class="form-control form-control-sm" min="1" max="90" ng-model="level60_opts.cap_job_1" />
+    </div>
+    <div class="col-sm-2"><small translate>Cap Job 2</small></div>
+    <div class="col-sm-2">
+      <input type="number" class="form-control form-control-sm" min="1" max="90" ng-model="level60_opts.cap_job_2" />
+    </div>
+    <div class="col-sm-2"><small translate>Cap Job 3</small></div>
+    <div class="col-sm-2">
+      <input type="number" class="form-control form-control-sm" min="1" max="90" ng-model="level60_opts.cap_job_3" />
+    </div>
+  </p>
+</div>
+
+<table class="table table-striped table-condensed">
+  <!-- 20-1 -->
+  <thead ng-if="level_ref == 99 || ! level_ref">
+    <tr>
+      <th></th>
+      <th class="col-sm-1" translate>Current level</th>
+      <th translate>starting level</th>
+      <th translate>ending level</th>
+      <th translate>starting xp</th>
+      <th translate>ending xp</th>
+      <th translate>Need xp</th>
+      <th translate>#run@{{ level60_opts.level.ref }}</th>
+    </tr>
+  </thead>
+  <tbody ng-if="level_ref == 99 || ! level_ref">
+    <tr ng-repeat="job in jobs | filter: filter_adventurer | filter: filter_cap(level60_opts) | filter: filter_class | filter: filter_mz(99) | orderBy: order_need_next(99):true" ng-class="{ 'xp-not-yet': class_xp_not_yet(99, job) }">
+      <td class="element-{{ job.element_ref }}">
+        <div class="element-weapon-container">
+          <span class="weapon weapon-{{ job.weapon_ref }}"></span>
+        </div>
+        <span style="padding-left: 16px;" class="job-have-char-{{ job.have_char }}">{{ job.character_name }}</span>
+        <span class="pull-right job-have-job-{{ job.have_job }}"> Job {{ job.level }}</span>
+      </td>
+      <td class="text-center">
+          <input type="number" value="{{ job.char_level() }}" class="form-control" 
+              ng-model="job_level[job.level][job.character_ref]"
+              ng-change="job_level_change(job.level, job.character_ref)"
+              ng-model-options="{ updateOn: settings.update_on }"
+              ng-if="job.char_level() == job.level_start(99)" />
+          <span ng-if="job.char_level() != job.level_start(99)">{{ job.char_level() }}</span>
+      </td>
+      <td class="text-center">{{ job.level_start(99) }}</td> 
+      <td class="text-center">{{ job.level_end(99) }}</td>
+      <td class="text-center">{{ job.start_exp(99) | number }}</td>
+      <td class="text-center">{{ job.end_exp(99) | number }}</td>
+      <td class="text-center">{{ job.need_next(99) | number }}</td>
+      <td class="text-center">
+          {{ job.nb_run(99, level60_opts) | ceil }}
+          <small>({{ job.nb_run(99, level60_opts) * level60_opts.level.stamina | ceil }} stam)</small>
+      </td>
+    </tr>
+  </tbody>
+  
+  <tr>
+    <td colspan="8">
+      <h4 ng-if="level_ref != 99 || ! level_ref" translate>Metal Zone</h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="9">
+        <div class="col-sm-3"><small translate>Use OP carrier</small></div>
+        <div class="col-sm-3">
+            <input type="checkbox" ng-model="mz_opts.use_op_carrier" />
+        </div>
+          <div class="col-sm-3"><small translate>Nb char. in team</small></div>
+          <div class="col-sm-3">
+              <input type="number" class="form-control form-control-sm" min="2" max="6" ng-model="mz_opts.team_size" />
+          </div>
+
+    </td>
+  </tr>
+  
+  <!-- Metal Zones -->
+  <thead ng-repeat-start="num in zones" ng-if="level_ref == zones[$index] || ! level_ref">
+    <tr>
+      <th><a href="#/xp/{{ zones[$index] }}" translate>Metal Zone {{ zones[$index] }}</a></th>
+      <th translate>Current level</th>
+      <th translate>starting level</th>
+      <th translate>ending level</th>
+      <th translate>starting exp</th>
+      <th translate>ending exp</th>
+      <th translate>Need XP</th>
+      <th>#runs</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat-end ng-if="level_ref == zones[$index] || ! level_ref">
+    <tr ng-repeat="job in jobs | filter: filter_adventurer | filter: filter_class | filter: filter_mz(zones[$index]) | orderBy: order_need_next(num):true" 
+        ng-class="{ 'xp-not-yet': class_xp_not_yet(num, job) }">
+      <td class="element-{{ job.element_ref }}" >
+        <div class="element-weapon-container">
+          <span class="weapon weapon-{{ job.weapon_ref }}"></span>
+        </div>
+        <span style="padding-left: 16px;" class="job-have-char-{{ job.have_char }}">{{ job.character_name }}</span>
+        <span class="pull-right job-have-job-{{ job.have_job }}" translate> Job {{ job.level }}</span>
+      </td>
+      <td class="text-center">
+        <input type="number" value="{{ job.char_level() }}" class="form-control" 
+           ng-model="job_level[job.level][job.character_ref]"
+           ng-change="job_level_change(job.level, job.character_ref)"
+           ng-model-options="{ updateOn: settings.update_on }"
+               ng-if="job.char_level() == job.level_start(num)" />
+          <span ng-if="job.char_level() != job.level_start(num)">{{ job.char_level() }}</span>
+      </td>
+      <td class="text-center">{{ job.level_start(num) }}</td>
+      <td class="text-center">{{ job.level_end(num) }}</td>
+      <td class="text-center">{{ job.start_exp(num) | number }}</td>
+      <td class="text-center">{{ job.end_exp(num) | number }}</td>
+      <td class="text-center">{{ job.need_next(num) | number }}</td>
+      <td class="text-center">&asymp; {{ job.nb_run(num, mz_opts) }}</td>
+    </tr>
+    <tr>
+      <td colspan="6"></td>
+      <th translate>total: </th>
+      <td class="text-center">{{ jobs | filter: filter_adventurer | filter: filter_class | filter: filter_mz(num) | agg_mz_run:num:mz_opts }}</td>
+      <td></td>
+    </tr>
+  </tbody>
+  <tr ng-if="! level_ref">
+    <td colspan="6"></td>
+    <th translate>Metal Zones 3, 4, 5 &amp; 6: </th>
+    <td class="text-center">
+      {{ (jobs | filter: filter_adventurer | filter: filter_class | filter: filter_mz(3) | agg_mz_run:3:mz_opts) +
+         (jobs | filter: filter_adventurer | filter: filter_class | filter: filter_mz(4) | agg_mz_run:4:mz_opts) +
+         (jobs | filter: filter_adventurer | filter: filter_class | filter: filter_mz(5) | agg_mz_run:5:mz_opts) +
+         (jobs | filter: filter_adventurer | filter: filter_class | filter: filter_mz(6) | agg_mz_run:6:mz_opts) }}
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<p ng-if="exclude_from_levelling.length > 0">Excluded characters are : {{ exclude_from_levelling.join(',') }}</p>

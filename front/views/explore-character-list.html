@@ -1,0 +1,13 @@
+<h2>TBdex</h2>
+<div style="margin-bottom: 1em;">
+<div class="row" ng-repeat="chars in characters track by $index" style="margin-top: 0.5em; margin-bottom: 0.5em;">
+    <div class="col-sm-{{ 12 / nb_col }}" ng-repeat="char in chars track by char.ref">
+        <div class="col-sm-4">
+            <img src="pictures/characters/32x32/character-{{ char.ref }}-1.png" class="img-thumbnail"/>
+        </div>
+        <a class="btn btn-default col-sm-8" href="#/explore/character/{{ char.ref }}" ng-if="char.name">
+            {{ char.name }}
+        </a>
+    </div>
+</div>
+</div>

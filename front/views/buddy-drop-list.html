@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-7 col-sm-offset-2">
+<table class="table table-condensed">
+    <tr>
+        <th>Name</th>
+        <th>
+            <table style="width: 100%">
+                <tr>
+                    <th style="width: 33%;">Stage</th>
+                    <th style="width: 33%;">Drop rate</th>
+                    <th style="width: 33%;">Avg. cost</th>
+                </tr>
+            </table>
+        </th>
+    </tr>
+    <tr ng-repeat="buddy in buddies | orderBy: 'name'">
+        <td>{{ buddy.name }} <small>({{ buddy.rarity }})</small></td>
+        <td>
+            <table style="width: 100%">
+                <tr ng-repeat="stage in buddy.stages | orderBy: sort_expected:true">
+                    <td style="width: 33%;" class="text-center">{{stage.stage_ref}}</td>
+                    <td style="width: 33%;" class="text-center">{{ stage.expected() * 100 | number:1 }}%</td>
+                    <td style="width: 33%;">
+                        <small>{{ stage.stamina_cost() | number:0}} stamina</small>
+                        <small>(avg: {{ stage.avg_stamina_cost() | number:0}} sta.)</small>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+</div>

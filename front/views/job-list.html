@@ -1,0 +1,78 @@
+<div class="row">
+  <!-- filter -->
+  <div class="col-sm-2">
+    <select class="form-control input-sm" ng-model="search.weapon_ref">
+      <option value="" translate>no weapon filter</option>
+      <option value="Arrow" translate>Arrow</option>
+      <option value="Spear" translate>Spear</option>
+      <option value="Sword" translate>Sword</option>
+      <option value="Magic" translate>Staff</option>
+    </select>
+  </div>
+  <div class="col-sm-2">
+    <select class="form-control input-sm" ng-model="search.element_ref">
+      <option value="" translate>no element filter</option>
+      <option value="Dark" translate>Darkness</option>
+      <option value="Fire" translate>Fire</option>
+      <option value="Ice" translate>Ice</option>
+      <option value="Thunder" translate>Lightning</option>
+      <option value="None" translate>Physical</option>
+    </select>
+  </div>
+
+  <div class="col-sm-2">
+    <input type="checkbox" ng-model="search.have_char" ng-init="search.have_char = true" ng-false-value="''" ng-click="toggle_have_char()"/><span translate>Characters you have</span></div>
+  <div class="col-sm-2">
+    <input type="checkbox" ng-model="search.have_job"  ng-init="search.have_job = true;" ng-false-value="''" /><span translate>Only jobs you have</span>
+    </div>
+    <div class="col-sm-2">
+        Cap level
+    </div>
+    <div class="col-sm-2">
+        <input type="number" class="form-control input-sm" min="1" max="{{ max_level }}" ng-model="cap_level" placeholder="none"/>
+    </div>
+</div>
+
+<table class="table table-striped table-condensed">
+  <thead>
+    <tr>
+      <th></th>
+      <th translate>Level</th>
+      
+      <th><button class="btn btn-default btn-sm {{ btn_class('_hp')  }}"   ng-click="sort_change('_hp');" translate>hp</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('m_hp') }}"   ng-click="sort_change('m_hp');" translate>hp@{{ max_level }}</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('_atk') }}"   ng-click="sort_change('_atk');" translate>atk</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('m_atk') }}"  ng-click="sort_change('m_atk');" translate>atk@{{ max_level }}</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('_def') }}"   ng-click="sort_change('_def');" translate>def</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('m_def') }}"  ng-click="sort_change('m_def');" translate>def@{{ max_level }}</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('_matk') }}"  ng-click="sort_change('_matk');" translate>matk</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('m_matk') }}" ng-click="sort_change('m_matk');" translate>matk@{{ max_level }}</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('_mdef') }}"  ng-click="sort_change('_mdef');" translate>mdef</button></th>
+      <th><button class="btn btn-default btn-sm {{ btn_class('m_mdef') }}" ng-click="sort_change('m_mdef');" translate>mdef@{{ max_level }}</button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="job in jobs | filter: search | orderBy: order_opts.pred:order_opts.desc" >
+      <td class="element-{{ job.element_ref }}">
+    <span style="display: none;">{{$index + 1}}</span>
+    <div class="element-weapon-container">
+      <span class="weapon weapon-{{ job.weapon_ref }}"></span>
+    </div>
+    <span style="padding-left: 16px;" class="job-have-char-{{ job.have_char }}">{{ job.character_name }}</span>
+    <span class="pull-right job-have-job-{{ job.have_job }}"> Job {{ job.level }}</span>
+      </td>
+      
+      <td class="text-center">{{ job.char_level(cap_level) }}</td>
+      <td class="text-center">{{ job._hp(cap_level)    }}</td>
+      <td class="text-center">{{ job.m_hp(cap_level)   }}</td> 
+      <td class="text-center">{{ job._atk(cap_level)   }}</td>
+      <td class="text-center">{{ job.m_atk(cap_level)  }}</td>
+      <td class="text-center">{{ job._def(cap_level)   }}</td>
+      <td class="text-center">{{ job.m_def(cap_level)  }}</td>
+      <td class="text-center">{{ job._matk(cap_level)  }}</td>
+      <td class="text-center">{{ job.m_matk(cap_level) }}</td>
+      <td class="text-center">{{ job._mdef(cap_level)  }}</td>
+      <td class="text-center">{{ job.m_mdef(cap_level) }}</td>
+    </tr>
+  </tbody>
+</table>

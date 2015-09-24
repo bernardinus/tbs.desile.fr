@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <table class="table table-condensed table-striped">
+            <tr>
+                <th>Stage</th>
+                <th>Items</th>
+                <th>Monsters</th>
+                <th>Buddies</th>
+            </tr>
+            <tr ng-repeat="stage in all_stages | orderBy: stage.ordre_">
+                <td>{{ stage.ref }}</td>
+                <td>
+                    <li ng-repeat="item in stage.items | orderBy: 'name'">
+                        {{ item.name }} <small>({{ item.percent * 100 }}% x {{ item.count || '?' }})</small>
+                    </li>
+                    <span ng-if="! stage.items || stage.items.length == 0">&#8709;</span>
+                </td>
+                <td>
+                    <li ng-repeat="char in stage.chars | orderBy: 'character_name'">
+                        {{ char.character_name }} <small>({{ char.percent * 100 }}% x {{ char.count || '?' }})</small>
+                    </li>
+                    <span ng-if="! stage.chars || stage.chars.length == 0">&#8709;</span>
+                </td>
+                <td>
+                    <li ng-repeat="buddy in stage.buddies | orderBy: 'buddy_name'">
+                        {{ buddy.buddy_name }} <small>({{ buddy.percent * 100 }}% x {{ buddy.count || '?' }})</small>
+                    </li>
+                    <span ng-if="! stage.buddies || stage.buddies.length == 0">&#8709;</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

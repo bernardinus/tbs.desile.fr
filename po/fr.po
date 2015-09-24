@@ -1,0 +1,2913 @@
+msgid ""
+msgstr "Project-Id-Version: Terra Battle Stat\nPOT-Creation-Date: \nPO-Revision-Date: \nLast-Translator: Matthieu DESILE <matthieu.desile@gmail.com>\nLanguage-Team: \nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Generator: Poedit 1.6.10\n"
+
+#: views/one-team.html:102 views/xp-list.html:115
+msgid "#run"
+msgstr ""
+
+#: views/xp-list.html:77
+msgid "#run@{{ lvl60 }}"
+msgstr ""
+
+#: views/character-list.html:257
+msgid "- To collect {{ __total_coins() | number }} coins, you can do {{ __total_coins() / 8000 | ceil | number }} runs in Hunting Zone 3 \"Attack of the Coin Creeps\""
+msgstr ""
+
+#: views/character-list.html:277
+msgid "- To collect {{ __total_energy() | number }} energy, you can wait {{ __total_energy() / 5 * 8 | ceil | number }} days ({{ __total_energy() / 5 * 8 / 365 | ceil | number}} years)."
+msgstr ""
+
+#: views/dummy-character-translation.html:372
+msgid "1AOO"
+msgstr "1AOO"
+
+#: views/dummy-character-translation.html:369
+msgid "1AOO MarkⅠ"
+msgstr "1AOO MarkⅠ"
+
+#: views/dummy-character-translation.html:410
+msgid "1AOO MarkⅡ"
+msgstr "1AOO MarkⅡ"
+
+#: views/dummy-character-translation.html:373
+msgid "2BOO"
+msgstr "2BOO"
+
+#: views/dummy-character-translation.html:370
+msgid "2BOO MarkⅠ"
+msgstr "2BOO MarkⅠ"
+
+#: views/dummy-character-translation.html:411
+msgid "2BOO MarkⅡ"
+msgstr "2BOO MarkⅡ"
+
+#: views/dummy-character-translation.html:374
+msgid "3COO"
+msgstr "3COO"
+
+#: views/dummy-character-translation.html:371
+msgid "3COO MarkⅠ"
+msgstr "3COO MarkⅠ"
+
+#: views/dummy-character-translation.html:412
+msgid "3COO MarkⅡ"
+msgstr "3COO MarkⅡ"
+
+#: views/dummy-character-translation.html:381
+msgid "54B2"
+msgstr "54B2"
+
+#: views/dummy-character-translation.html:423
+msgid "6ZOO"
+msgstr "6ZOO"
+
+#: views/dummy-character-translation.html:263
+msgid "???"
+msgstr "???"
+
+#: views/dummy-character-translation.html:8
+msgid "A'merpact"
+msgstr "A'merpact"
+
+#: views/dummy-character-translation.html:27
+msgid "A'misandra"
+msgstr "A'misandra"
+
+#: views/dummy-character-translation.html:420
+msgid "AOO"
+msgstr "AOO"
+
+#: views/mz-edit.html:36 views/stage-edit.html:54
+msgid "Add"
+msgstr ""
+
+#: views/mz-edit.html:24 views/stage-edit.html:35
+msgid "Add new run"
+msgstr ""
+
+#: views/character-list.html:26 views/xp-list.html:19
+msgid "Adventurer"
+msgstr ""
+
+#: views/character-list.html:22 views/xp-list.html:15
+msgid "Adventurer and/or Monster"
+msgstr ""
+
+#: views/dummy-character-translation.html:448
+msgid "Aerobomb"
+msgstr "Aérobombe"
+
+#: views/dummy-character-translation.html:188
+msgid "Aeropede"
+msgstr "Aéropode"
+
+#: views/dummy-character-translation.html:37
+msgid "Alika"
+msgstr "Alika"
+
+#: views/character-list.html:33 views/xp-list.html:26 views/xp-list.html:3
+msgid "All"
+msgstr ""
+
+#: index.html:108
+msgid "All Characters"
+msgstr ""
+
+#: index.html:124
+msgid "All Items"
+msgstr ""
+
+#: index.html:95
+msgid "All Stages"
+msgstr ""
+
+#: views/dummy-character-translation.html:473
+msgid "Alphascorp"
+msgstr ""
+
+#: views/dummy-character-translation.html:29
+msgid "Amazora"
+msgstr "Amazora"
+
+#: views/dummy-character-translation.html:465
+msgid "Ambrosia"
+msgstr "Ambrosia"
+
+#: views/dummy-item-translation.html:59
+msgid "Amethyst Flame"
+msgstr ""
+
+#: views/dummy-character-translation.html:28
+msgid "Amimari"
+msgstr "Amimari"
+
+#: views/dummy-character-translation.html:26
+msgid "Amina"
+msgstr "Amina"
+
+#: views/dummy-character-translation.html:315
+msgid "Analyzer"
+msgstr "Analyseur"
+
+#: views/dummy-character-translation.html:283
+msgid "Ancient Key"
+msgstr "Clé antique"
+
+#: views/dummy-character-translation.html:127
+#: views/dummy-character-translation.html:267
+msgid "Androclops"
+msgstr "Andro cyclope"
+
+#: views/dummy-item-translation.html:30
+msgid "Animaton"
+msgstr "Animaton"
+
+#: views/dummy-character-translation.html:187
+msgid "Antenna Orbling"
+msgstr "Orbailé antenne"
+
+#: views/dummy-item-translation.html:34
+msgid "Apollo"
+msgstr "Apollo"
+
+#: views/dummy-character-translation.html:341
+msgid "Aquafeeder"
+msgstr "Aquavore"
+
+#: views/dummy-character-translation.html:202
+#: views/dummy-character-translation.html:83
+msgid "Arachnobot"
+msgstr "Arachnobot"
+
+#: views/dummy-character-translation.html:394
+msgid "Arachnochip"
+msgstr "Arachnopuce"
+
+#: views/dummy-character-translation.html:395
+msgid "Arachnochip EX"
+msgstr "Arachnopuce +"
+
+#: views/dummy-character-translation.html:203
+msgid "Arachnolings"
+msgstr "Araignelles"
+
+#: views/dummy-character-translation.html:163
+#: views/dummy-character-translation.html:65
+msgid "Archer"
+msgstr "Archer"
+
+#: views/character-list.html:60 views/job-list.html:6
+msgid "Arrow"
+msgstr ""
+
+#: views/dummy-character-translation.html:510
+msgid "Artemis"
+msgstr ""
+
+#: views/dummy-item-translation.html:35
+msgid "Asclepius"
+msgstr "Asclepius"
+
+#: views/dummy-character-translation.html:255
+#: views/dummy-character-translation.html:90
+msgid "Assassin"
+msgstr "Assassin"
+
+#: views/dummy-character-translation.html:254
+msgid "Assassin Poseur"
+msgstr "Assassin frimeur"
+
+#: views/mz-list.html:5
+msgid "Average XP"
+msgstr ""
+
+#: views/dummy-character-translation.html:471
+msgid "BN"
+msgstr ""
+
+#: views/dummy-character-translation.html:421
+msgid "BOO"
+msgstr "BOO"
+
+#: views/dummy-character-translation.html:186
+#: views/dummy-character-translation.html:30
+msgid "Ba'gunar"
+msgstr "Ba'gunar"
+
+#: views/dummy-character-translation.html:101
+#: views/dummy-character-translation.html:462
+msgid "Bahamut"
+msgstr "Bahamut"
+
+#: views/dummy-character-translation.html:470
+msgid "Bahamut Omega"
+msgstr "Oméga Bahamut"
+
+#: views/dummy-character-translation.html:3
+msgid "Bahl"
+msgstr "Bahl"
+
+#: views/dummy-character-translation.html:155
+msgid "Bajanna"
+msgstr ""
+
+#: views/dummy-item-translation.html:73
+msgid "Balmung"
+msgstr ""
+
+#: views/dummy-character-translation.html:523
+msgid "Basilisk"
+msgstr ""
+
+#: views/stage-list.html:26
+msgid "Battle"
+msgstr ""
+
+#: views/dummy-character-translation.html:246
+msgid "Beambot"
+msgstr "Laserobot"
+
+#: views/dummy-character-translation.html:175
+#: views/dummy-character-translation.html:73
+msgid "Beastfolk Archer"
+msgstr "Archer sauvage"
+
+#: views/dummy-character-translation.html:125
+#: views/dummy-character-translation.html:177
+msgid "Beastfolk Healer"
+msgstr "Soigneur sauvage"
+
+#: views/dummy-character-translation.html:116
+#: views/dummy-character-translation.html:178
+msgid "Beastfolk Hero"
+msgstr "Héros sauvage"
+
+#: views/dummy-character-translation.html:174
+#: views/dummy-character-translation.html:72
+msgid "Beastfolk Knight"
+msgstr "Chevalier sauvage"
+
+#: views/dummy-character-translation.html:119
+#: views/dummy-character-translation.html:176
+msgid "Beastfolk Mage"
+msgstr "Mage sauvage"
+
+#: views/dummy-character-translation.html:173
+#: views/dummy-character-translation.html:71
+msgid "Beastfolk Warrior"
+msgstr "Guerrier sauvage"
+
+#: views/dummy-item-translation.html:5
+msgid "Benevolent Fang"
+msgstr "Croc bienveillant"
+
+#: views/dummy-character-translation.html:114
+msgid "Blade Falcon"
+msgstr "Faucon tranchant"
+
+#: views/dummy-character-translation.html:105
+#: views/dummy-character-translation.html:192
+msgid "Blastosaur"
+msgstr "Soufflosaure"
+
+#: views/dummy-character-translation.html:247
+msgid "Bludgeonbot"
+msgstr "Matracobot"
+
+#: views/dummy-character-translation.html:343
+msgid "Boltspew"
+msgstr "Crachéclair"
+
+#: views/dummy-character-translation.html:194
+msgid "Bomb"
+msgstr "Bombe"
+
+#: views/dummy-character-translation.html:112
+#: views/dummy-character-translation.html:217
+msgid "Bomborg"
+msgstr "Bomborg"
+
+#: views/dummy-character-translation.html:159
+#: views/dummy-character-translation.html:515
+msgid "Bone"
+msgstr ""
+
+#: views/dummy-character-translation.html:52
+msgid "Bonna"
+msgstr "Bonna"
+
+#: views/cps-list.html:3 views/daily-bonus-list.html:3
+#: views/item-drop-list.html:3
+msgid "Bonus"
+msgstr ""
+
+#: views/dummy-character-translation.html:483
+msgid "Boombomber"
+msgstr ""
+
+#: views/character-list.html:25 views/xp-list.html:18
+msgid "Both"
+msgstr ""
+
+#: views/dummy-character-translation.html:31
+msgid "Burbaba"
+msgstr "Burbaba"
+
+#: views/dummy-character-translation.html:237
+msgid "Burnbot"
+msgstr "Brûlobot"
+
+#: views/dummy-character-translation.html:238
+msgid "Burnbot Redux"
+msgstr "Brûlobot 2.0"
+
+#: views/dummy-character-translation.html:472
+msgid "CB"
+msgstr ""
+
+#: views/dummy-character-translation.html:422
+msgid "COO"
+msgstr "COO"
+
+#: index.html:99
+msgid "CPS"
+msgstr ""
+
+#: views/dummy-item-translation.html:50
+msgid "Caladbolg"
+msgstr "Caladbolg"
+
+#: views/dummy-item-translation.html:51
+msgid "Caladcholg"
+msgstr "Caladcholg"
+
+#: views/dummy-character-translation.html:150
+msgid "Camellia"
+msgstr "Camélia"
+
+#: views/account-create.html:38
+msgid "Cancel"
+msgstr ""
+
+#: views/xp-list.html:55
+msgid "Cap Job 1"
+msgstr ""
+
+#: views/xp-list.html:59
+msgid "Cap Job 2"
+msgstr ""
+
+#: views/dummy-character-translation.html:333
+msgid "Carnelibean"
+msgstr "Coralicot"
+
+#: views/dummy-character-translation.html:454
+msgid "Casting Puppet"
+msgstr "Poupée mage"
+
+#: views/dummy-item-translation.html:75
+msgid "Celestial Bow"
+msgstr ""
+
+#: views/dummy-character-translation.html:132
+#: views/dummy-character-translation.html:336
+msgid "Celestial Dragon"
+msgstr "Dragon céleste"
+
+#: views/dummy-character-translation.html:214
+msgid "Cerberus"
+msgstr "Cerbère"
+
+#: views/dummy-character-translation.html:474
+msgid "Cerberus's Head"
+msgstr ""
+
+#: views/dummy-character-translation.html:258
+msgid "Chainer"
+msgstr "Enchaîneur"
+
+#: views/dummy-character-translation.html:514
+msgid "Chaos"
+msgstr ""
+
+#: index.html:91 index.html:94
+msgid "Chapters"
+msgstr ""
+
+#: views/skill-list.html:17
+msgid "Character"
+msgstr ""
+
+#: index.html:105 views/quick-stats.html:6
+msgid "Characters"
+msgstr ""
+
+#: views/job-list.html:24
+msgid "Characters you have"
+msgstr ""
+
+#: views/dummy-character-translation.html:143
+#: views/dummy-character-translation.html:318
+msgid "Chargebot"
+msgstr "Charobot"
+
+#: views/dummy-character-translation.html:311
+msgid "Chargebot (Beta)"
+msgstr "Charobot (Bêta)"
+
+#: views/dummy-character-translation.html:491
+msgid "Chiton"
+msgstr ""
+
+#: views/character-list.html:30 views/xp-list.html:23
+msgid "Class"
+msgstr ""
+
+#: views/character-list.html:10
+msgid "Class {{ current_class_ref | upper_case }}"
+msgstr ""
+
+#: views/dummy-item-translation.html:7
+msgid "Claw of Fate"
+msgstr "Griffe du destin"
+
+#: views/dummy-item-translation.html:53
+msgid "Cobalt Goblet"
+msgstr ""
+
+#: views/dummy-item-translation.html:79
+msgid "Codex Runicus"
+msgstr ""
+
+#: views/dummy-item-translation.html:58
+msgid "Coin Boost"
+msgstr ""
+
+#: views/dummy-character-translation.html:444
+msgid "Coin Creep"
+msgstr "Sbire"
+
+#: views/dummy-character-translation.html:447
+msgid "Coin Creep Bomber"
+msgstr "Sbire bombardier"
+
+#: views/dummy-character-translation.html:450
+msgid "Coin Creep Fighter"
+msgstr "Sbire lutteur"
+
+#: views/dummy-character-translation.html:445
+msgid "Coin Creep Gorger"
+msgstr "Sbire glouton"
+
+#: views/dummy-character-translation.html:446
+msgid "Coin Creep Mage"
+msgstr "Mage sbire"
+
+#: views/character-list.html:98
+msgid "Coin rolls"
+msgstr ""
+
+#: views/stage-edit.html:21 views/stage-edit.html:46 views/stage-list.html:30
+msgid "Coins"
+msgstr ""
+
+#: views/stage-list.html:33
+msgid "Coins / stamina"
+msgstr ""
+
+#: views/dummy-character-translation.html:489
+msgid "Conchio"
+msgstr ""
+
+#: views/dummy-character-translation.html:368
+msgid "Craggy Leviathan"
+msgstr "Léviathan sculpté"
+
+#: views/dummy-character-translation.html:386
+msgid "Crasher"
+msgstr "Écraseur"
+
+#: views/account-create.html:39
+msgid "Create"
+msgstr ""
+
+#: views/account-create.html:4 views/login.html:33
+msgid "Create account"
+msgstr ""
+
+#: views/dummy-character-translation.html:377
+msgid "Cryobird"
+msgstr "Cryoiseau"
+
+#: views/dummy-character-translation.html:284
+msgid "Cryocell"
+msgstr "Cryocellule"
+
+#: views/dummy-character-translation.html:288
+msgid "Cryoplatelet"
+msgstr "Cryoplaquette"
+
+#: views/dummy-character-translation.html:268
+msgid "Cryosaurus"
+msgstr "Cryosaure"
+
+#: views/dummy-character-translation.html:102
+#: views/dummy-character-translation.html:340
+msgid "Cryowisp"
+msgstr "Cryofollet"
+
+#: views/one-team.html:95 views/xp-list.html:109
+msgid "Current level"
+msgstr ""
+
+#: views/dummy-character-translation.html:350
+msgid "Cursed Claw"
+msgstr "Griffe maudite"
+
+#: views/dummy-character-translation.html:256
+#: views/dummy-character-translation.html:87
+msgid "Cyberclops"
+msgstr "Cyber cyclope"
+
+#: views/dummy-character-translation.html:204
+#: views/dummy-character-translation.html:84
+msgid "Cybergolem"
+msgstr "Cyber golem"
+
+#: views/dummy-character-translation.html:200
+msgid "Cybermummy"
+msgstr "Cyber momie"
+
+#: views/dummy-character-translation.html:220
+msgid "Cyberscorp"
+msgstr "Cyber scorpion"
+
+#: views/dummy-character-translation.html:222
+msgid "Cyberwyrm"
+msgstr "Cyber vouivre"
+
+#: views/dummy-character-translation.html:33
+msgid "Czekras"
+msgstr "Czecras"
+
+#: views/dummy-character-translation.html:48
+msgid "Daiana"
+msgstr "Daiana"
+
+#: index.html:98 views/quick-stats.html:33
+msgid "Daily Bonus"
+msgstr ""
+
+#: views/quick-stats.html:36
+msgid "Daily Bonus is {{ daily_bonus.label() }}."
+msgstr ""
+
+#: views/dummy-character-translation.html:278
+msgid "Dark Ampcell"
+msgstr "Cellulampli sombre"
+
+#: views/dummy-character-translation.html:276
+msgid "Dark Archercell"
+msgstr "Cellularc sombre"
+
+#: views/dummy-character-translation.html:354
+msgid "Dark Dragon"
+msgstr "Dragon sombre"
+
+#: views/dummy-item-translation.html:29
+msgid "Dark Matter"
+msgstr "Matière noire"
+
+#: views/dummy-character-translation.html:275
+msgid "Dark Mechacell"
+msgstr "Mécacellule sombre"
+
+#: views/dummy-character-translation.html:140
+#: views/dummy-character-translation.html:349
+msgid "Dark Pegawyrm"
+msgstr "Pégavouivre sombre"
+
+#: views/dummy-character-translation.html:139
+#: views/dummy-character-translation.html:384
+msgid "Dark Petrifier"
+msgstr "Paralyseur sombre"
+
+#: views/dummy-item-translation.html:18
+msgid "Dark Ring"
+msgstr "Anneau sombre"
+
+#: views/dummy-character-translation.html:277
+msgid "Dark Sparker"
+msgstr "Étincelle sombre"
+
+#: views/dummy-character-translation.html:228
+#: views/dummy-character-translation.html:80
+msgid "Dark Tortoise"
+msgstr "Tortue sombre"
+
+#: views/dummy-character-translation.html:274
+msgid "Darkbot"
+msgstr "Sombrobot"
+
+#: views/character-list.html:49 views/job-list.html:15
+msgid "Darkness"
+msgstr ""
+
+#: views/history-import.html:16
+msgid "Date"
+msgstr ""
+
+#: views/dummy-item-translation.html:70
+msgid "Death"
+msgstr ""
+
+#: views/dummy-item-translation.html:44
+msgid "Defender"
+msgstr "Protectrice"
+
+#: views/dummy-character-translation.html:380
+msgid "Defense Amp"
+msgstr "Défensampli"
+
+#: views/dummy-character-translation.html:487
+msgid "Delphinus"
+msgstr ""
+
+#: views/dummy-character-translation.html:117
+#: views/dummy-character-translation.html:182
+msgid "Devil Bat"
+msgstr "Chiroptère démon"
+
+#: views/stage-list.html:25
+msgid "Difficulty"
+msgstr ""
+
+#: views/dummy-item-translation.html:56
+msgid "Disarmer"
+msgstr ""
+
+#: index.html:146
+msgid "Disclaimer"
+msgstr ""
+
+#: views/history-import.html:28 views/import.html:17 views/mz-edit.html:44
+#: views/stage-edit.html:62
+msgid "Dismiss"
+msgstr ""
+
+#: views/dummy-character-translation.html:9
+msgid "Djugan"
+msgstr "Djugan"
+
+#: views/dummy-character-translation.html:115
+#: views/dummy-character-translation.html:165
+msgid "Dracorin"
+msgstr "Dracorin"
+
+#: views/dummy-character-translation.html:505
+msgid "Draugr"
+msgstr ""
+
+#: views/dummy-character-translation.html:266
+msgid "Drillasaurus"
+msgstr "Perçosaure"
+
+#: views/character-list.html:100
+msgid "Drop from"
+msgstr ""
+
+#: index.html:111 index.html:128 index.html:97
+msgid "Drops"
+msgstr ""
+
+#: views/dummy-character-translation.html:516
+msgid "Dís"
+msgstr ""
+
+#: views/dummy-character-translation.html:327
+msgid "EM Generator"
+msgstr "Générateur EM"
+
+#: views/dummy-item-translation.html:57
+msgid "EXP Boost"
+msgstr ""
+
+#: views/mz-edit.html:2
+msgid "Edit Metal Zone {{ stage_ref }}"
+msgstr ""
+
+#: views/stage-edit.html:2
+msgid "Edit Stage {{ stage_ref }}"
+msgstr ""
+
+#: index.html:110
+msgid "Eidolons"
+msgstr ""
+
+#: views/dummy-character-translation.html:14
+msgid "Eileen"
+msgstr "Eileen"
+
+#: views/dummy-character-translation.html:497
+msgid "Einheri"
+msgstr ""
+
+#: views/dummy-character-translation.html:248
+msgid "Electropede"
+msgstr "Électropode"
+
+#: views/dummy-character-translation.html:147
+#: views/dummy-character-translation.html:379
+msgid "Electrosapper"
+msgstr "Électropompeur"
+
+#: views/dummy-character-translation.html:366
+msgid "Electroseizer"
+msgstr "Électrotorche"
+
+#: views/dummy-character-translation.html:216
+msgid "Electrotick"
+msgstr "Électropuce"
+
+#: views/dummy-character-translation.html:221
+msgid "Electrowatt"
+msgstr "Électrowatt"
+
+#: views/character-list.html:45
+msgid "Element"
+msgstr ""
+
+#: views/dummy-character-translation.html:418
+msgid "Elemental Spinner"
+msgstr "Drone élémental"
+
+#: views/dummy-character-translation.html:7
+msgid "Ellvern"
+msgstr "Ellvern"
+
+#: views/one-team.html:99
+msgid "Ending XP"
+msgstr ""
+
+#: views/one-team.html:97
+msgid "Ending level"
+msgstr ""
+
+#: views/dummy-item-translation.html:82
+msgid "Energy"
+msgstr ""
+
+#: views/dummy-character-translation.html:323
+msgid "Energy Aspirator"
+msgstr "Gobeur d'énergie"
+
+#: views/character-list.html:99
+msgid "Energy rolls"
+msgstr ""
+
+#: views/dummy-character-translation.html:301
+msgid "Enerzerk"
+msgstr "Énerzerk"
+
+#: views/dummy-character-translation.html:511
+msgid "Erinys"
+msgstr ""
+
+#: views/dummy-character-translation.html:96
+msgid "Ethereal"
+msgstr "Éthéré"
+
+#: views/dummy-item-translation.html:37
+msgid "Excalibur"
+msgstr "Excalibur"
+
+#: views/stage-edit.html:10
+msgid "Exp"
+msgstr ""
+
+#: views/mz-list.html:6 views/stage-list.html:34
+msgid "Exp / day"
+msgstr ""
+
+#: views/mz-edit.html:28 views/stage-edit.html:39 views/stage-list.html:29
+msgid "Exp."
+msgstr ""
+
+#: views/stage-list.html:32
+msgid "Exp. / stamina"
+msgstr ""
+
+#: index.html:143
+msgid "Export local data"
+msgstr ""
+
+#: views/dummy-character-translation.html:468
+msgid "Falak"
+msgstr "Falak"
+
+#: views/dummy-character-translation.html:459
+msgid "Fell Drake"
+msgstr "Dragon déchu"
+
+#: views/dummy-character-translation.html:467
+msgid "Fell Drake Redux"
+msgstr "Dragon déchu rené"
+
+#: views/character-list.html:50 views/job-list.html:16
+msgid "Fire"
+msgstr ""
+
+#: views/dummy-item-translation.html:15
+msgid "Fire Ring"
+msgstr "Anneau de feu"
+
+#: views/dummy-character-translation.html:332
+msgid "Firespew"
+msgstr "Crachefeu"
+
+#: views/dummy-character-translation.html:494
+msgid "Fisheye"
+msgstr ""
+
+#: views/dummy-character-translation.html:262
+msgid "Flail"
+msgstr "Fléau"
+
+#: views/dummy-character-translation.html:455
+msgid "Flame Puppet"
+msgstr "Pyropoupée"
+
+#: views/dummy-character-translation.html:404
+msgid "Flame Spawn"
+msgstr "Rejeton de feu"
+
+#: views/dummy-character-translation.html:230
+msgid "Flame Urchin"
+msgstr "Oursin de feu"
+
+#: views/dummy-item-translation.html:42
+msgid "Flame of Indra"
+msgstr "Flamme d'Indra"
+
+#: views/dummy-character-translation.html:144
+#: views/dummy-character-translation.html:317
+msgid "Flamebot"
+msgstr "Flammobot"
+
+#: views/dummy-character-translation.html:313
+msgid "Flamebot (Beta)"
+msgstr "Flammobot (Bêta)"
+
+#: views/dummy-item-translation.html:46
+msgid "Flamedrake Spear"
+msgstr "Lance flammagon"
+
+#: views/dummy-character-translation.html:136
+#: views/dummy-character-translation.html:329
+msgid "Floralpede"
+msgstr "Florapode"
+
+#: views/dummy-item-translation.html:9
+msgid "Forlorn Stone"
+msgstr "Pierre abandonnée"
+
+#: views/dummy-character-translation.html:286
+msgid "Freeze Sparker"
+msgstr "Étincelle de givre"
+
+#: views/dummy-character-translation.html:496
+msgid "Freki"
+msgstr ""
+
+#: views/dummy-character-translation.html:456
+msgid "Frost Puppet"
+msgstr "Cryopoupée"
+
+#: views/dummy-character-translation.html:190
+msgid "Fungibird"
+msgstr "Champi-oiseau"
+
+#: views/dummy-character-translation.html:475
+msgid "GEN"
+msgstr ""
+
+#: views/dummy-item-translation.html:36
+msgid "Gae Bolg"
+msgstr "Gae Bolg"
+
+#: views/dummy-item-translation.html:40
+msgid "Gaea"
+msgstr "Gaea"
+
+#: views/dummy-character-translation.html:23
+msgid "Gaiga"
+msgstr "Gaiga"
+
+#: views/dummy-character-translation.html:265
+msgid "Gaoler"
+msgstr "Geôlier"
+
+#: views/dummy-character-translation.html:292
+msgid "Gas Bomb"
+msgstr "Suffocant"
+
+#: views/dummy-character-translation.html:13
+msgid "Gatz"
+msgstr "Gatz"
+
+#: views/dummy-character-translation.html:25
+msgid "Gegonago"
+msgstr "Gegonago"
+
+#: views/item-list.html:99
+msgid "Generate screenshot"
+msgstr ""
+
+#: views/dummy-character-translation.html:245
+msgid "Gigaworm"
+msgstr "Giga vers"
+
+#: views/dummy-character-translation.html:39
+msgid "Gigojago"
+msgstr "Gigojago"
+
+#: views/dummy-character-translation.html:449
+msgid "Golden Coin Creep"
+msgstr "Sbire doré"
+
+#: views/dummy-character-translation.html:427
+msgid "Golden Runner"
+msgstr "Coursier d'or"
+
+#: views/dummy-character-translation.html:229
+#: views/dummy-character-translation.html:81
+msgid "Golem"
+msgstr "Golem"
+
+#: views/dummy-character-translation.html:166
+msgid "Gorf"
+msgstr "Gorf"
+
+#: views/dummy-character-translation.html:485
+msgid "Gormandizer"
+msgstr ""
+
+#: views/dummy-character-translation.html:5
+msgid "Grace"
+msgstr "Grace"
+
+#: views/dummy-item-translation.html:48
+msgid "Green Ring"
+msgstr "Anneau vert"
+
+#: views/dummy-character-translation.html:387
+msgid "Grim Leaker"
+msgstr "Matière sinistre"
+
+#: views/dummy-character-translation.html:21
+msgid "Gugba"
+msgstr "Gugba"
+
+#: views/dummy-item-translation.html:32
+msgid "Gungnir"
+msgstr "Gungnir"
+
+#: views/dummy-item-translation.html:43
+msgid "Gyros"
+msgstr "Gyros"
+
+#: views/dummy-character-translation.html:157
+msgid "Harold"
+msgstr ""
+
+#: views/dummy-item-translation.html:80
+msgid "Harpe"
+msgstr ""
+
+#: views/character-list.html:90 views/eidolon-list.html:7
+msgid "Have ?"
+msgstr ""
+
+#: views/dummy-character-translation.html:67
+msgid "Healer"
+msgstr "Soigneur"
+
+#: views/dummy-character-translation.html:208
+msgid "Heat Sparker"
+msgstr "Étincelle de feu"
+
+#: views/dummy-character-translation.html:253
+msgid "Hell Bat"
+msgstr "Chiroptère enfers"
+
+#: index.html:147
+msgid "Help"
+msgstr ""
+
+#: index.html:140
+msgid "History"
+msgstr ""
+
+#: views/dummy-character-translation.html:183
+msgid "Horned Slug"
+msgstr "Limace cornue"
+
+#: views/dummy-item-translation.html:81
+msgid "Hotarumaru"
+msgstr ""
+
+#: views/dummy-character-translation.html:406
+msgid "Hover Zapper"
+msgstr "Chasseur flottant"
+
+#: views/dummy-character-translation.html:503
+msgid "Hugin"
+msgstr ""
+
+#: views/item-list.html:25
+msgid "Hunting Zone"
+msgstr ""
+
+#: views/dummy-character-translation.html:521
+msgid "Hypnotoad"
+msgstr ""
+
+#: views/character-list.html:51 views/job-list.html:17
+msgid "Ice"
+msgstr ""
+
+#: views/dummy-character-translation.html:285
+msgid "Ice Archercell"
+msgstr "Cellularc de glace"
+
+#: views/dummy-character-translation.html:346
+msgid "Ice Golem"
+msgstr "Golem de glace"
+
+#: views/dummy-character-translation.html:378
+msgid "Ice Razor"
+msgstr "Lame de glace"
+
+#: views/dummy-item-translation.html:16
+msgid "Ice Ring"
+msgstr "Anneau de glace"
+
+#: views/dummy-character-translation.html:376
+msgid "Ice Slammer"
+msgstr "Briseglace"
+
+#: views/dummy-character-translation.html:403
+msgid "Ice Spawn"
+msgstr "Rejeton de glace"
+
+#: views/dummy-character-translation.html:287
+msgid "Ice Urchin"
+msgstr "Oursin de glace"
+
+#: views/dummy-character-translation.html:517
+msgid "Idis"
+msgstr ""
+
+#: views/dummy-character-translation.html:196
+msgid "Impalebot"
+msgstr "Empalobot"
+
+#: views/dummy-character-translation.html:264
+msgid "Impalebot Redux"
+msgstr "Empalobot 2.0"
+
+#: views/dummy-character-translation.html:357
+msgid "Impaler"
+msgstr "Empaleur"
+
+#: views/history-import.html:2 views/import.html:2
+msgid "Import user data"
+msgstr ""
+
+#: views/login.html:27
+msgid "In either case, you should save it."
+msgstr ""
+
+#: views/dummy-item-translation.html:84
+msgid "Item"
+msgstr ""
+
+#: views/dummy-item-translation.html:83
+msgid "Item21"
+msgstr ""
+
+#: index.html:121 views/quick-stats.html:86 views/stage-list.html:36
+msgid "Items"
+msgstr ""
+
+#: index.html:125
+msgid "Items in Pudding Time"
+msgstr ""
+
+#: index.html:127
+msgid "Items in Puppet Show"
+msgstr ""
+
+#: index.html:126
+msgid "Items in Tin Parade"
+msgstr ""
+
+#: views/dummy-character-translation.html:382
+msgid "Jade Guardian"
+msgstr "Gardien de jade"
+
+#: views/dummy-character-translation.html:148
+msgid "Jaguna"
+msgstr "Jaguna"
+
+#: views/dummy-character-translation.html:434
+msgid "Jelly"
+msgstr "Gelée"
+
+#: views/dummy-character-translation.html:60
+msgid "Jennish"
+msgstr "Jennish"
+
+#: views/skill-list.html:18
+msgid "Job 1"
+msgstr ""
+
+#: views/character-list.html:93
+msgid "Job 1 Level"
+msgstr ""
+
+#: views/skill-list.html:19
+msgid "Job 2"
+msgstr ""
+
+#: views/character-list.html:94
+msgid "Job 2 Level"
+msgstr ""
+
+#: views/skill-list.html:20
+msgid "Job 3"
+msgstr ""
+
+#: views/character-list.html:95
+msgid "Job 3 Level"
+msgstr ""
+
+#: views/character-list.html:92 views/eidolon-list.html:8
+msgid "Job unlocked"
+msgstr ""
+
+#: views/xp-list.html:125
+msgid "Job {{ job.level }}"
+msgstr ""
+
+#: views/dummy-character-translation.html:435
+msgid "Jumbo Pudding"
+msgstr "Super flan"
+
+#: views/dummy-character-translation.html:17
+msgid "Ka'pori"
+msgstr "Ka'pori"
+
+#: views/dummy-character-translation.html:24
+msgid "Kana"
+msgstr "Kana"
+
+#: views/dummy-character-translation.html:42
+msgid "Kem"
+msgstr "Kem"
+
+#: views/dummy-character-translation.html:64
+msgid "Knight"
+msgstr "Chevalier"
+
+#: views/dummy-item-translation.html:65
+msgid "Knight of Bows"
+msgstr ""
+
+#: views/dummy-item-translation.html:71
+msgid "Knight of Chalices"
+msgstr ""
+
+#: views/dummy-item-translation.html:72
+msgid "Knight of Pentacles"
+msgstr ""
+
+#: views/dummy-item-translation.html:64
+msgid "Knight of Spears"
+msgstr ""
+
+#: views/dummy-item-translation.html:63
+msgid "Knight of Swords"
+msgstr ""
+
+#: views/dummy-item-translation.html:66
+msgid "Knight of Wands"
+msgstr ""
+
+#: views/dummy-character-translation.html:36
+msgid "Koko"
+msgstr "Koko"
+
+#: views/dummy-character-translation.html:41
+msgid "Korin"
+msgstr "Korin"
+
+#: views/dummy-character-translation.html:108
+#: views/dummy-character-translation.html:398
+msgid "Kraken"
+msgstr "Kraken"
+
+#: views/dummy-character-translation.html:399
+msgid "Kraken's Tentacle"
+msgstr "Kraken (tentacule)"
+
+#: views/dummy-character-translation.html:151
+#: views/dummy-character-translation.html:463
+msgid "Kujata"
+msgstr "Kujata"
+
+#: views/dummy-character-translation.html:6
+msgid "Kuscah"
+msgstr "Kuscah"
+
+#: views/dummy-character-translation.html:522
+msgid "Kydoimos"
+msgstr ""
+
+#: views/dummy-character-translation.html:525
+msgid "Lamia"
+msgstr ""
+
+#: views/dummy-character-translation.html:321
+msgid "Laser Unit H"
+msgstr "Unité laser H"
+
+#: views/dummy-character-translation.html:322
+msgid "Laser Unit V"
+msgstr "Unité laser V"
+
+#: views/dummy-character-translation.html:342
+msgid "Lazulibean"
+msgstr "Lazulicot"
+
+#: views/job-list.html:36
+msgid "Level"
+msgstr ""
+
+#: views/xp-list.html:38 views/xp-list.html:4
+msgid "Level > 60"
+msgstr ""
+
+#: views/skill-list.html:5
+msgid "Level Cap"
+msgstr ""
+
+#: index.html:114
+msgid "Levelling"
+msgstr ""
+
+#: views/dummy-character-translation.html:490
+#: views/dummy-character-translation.html:98
+msgid "Leviathan"
+msgstr "Leviathan"
+
+#: views/dummy-character-translation.html:495
+msgid "Leviathan Omega"
+msgstr "Leviathan Omega"
+
+#: views/dummy-character-translation.html:58
+msgid "Lewto"
+msgstr "Lewto"
+
+#: views/dummy-character-translation.html:106
+#: views/dummy-character-translation.html:405
+msgid "Lich"
+msgstr "Liche"
+
+#: views/character-list.html:52 views/job-list.html:18
+msgid "Lightning"
+msgstr ""
+
+#: views/dummy-item-translation.html:17
+msgid "Lightning Ring"
+msgstr "Anneau de foudre"
+
+#: views/dummy-character-translation.html:499
+msgid "Lindworm"
+msgstr ""
+
+#: views/dummy-character-translation.html:170
+#: views/dummy-character-translation.html:70
+msgid "Lizardfolk Archer"
+msgstr "Archer saurien"
+
+#: views/dummy-character-translation.html:124
+#: views/dummy-character-translation.html:172
+msgid "Lizardfolk Healer"
+msgstr "Soigneur saurien"
+
+#: views/dummy-character-translation.html:146
+#: views/dummy-character-translation.html:179
+msgid "Lizardfolk Hero"
+msgstr "Héros saurien"
+
+#: views/dummy-character-translation.html:169
+#: views/dummy-character-translation.html:69
+msgid "Lizardfolk Knight"
+msgstr "Chevalier saurien"
+
+#: views/dummy-character-translation.html:118
+#: views/dummy-character-translation.html:171
+msgid "Lizardfolk Mage"
+msgstr "Mage saurien"
+
+#: views/dummy-character-translation.html:168
+#: views/dummy-character-translation.html:68
+msgid "Lizardfolk Warrior"
+msgstr "Guerrier saurien"
+
+#: index.html:145
+msgid "Load sample data"
+msgstr ""
+
+#: views/settings.html:35
+msgid "Locale"
+msgstr ""
+
+#: views/dummy-character-translation.html:308
+msgid "Lock-On"
+msgstr "Verrou"
+
+#: views/dummy-character-translation.html:319
+msgid "Lock-On 333"
+msgstr "Verrou 333"
+
+#: views/dummy-character-translation.html:320
+msgid "Lock-On 333+"
+msgstr "Verrou 333+"
+
+#: views/dummy-character-translation.html:314
+msgid "Lock-On 555"
+msgstr "Verrou 555"
+
+#: views/dummy-character-translation.html:309
+msgid "Lock-On+"
+msgstr "Verrou +"
+
+#: views/login.html:34
+msgid "Login"
+msgstr ""
+
+#: views/dummy-item-translation.html:25
+msgid "Lore Particle"
+msgstr "Particule folklo"
+
+#: views/dummy-character-translation.html:57
+msgid "Lunaken"
+msgstr "Lunaken"
+
+#: views/dummy-character-translation.html:56
+msgid "Lunato"
+msgstr "Lunato"
+
+#: views/dummy-character-translation.html:477
+msgid "MAGICM"
+msgstr ""
+
+#: views/dummy-character-translation.html:478
+msgid "MAGICS"
+msgstr ""
+
+#: views/dummy-character-translation.html:476
+msgid "MAGICT"
+msgstr ""
+
+#: views/dummy-character-translation.html:12
+msgid "Ma'curi"
+msgstr "Ma'curi"
+
+#: views/dummy-item-translation.html:47
+msgid "Maelstrom Bow"
+msgstr "Arc maelström"
+
+#: views/dummy-character-translation.html:66
+msgid "Mage"
+msgstr "Mage"
+
+#: views/dummy-character-translation.html:259
+msgid "Magic Muzzler"
+msgstr "Muselière magique"
+
+#: views/dummy-character-translation.html:212
+msgid "Magma Cluster"
+msgstr "Pépite magma"
+
+#: views/dummy-character-translation.html:206
+msgid "Magma Eye"
+msgstr "Œil magma"
+
+#: views/dummy-character-translation.html:210
+#: views/dummy-character-translation.html:85
+msgid "Magma Mummy"
+msgstr "Momie magma"
+
+#: views/dummy-character-translation.html:225
+msgid "Magma Slug"
+msgstr "Limace magma"
+
+#: views/dummy-character-translation.html:512
+msgid "Malocchio"
+msgstr ""
+
+#: views/dummy-character-translation.html:40
+msgid "Manmer"
+msgstr "Manmer"
+
+#: views/dummy-character-translation.html:231
+msgid "Mantle Mammoth"
+msgstr "Mammouth terrestre"
+
+#: views/dummy-character-translation.html:209
+msgid "Mantle Slime"
+msgstr "Gélatine terrestre"
+
+#: views/dummy-character-translation.html:131
+#: views/dummy-character-translation.html:207
+msgid "Mantle Tortoise"
+msgstr "Tortue terrestre"
+
+#: views/dummy-character-translation.html:215
+#: views/dummy-character-translation.html:86
+msgid "Mantledrake"
+msgstr "Dragon terrestre"
+
+#: views/dummy-character-translation.html:74
+msgid "Maralme"
+msgstr "Maralme"
+
+#: views/dummy-character-translation.html:107
+#: views/dummy-character-translation.html:401
+msgid "Marilith"
+msgstr "Marilith"
+
+#: views/dummy-item-translation.html:33
+msgid "Masamune"
+msgstr "Masamune"
+
+#: views/dummy-character-translation.html:507
+msgid "Mayuk"
+msgstr ""
+
+#: views/dummy-character-translation.html:129
+#: views/dummy-character-translation.html:198
+msgid "Mech Orbling"
+msgstr "Mécaorbailé"
+
+#: views/dummy-character-translation.html:389
+msgid "Mechabird"
+msgstr "Mécaoiseau"
+
+#: views/dummy-character-translation.html:294
+msgid "Mechacell"
+msgstr "Mécacellule"
+
+#: views/dummy-character-translation.html:128
+#: views/dummy-character-translation.html:250
+msgid "Mechaclops"
+msgstr "Mécacyclope"
+
+#: views/dummy-character-translation.html:223
+msgid "Mechadrake"
+msgstr "Mécadragon"
+
+#: views/dummy-character-translation.html:282
+msgid "Mechadrake Redux"
+msgstr "Mécadragon 2"
+
+#: views/dummy-character-translation.html:113
+#: views/dummy-character-translation.html:218
+msgid "Mechanic"
+msgstr "Mécadisque"
+
+#: views/dummy-character-translation.html:271
+#: views/dummy-character-translation.html:89
+msgid "Mecharose"
+msgstr "Mécarose"
+
+#: views/dummy-character-translation.html:299
+msgid "Mechavirus 1567"
+msgstr "Mécavirus 1567"
+
+#: views/dummy-character-translation.html:280
+#: views/dummy-character-translation.html:93
+msgid "Mechavirus 3721"
+msgstr "Mécavirus 3721"
+
+#: views/dummy-character-translation.html:290
+msgid "Mechavirus 9643"
+msgstr "Mécavirus 9643"
+
+#: views/dummy-character-translation.html:135
+#: views/dummy-character-translation.html:397
+msgid "Mediscanner"
+msgstr "Guet oxsécien"
+
+#: views/dummy-character-translation.html:293
+#: views/dummy-character-translation.html:94
+msgid "Megacell"
+msgstr "Mégacellule"
+
+#: views/dummy-character-translation.html:345
+#: views/dummy-character-translation.html:99
+msgid "Mermaid"
+msgstr "Sirène"
+
+#: views/dummy-character-translation.html:428
+msgid "Metal Gorf"
+msgstr "Gorf de métal"
+
+#: views/dummy-character-translation.html:424
+msgid "Metal Orbling"
+msgstr "Métalorbailé"
+
+#: views/dummy-character-translation.html:429
+msgid "Metal Orbling King"
+msgstr "Roi métalorbailé"
+
+#: views/dummy-character-translation.html:426
+msgid "Metal Orbling Mage"
+msgstr "Mage métalorbailé"
+
+#: views/dummy-character-translation.html:425
+msgid "Metal Runner"
+msgstr "Coursier de métal"
+
+#: views/dummy-item-translation.html:52
+msgid "Metal Ticket"
+msgstr "Ticket de métal"
+
+#: index.html:96 views/xp-list.html:101
+msgid "Metal Zone"
+msgstr ""
+
+#: views/xp-list.html:9
+msgid "Metal Zone 1"
+msgstr ""
+
+#: views/xp-list.html:8
+msgid "Metal Zone 2"
+msgstr ""
+
+#: views/xp-list.html:7
+msgid "Metal Zone 3"
+msgstr ""
+
+#: views/xp-list.html:6
+msgid "Metal Zone 4"
+msgstr ""
+
+#: views/xp-list.html:5
+msgid "Metal Zone 5"
+msgstr ""
+
+#: views/one-team.html:94
+msgid "Metal Zone {{ zone }}"
+msgstr ""
+
+#: views/xp-list.html:108
+msgid "Metal Zone {{ zones[$index] }}"
+msgstr ""
+
+#: views/xp-list.html:143
+msgid "Metal Zones 3, 4 & 5:"
+msgstr ""
+
+#: views/dummy-character-translation.html:46
+msgid "Metupí"
+msgstr "Metupí"
+
+#: views/character-list.html:27 views/xp-list.html:20
+msgid "Monster"
+msgstr ""
+
+#: views/stage-list.html:35
+msgid "Monsters"
+msgstr ""
+
+#: views/dummy-item-translation.html:21
+msgid "Moon Tears"
+msgstr "Larmes de lune"
+
+#: views/dummy-character-translation.html:242
+#: views/dummy-character-translation.html:88
+msgid "Mothbot"
+msgstr "Phalènobot"
+
+#: views/dummy-character-translation.html:243
+msgid "Mothbot Queen"
+msgstr "Reine phalènobot"
+
+#: views/dummy-character-translation.html:180
+msgid "Mudtoad"
+msgstr "Crapaud boueux"
+
+#: views/dummy-character-translation.html:337
+msgid "Mudwing"
+msgstr "Aile boueuse"
+
+#: views/dummy-character-translation.html:502
+msgid "Munin"
+msgstr ""
+
+#: views/dummy-character-translation.html:298
+msgid "N Cell"
+msgstr "Cellule N"
+
+#: views/dummy-item-translation.html:76
+msgid "Naegling"
+msgstr ""
+
+#: views/dummy-character-translation.html:44
+msgid "Nakupí"
+msgstr "Nakupí"
+
+#: views/character-list.html:89 views/eidolon-list.html:6
+#: views/item-list.html:18
+msgid "Name"
+msgstr ""
+
+#: views/dummy-character-translation.html:244
+msgid "Nanoworm"
+msgstr "Nano vers"
+
+#: views/dummy-character-translation.html:508
+msgid "Nanuk"
+msgstr ""
+
+#: views/xp-list.html:48
+msgid "Nb char. in team"
+msgstr ""
+
+#: views/dummy-character-translation.html:385
+msgid "Nebulator"
+msgstr "Nébulator"
+
+#: views/dummy-character-translation.html:352
+msgid "Necromancer"
+msgstr "Nécromancien"
+
+#: views/one-team.html:100 views/xp-list.html:114
+msgid "Need XP"
+msgstr ""
+
+#: views/xp-list.html:76
+msgid "Need xp"
+msgstr ""
+
+#: views/dummy-character-translation.html:359
+msgid "Negator X"
+msgstr "Nullificateur X"
+
+#: views/dummy-character-translation.html:466
+msgid "Neo Bahamut"
+msgstr "Néo Bahamut"
+
+#: views/dummy-character-translation.html:493
+msgid "Neo Leviathan"
+msgstr "Neo Leviathan"
+
+#: views/dummy-character-translation.html:504
+msgid "Neo Odin"
+msgstr "Neo Odin"
+
+#: views/dummy-character-translation.html:519
+msgid "Norn"
+msgstr ""
+
+#: views/dummy-character-translation.html:38
+msgid "O'pari"
+msgstr "O'pari"
+
+#: views/history-import.html:29 views/import.html:18
+#: views/item-character-detail.html:15 views/item-drop.html:10
+#: views/mz-edit.html:43 views/stage-char-drop.html:14
+#: views/stage-drop.html:10 views/stage-edit.html:61
+msgid "OK"
+msgstr ""
+
+#: views/dummy-character-translation.html:486
+msgid "Oceanus"
+msgstr ""
+
+#: views/dummy-character-translation.html:272
+msgid "Oculus"
+msgstr "Oculus"
+
+#: views/dummy-character-translation.html:104
+#: views/dummy-character-translation.html:500
+msgid "Odin"
+msgstr "Odin"
+
+#: views/dummy-character-translation.html:506
+msgid "Odin Omega"
+msgstr "Odin Omega"
+
+#: views/dummy-character-translation.html:10
+msgid "Olber"
+msgstr "Olber"
+
+#: index.html:115
+msgid "One team at a time"
+msgstr ""
+
+#: views/character-list.html:73
+msgid "Only P.o.F, not 100% yet"
+msgstr ""
+
+#: views/settings.html:21
+msgid "Only adventurers by default"
+msgstr ""
+
+#: views/character-list.html:69 views/skill-list.html:9
+msgid "Only characters you have"
+msgstr ""
+
+#: views/settings.html:28
+msgid "Only characters you have by default"
+msgstr ""
+
+#: views/job-list.html:26
+msgid "Only jobs you have"
+msgstr ""
+
+#: views/dummy-character-translation.html:133
+#: views/dummy-character-translation.html:356
+msgid "Onyx Dragon"
+msgstr "Dragon onyx"
+
+#: views/dummy-character-translation.html:160
+msgid "Orbling"
+msgstr "Orbailé"
+
+#: views/dummy-item-translation.html:28
+msgid "Orichalcum"
+msgstr "Orichalque"
+
+#: index.html:142
+msgid "Overwrite local data"
+msgstr ""
+
+#: views/dummy-character-translation.html:302
+msgid "Oxsecian Airgrunt"
+msgstr "Airsoldat oxsécien"
+
+#: views/dummy-character-translation.html:416
+msgid "Oxsecian Arrowbot"
+msgstr "Flèchobot oxsécien"
+
+#: views/dummy-character-translation.html:307
+msgid "Oxsecian Battery"
+msgstr "Mortier oxsécien"
+
+#: views/dummy-character-translation.html:414
+msgid "Oxsecian Bladebot"
+msgstr "Lamobot oxsécien"
+
+#: views/dummy-character-translation.html:393
+msgid "Oxsecian Blitzer"
+msgstr "Cuirassé oxsécien"
+
+#: views/dummy-character-translation.html:310
+msgid "Oxsecian Bomb"
+msgstr "Bombe oxsécienne"
+
+#: views/dummy-character-translation.html:363
+msgid "Oxsecian Bomber"
+msgstr "Canon oxsécien"
+
+#: views/dummy-character-translation.html:364
+msgid "Oxsecian Bomber EX"
+msgstr "Canon oxsécien +"
+
+#: views/dummy-character-translation.html:362
+msgid "Oxsecian Fighter"
+msgstr "Chasseur oxsécien"
+
+#: views/dummy-character-translation.html:419
+msgid "Oxsecian Fighter EX"
+msgstr "Chass. oxsécien +"
+
+#: views/dummy-character-translation.html:407
+msgid "Oxsecian Gas Bomb"
+msgstr "Suffocant oxsécien"
+
+#: views/dummy-character-translation.html:304
+msgid "Oxsecian Grunt"
+msgstr "Soldat oxsécien"
+
+#: views/dummy-character-translation.html:324
+msgid "Oxsecian Grunt SP"
+msgstr "Soldat oxsécien SP"
+
+#: views/dummy-character-translation.html:303
+msgid "Oxsecian Guard"
+msgstr "Garde oxsécien"
+
+#: views/dummy-character-translation.html:325
+msgid "Oxsecian Guard SP"
+msgstr "Garde oxsécien SP"
+
+#: views/dummy-character-translation.html:375
+msgid "Oxsecian Gunner"
+msgstr "Tireur oxsécien"
+
+#: views/dummy-character-translation.html:326
+msgid "Oxsecian Gunner SP"
+msgstr "Tireur oxsécien SP"
+
+#: views/dummy-character-translation.html:392
+msgid "Oxsecian Lancer"
+msgstr "Lancier oxsécien"
+
+#: views/dummy-character-translation.html:396
+msgid "Oxsecian RPS"
+msgstr "Tour oxsécienne"
+
+#: views/dummy-character-translation.html:391
+msgid "Oxsecian Raider"
+msgstr "Pilleur oxsécien"
+
+#: views/dummy-character-translation.html:316
+msgid "Oxsecian Sniper"
+msgstr "Sniper oxsécien"
+
+#: views/dummy-character-translation.html:415
+msgid "Oxsecian Spearbot"
+msgstr "Lançobot oxsécien"
+
+#: views/dummy-character-translation.html:383
+msgid "Oxsecian Stormer"
+msgstr "Butor oxsécien"
+
+#: views/dummy-character-translation.html:409
+msgid "Oxsecian Stormer SP"
+msgstr "Butor oxsécien SP"
+
+#: views/dummy-character-translation.html:413
+msgid "Oxsecian Striker"
+msgstr ""
+
+#: views/dummy-character-translation.html:312
+msgid "Oxsecian Trapper"
+msgstr "Piégeur oxsécien"
+
+#: views/dummy-character-translation.html:408
+msgid "Oxsecian Worm"
+msgstr "Vers oxsécien"
+
+#: views/dummy-item-translation.html:31
+msgid "Oxsecium"
+msgstr "Oxsécium"
+
+#: views/character-list.html:97
+msgid "P.o.F"
+msgstr ""
+
+#: views/character-list.html:96
+msgid "P.o.T"
+msgstr ""
+
+#: views/quick-stats.html:45
+msgid "Pacts"
+msgstr ""
+
+#: views/dummy-character-translation.html:43
+msgid "Pahrl"
+msgstr "Pahrl"
+
+#: views/dummy-character-translation.html:62
+msgid "Palpa"
+msgstr "Palpa"
+
+#: views/dummy-character-translation.html:458
+msgid "Papa Puppet"
+msgstr "Poupée patriarche"
+
+#: views/dummy-character-translation.html:137
+#: views/dummy-character-translation.html:365
+msgid "Paralypede"
+msgstr "Paralypode"
+
+#: views/dummy-character-translation.html:480
+msgid "Particle Hoarder"
+msgstr ""
+
+#: index.html:109
+msgid "Party Sorter"
+msgstr ""
+
+#: views/account-create.html:16 views/login.html:17
+msgid "Password"
+msgstr ""
+
+#: views/dummy-character-translation.html:100
+#: views/dummy-character-translation.html:331
+msgid "Pegawyrm"
+msgstr "Pégavouivre"
+
+#: views/dummy-item-translation.html:8
+msgid "Pelt of Knowledge"
+msgstr "Peau d'érudition"
+
+#: views/dummy-character-translation.html:273
+msgid "Pepropé"
+msgstr "Pepropé"
+
+#: views/dummy-character-translation.html:524
+msgid "Perentie"
+msgstr ""
+
+#: views/dummy-character-translation.html:251
+msgid "Phantasmal Lens"
+msgstr "Fantolentille"
+
+#: views/dummy-character-translation.html:130
+#: views/dummy-character-translation.html:205
+msgid "Phi Orbling"
+msgstr "Orbailé phi"
+
+#: views/dummy-character-translation.html:335
+#: views/dummy-item-translation.html:45
+msgid "Phoenix"
+msgstr "Phénix"
+
+#: views/character-list.html:53 views/job-list.html:19
+msgid "Physical"
+msgstr ""
+
+#: views/character-list.html:244
+msgid "Picture : all characters"
+msgstr ""
+
+#: views/character-list.html:248
+msgid "Picture : only adventurers"
+msgstr ""
+
+#: views/character-list.html:252
+msgid "Picture : only monsters"
+msgstr ""
+
+#: views/dummy-character-translation.html:452
+msgid "Piercing Puppet"
+msgstr "Poupée perforante"
+
+#: views/dummy-character-translation.html:59
+msgid "Piz'fer"
+msgstr "Piz'fer"
+
+#: views/dummy-item-translation.html:41
+msgid "Planet's Heart"
+msgstr "Cœur de planète"
+
+#: views/dummy-character-translation.html:306
+msgid "Pneumatobot"
+msgstr "Pneumatobot"
+
+#: views/dummy-character-translation.html:305
+msgid "Pneumatobot (Beta)"
+msgstr "Pneumatobot (Bêta)"
+
+#: index.html:113
+msgid "Potentials"
+msgstr ""
+
+#: views/dummy-character-translation.html:197
+msgid "Power Pyramid"
+msgstr "Pyra-puissance"
+
+#: views/dummy-character-translation.html:300
+msgid "Powercell"
+msgstr "Cellule d'énergie"
+
+#: views/dummy-character-translation.html:453
+msgid "Projectile Puppet"
+msgstr "Poupée archère"
+
+#: views/dummy-character-translation.html:430
+msgid "Pudding"
+msgstr "Flan"
+
+#: views/dummy-character-translation.html:55
+msgid "Pupropu"
+msgstr "Pupropu"
+
+#: views/dummy-character-translation.html:54
+msgid "Pupropé"
+msgstr "Pupropé"
+
+#: views/dummy-character-translation.html:154
+msgid "Pupru"
+msgstr ""
+
+#: views/dummy-character-translation.html:257
+msgid "Pyrosaurus"
+msgstr "Pyrosaure"
+
+#: views/dummy-character-translation.html:224
+msgid "Pyrotoad"
+msgstr "Crapaufeu"
+
+#: views/dummy-character-translation.html:103
+#: views/dummy-character-translation.html:334
+msgid "Pyrowisp"
+msgstr "Pyrofollet"
+
+#: views/dummy-character-translation.html:492
+msgid "Qarn"
+msgstr ""
+
+#: views/dummy-character-translation.html:20
+msgid "R'zonand"
+msgstr "R'zonand"
+
+#: views/dummy-character-translation.html:34
+msgid "Ra'prow"
+msgstr "Ra'prow"
+
+#: views/dummy-item-translation.html:78
+msgid "Raikiri"
+msgstr ""
+
+#: views/dummy-item-translation.html:22
+msgid "Rainbow Tears"
+msgstr "Larmes irisées"
+
+#: views/dummy-character-translation.html:296
+msgid "Ramcell"
+msgstr "Cellule RAM"
+
+#: views/item-list.html:17
+msgid "Rarity"
+msgstr ""
+
+#: views/dummy-character-translation.html:481
+msgid "Rarity Hoarder"
+msgstr ""
+
+#: views/dummy-character-translation.html:142
+#: views/dummy-character-translation.html:213
+msgid "Red Starwhip"
+msgstr "Fouettétoile rouge"
+
+#: views/dummy-character-translation.html:226
+msgid "Redguard"
+msgstr "Rougegarde"
+
+#: views/dummy-character-translation.html:281
+#: views/dummy-character-translation.html:92
+msgid "Regenercell"
+msgstr "Régénérocellule"
+
+#: views/dummy-character-translation.html:153
+msgid "Rejin"
+msgstr ""
+
+#: index.html:144
+msgid "Reset local data"
+msgstr ""
+
+#: views/dummy-character-translation.html:361
+msgid "Restorator Z"
+msgstr "Rétablisseur Z"
+
+#: views/dummy-character-translation.html:330
+msgid "Rhinosaurus"
+msgstr "Rhinosaure"
+
+#: views/dummy-character-translation.html:16
+msgid "Rikken"
+msgstr "Rikken"
+
+#: views/dummy-character-translation.html:199
+msgid "Robotick"
+msgstr "Robopuce"
+
+#: views/dummy-character-translation.html:211
+msgid "Rockburn"
+msgstr "Brûle-roche"
+
+#: views/dummy-character-translation.html:227
+msgid "Rockfreeze"
+msgstr "Givre-roche"
+
+#: views/dummy-item-translation.html:60
+msgid "Rune"
+msgstr ""
+
+#: views/dummy-character-translation.html:433
+msgid "Runny Pudding"
+msgstr "Flan coulant"
+
+#: views/mz-edit.html:7 views/stage-edit.html:7
+msgid "Runs"
+msgstr ""
+
+#: views/dummy-character-translation.html:297
+msgid "S Cell"
+msgstr "Cellule S"
+
+#: views/dummy-character-translation.html:19
+msgid "S'naip"
+msgstr "S'naip"
+
+#: views/dummy-character-translation.html:164
+#: views/dummy-character-translation.html:76
+msgid "Sabertooth"
+msgstr "Dents-de-sabre"
+
+#: views/dummy-character-translation.html:111
+#: views/dummy-character-translation.html:185
+msgid "Sabertooth King"
+msgstr "Roi dents-sabrés"
+
+#: views/dummy-character-translation.html:460
+msgid "Sacred Flame"
+msgstr "Flamme sacrée"
+
+#: views/dummy-character-translation.html:4
+msgid "Samatha"
+msgstr "Samatha"
+
+#: views/dummy-character-translation.html:45
+msgid "Samupí"
+msgstr "Samupí"
+
+#: views/dummy-character-translation.html:249
+msgid "Scrap Golem"
+msgstr "Golem ferraille"
+
+#: views/dummy-character-translation.html:241
+msgid "Scrap Slime"
+msgstr "Gélatine ferraille"
+
+#: views/dummy-item-translation.html:23
+msgid "Sea Tears"
+msgstr "Larmes de mer"
+
+#: views/dummy-character-translation.html:353
+msgid "Seed"
+msgstr "Graine"
+
+#: views/dummy-character-translation.html:488
+msgid "Selena"
+msgstr ""
+
+#: views/dummy-item-translation.html:3
+msgid "Serenity Shoot"
+msgstr "Pousse sérénité"
+
+#: index.html:139
+msgid "Settings"
+msgstr ""
+
+#: views/dummy-character-translation.html:18
+msgid "Sh'berdan"
+msgstr "Sh'berdan"
+
+#: views/dummy-character-translation.html:49
+msgid "Sha'plar"
+msgstr "Sha'plar"
+
+#: views/dummy-character-translation.html:269
+msgid "Shackler"
+msgstr "Emprisonneur"
+
+#: views/dummy-character-translation.html:351
+msgid "Shadow Slug"
+msgstr "Limace d'ombre"
+
+#: views/dummy-character-translation.html:513
+msgid "Shadowfeeder"
+msgstr ""
+
+#: views/dummy-character-translation.html:11
+msgid "Sheena"
+msgstr "Sheena"
+
+#: views/dummy-item-translation.html:10
+msgid "Shell of Madness"
+msgstr "Carapace de folie"
+
+#: views/dummy-character-translation.html:289
+msgid "Shieldcell"
+msgstr "Cellule bouclier"
+
+#: views/character-list.html:91
+msgid "Skill Boost"
+msgstr ""
+
+#: index.html:112
+msgid "Skills"
+msgstr ""
+
+#: views/dummy-character-translation.html:195
+msgid "Slashbot"
+msgstr "Tranchobot"
+
+#: views/dummy-character-translation.html:252
+msgid "Slashbot Redux"
+msgstr "Tranchobot 2.0"
+
+#: views/dummy-character-translation.html:348
+#: views/dummy-character-translation.html:97
+msgid "Slasher"
+msgstr "Trancheur"
+
+#: views/dummy-character-translation.html:451
+msgid "Slashing Puppet"
+msgstr "Poupée tranchante"
+
+#: views/dummy-character-translation.html:138
+#: views/dummy-character-translation.html:328
+msgid "Slime Slug"
+msgstr "Limace baveuse"
+
+#: views/dummy-character-translation.html:482
+msgid "Slimebomber"
+msgstr ""
+
+#: views/dummy-character-translation.html:193
+msgid "Slugosaur"
+msgstr "Limaçosaure"
+
+#: views/dummy-character-translation.html:295
+msgid "Snipercell"
+msgstr "Cellule sniper"
+
+#: views/dummy-character-translation.html:339
+msgid "Snowspew"
+msgstr "Cracheneige"
+
+#: views/dummy-character-translation.html:461
+msgid "Soma"
+msgstr "Soma"
+
+#: views/dummy-character-translation.html:50
+msgid "Sorman"
+msgstr "Sorman"
+
+#: views/dummy-character-translation.html:417
+msgid "Space Debris"
+msgstr "Débris spatial"
+
+#: views/character-list.html:61 views/job-list.html:7
+msgid "Spear"
+msgstr ""
+
+#: views/dummy-character-translation.html:167
+#: views/dummy-character-translation.html:75
+msgid "Spinetrich"
+msgstr "Pikotruche"
+
+#: views/dummy-character-translation.html:390
+msgid "Spiny Leviathan"
+msgstr "Léviathan épineux"
+
+#: views/dummy-item-translation.html:24
+msgid "Spirit Particle"
+msgstr "Particule d'âme"
+
+#: views/dummy-item-translation.html:20
+msgid "Spirit Tears"
+msgstr "Larmes d'esprit"
+
+#: views/character-list.html:63 views/job-list.html:9
+msgid "Staff"
+msgstr ""
+
+#: views/stage-list.html:24
+msgid "Stage"
+msgstr ""
+
+#: views/xp-list.html:40
+msgid "Stage for levelling after 60"
+msgstr ""
+
+#: views/mz-list.html:4 views/stage-list.html:27
+msgid "Stamina"
+msgstr ""
+
+#: views/dummy-character-translation.html:431
+msgid "Star Pudding"
+msgstr "Flan étoilé"
+
+#: views/one-team.html:98
+msgid "Starting XP"
+msgstr ""
+
+#: views/settings.html:12
+msgid "Starting date"
+msgstr ""
+
+#: views/one-team.html:96
+msgid "Starting level"
+msgstr ""
+
+#: views/dummy-character-translation.html:141
+#: views/dummy-character-translation.html:338
+msgid "Starwhip"
+msgstr "Fouettétoile"
+
+#: views/dummy-character-translation.html:261
+msgid "Stonefiend"
+msgstr "Démon de pierre"
+
+#: views/dummy-character-translation.html:122
+#: views/dummy-character-translation.html:234
+msgid "Stonefolk Archer"
+msgstr "Archer rocheux"
+
+#: views/dummy-character-translation.html:126
+#: views/dummy-character-translation.html:235
+msgid "Stonefolk Healer"
+msgstr "Soigneur rocheux"
+
+#: views/dummy-character-translation.html:121
+#: views/dummy-character-translation.html:233
+msgid "Stonefolk Knight"
+msgstr "Chevalier rocheux"
+
+#: views/dummy-character-translation.html:123
+#: views/dummy-character-translation.html:236
+msgid "Stonefolk Mage"
+msgstr "Mage rocheux"
+
+#: views/dummy-character-translation.html:120
+#: views/dummy-character-translation.html:232
+msgid "Stonefolk Warrior"
+msgstr "Guerrier rocheux"
+
+#: views/dummy-character-translation.html:149
+msgid "Suoh"
+msgstr "Suoh"
+
+#: views/dummy-character-translation.html:152
+#: views/dummy-character-translation.html:464
+msgid "Suzaku"
+msgstr "Suzaku"
+
+#: views/character-list.html:62 views/job-list.html:8
+msgid "Sword"
+msgstr ""
+
+#: views/dummy-item-translation.html:6
+msgid "Tail of Insight"
+msgstr "Queue de lucidité"
+
+#: views/dummy-character-translation.html:479
+msgid "Tear Hoarder"
+msgstr ""
+
+#: views/dummy-character-translation.html:432
+msgid "Teddy Pudding"
+msgstr "Flan ursidé"
+
+#: views/dummy-character-translation.html:201
+msgid "Teksura"
+msgstr "Teksura"
+
+#: views/dummy-character-translation.html:400
+msgid "Tentacle Clone"
+msgstr "Tentacule (clone)"
+
+#: views/dummy-character-translation.html:360
+msgid "Terminator Y"
+msgstr "Terminateur Y"
+
+#: views/dummy-item-translation.html:13
+msgid "Terra Bowstring"
+msgstr "Corde Terra"
+
+#: views/dummy-item-translation.html:49
+msgid "Terra Fragment"
+msgstr "Fragment de Terra"
+
+#: views/dummy-item-translation.html:12
+msgid "Terra Spearbronze"
+msgstr "Bronze Terra"
+
+#: views/dummy-item-translation.html:14
+msgid "Terra Staffwood"
+msgstr "Bois Terra"
+
+#: views/dummy-item-translation.html:11
+msgid "Terra Swordsteel"
+msgstr "Acier Terra"
+
+#: views/dummy-item-translation.html:61
+msgid "The Emperor"
+msgstr ""
+
+#: views/dummy-item-translation.html:62
+msgid "The Hierophant"
+msgstr ""
+
+#: views/dummy-item-translation.html:68
+msgid "The Moon"
+msgstr ""
+
+#: views/dummy-item-translation.html:67
+msgid "The Sun"
+msgstr ""
+
+#: views/dummy-item-translation.html:69
+msgid "The Tower"
+msgstr ""
+
+#: views/dummy-character-translation.html:145
+#: views/dummy-character-translation.html:358
+msgid "Thornasaurus"
+msgstr "Épinosaure"
+
+#: views/dummy-character-translation.html:344
+msgid "Thunder Horn"
+msgstr "Corne tonnerre"
+
+#: views/dummy-character-translation.html:109
+#: views/dummy-character-translation.html:402
+msgid "Tiamat"
+msgstr "Tiamat"
+
+#: views/dummy-character-translation.html:367
+msgid "Time Analyzer"
+msgstr "Analyseur de temps"
+
+#: views/dummy-character-translation.html:240
+msgid "Time Devourer"
+msgstr "Dévoreur de temps"
+
+#: views/dummy-item-translation.html:55
+msgid "Time Extension"
+msgstr ""
+
+#: views/dummy-character-translation.html:469
+msgid "Time Spire"
+msgstr "Flèche du temps"
+
+#: views/dummy-character-translation.html:484
+msgid "Timebomber"
+msgstr ""
+
+#: index.html:141
+msgid "Timezone"
+msgstr ""
+
+#: views/dummy-character-translation.html:438
+msgid "Tin Artillery"
+msgstr "Artillerie de fer"
+
+#: views/dummy-character-translation.html:442
+msgid "Tin Darkcaster"
+msgstr "Ombromage de fer"
+
+#: views/dummy-character-translation.html:441
+msgid "Tin Electrocaster"
+msgstr "Electromage de fer"
+
+#: views/dummy-character-translation.html:436
+msgid "Tin Fencer"
+msgstr "Escrimeur de fer"
+
+#: views/dummy-character-translation.html:439
+msgid "Tin Flamecaster"
+msgstr "Pyromage de fer"
+
+#: views/dummy-character-translation.html:440
+msgid "Tin Frostcaster"
+msgstr "Cryomage de fer"
+
+#: views/dummy-character-translation.html:443
+msgid "Tin King"
+msgstr "Roi de fer"
+
+#: views/dummy-character-translation.html:437
+msgid "Tin Knight"
+msgstr "Chevalier de fer"
+
+#: views/one-team.html:124
+msgid "Total runs"
+msgstr ""
+
+#: views/xp-list.html:137
+msgid "Total:"
+msgstr ""
+
+#: views/dummy-character-translation.html:239
+msgid "Toxic Bomborg"
+msgstr "Bomborg toxique"
+
+#: views/dummy-character-translation.html:291
+msgid "Toxic Cannon"
+msgstr "Canon toxique"
+
+#: views/dummy-character-translation.html:270
+msgid "Toxoid"
+msgstr "Toxoïde"
+
+#: views/dummy-character-translation.html:388
+msgid "Transporter"
+msgstr "Transporteur"
+
+#: views/dummy-item-translation.html:54
+msgid "Trident"
+msgstr ""
+
+#: views/dummy-character-translation.html:219
+msgid "Trilobot"
+msgstr "Trilobot"
+
+#: views/dummy-character-translation.html:184
+#: views/dummy-character-translation.html:79
+msgid "Triscorp"
+msgstr "Triscorpio"
+
+#: views/item-list.html:16
+msgid "Type"
+msgstr ""
+
+#: views/dummy-item-translation.html:74
+msgid "Tyrfing"
+msgstr ""
+
+#: views/dummy-character-translation.html:47
+msgid "U'nasag"
+msgstr "U'nasag"
+
+#: views/history-import.html:8 views/import.html:8
+msgid "User data"
+msgstr ""
+
+#: views/account-create.html:9 views/login.html:10
+msgid "Username"
+msgstr ""
+
+#: views/settings.html:4
+msgid "Username (for screenshot)"
+msgstr ""
+
+#: views/dummy-character-translation.html:134
+#: views/dummy-character-translation.html:347
+#: views/dummy-item-translation.html:39
+msgid "Vajra"
+msgstr "Vajra"
+
+#: views/dummy-character-translation.html:520
+msgid "Valkyrie"
+msgstr ""
+
+#: views/dummy-character-translation.html:509
+msgid "Vampire Bat"
+msgstr ""
+
+#: views/dummy-item-translation.html:77
+msgid "Varunastra"
+msgstr ""
+
+#: views/dummy-character-translation.html:77
+msgid "Velraine"
+msgstr "Velraine"
+
+#: views/dummy-character-translation.html:260
+#: views/dummy-character-translation.html:91
+msgid "Vial Chucker"
+msgstr "Lanceur de fioles"
+
+#: views/dummy-character-translation.html:457
+msgid "Volt Puppet"
+msgstr "Électropoupée"
+
+#: views/dummy-character-translation.html:518
+msgid "Völva"
+msgstr ""
+
+#: views/dummy-character-translation.html:501
+msgid "Wailing Wall"
+msgstr ""
+
+#: views/dummy-item-translation.html:27
+msgid "Warped Particle"
+msgstr "Particule altérée"
+
+#: views/dummy-character-translation.html:162
+#: views/dummy-character-translation.html:63
+msgid "Warrior"
+msgstr "Guerrier"
+
+#: views/dummy-character-translation.html:279
+#: views/dummy-character-translation.html:95
+msgid "Wastecell"
+msgstr "Cellule déchet"
+
+#: views/character-list.html:56
+msgid "Weapon"
+msgstr ""
+
+#: views/dummy-character-translation.html:161
+msgid "Wee Orbling"
+msgstr "Mini orbailé"
+
+#: views/dummy-character-translation.html:498
+msgid "Weeper"
+msgstr ""
+
+#: views/stage-drop.html:2
+msgid "What drops from {{ stage_ref }}"
+msgstr ""
+
+#: views/dummy-item-translation.html:19
+msgid "White Ring"
+msgstr "Anneau blanc"
+
+#: views/dummy-character-translation.html:110
+#: views/dummy-character-translation.html:181
+msgid "White Sabertooth"
+msgstr "Dents-sabrés blanc"
+
+#: views/dummy-character-translation.html:191
+#: views/dummy-character-translation.html:78
+msgid "Whitewyrm"
+msgstr "Vouivre blanche"
+
+#: views/stage-char-drop.html:2
+msgid "Who drops from {{ stage_ref }}"
+msgstr ""
+
+#: views/dummy-item-translation.html:4
+msgid "Wisdom Flower"
+msgstr "Fleur de sagesse"
+
+#: views/dummy-item-translation.html:26
+msgid "Wish Particle"
+msgstr "Particule de vœu"
+
+#: views/dummy-character-translation.html:189
+#: views/dummy-character-translation.html:82
+msgid "Wyvern"
+msgstr "Vouivre"
+
+#: views/dummy-character-translation.html:156
+msgid "Y'apkar"
+msgstr ""
+
+#: views/login.html:26
+msgid "You already have local data, they will be erased by data stored on server, unless it's your first time login."
+msgstr ""
+
+#: views/dummy-character-translation.html:355
+msgid "Young Onyx Dragon"
+msgstr "Jeune dragon onyx"
+
+#: views/dummy-character-translation.html:15
+msgid "Yukken"
+msgstr "Yukken"
+
+#: views/dummy-character-translation.html:158
+msgid "Yulia"
+msgstr ""
+
+#: views/dummy-item-translation.html:38
+msgid "Yumiharizuki"
+msgstr "Yumiharizuki"
+
+#: views/dummy-character-translation.html:51
+msgid "Zafitte"
+msgstr "Zafitte"
+
+#: views/dummy-character-translation.html:32
+msgid "Zan"
+msgstr "Zan"
+
+#: views/dummy-character-translation.html:53
+msgid "Zeera"
+msgstr "Zeera"
+
+#: views/dummy-character-translation.html:35
+msgid "Zenzoze"
+msgstr "Zenzoze"
+
+#: views/dummy-character-translation.html:61
+msgid "Zerro"
+msgstr "Zerro"
+
+#: views/dummy-character-translation.html:22
+msgid "Zuzu"
+msgstr "Zuzu"
+
+#: views/item-list.html:22
+msgid "all"
+msgstr ""
+
+#: views/job-list.html:40
+msgid "atk"
+msgstr ""
+
+#: views/job-list.html:41
+msgid "atk@{{ max_level }}"
+msgstr ""
+
+#: views/one-team.html:101
+msgid "avg xp"
+msgstr ""
+
+#: views/xp-list.html:71
+msgid "current level"
+msgstr ""
+
+#: views/job-list.html:42
+msgid "def"
+msgstr ""
+
+#: views/job-list.html:43
+msgid "def@{{ max_level }}"
+msgstr ""
+
+#: views/mz-list.html:7
+msgid "edit"
+msgstr ""
+
+#: views/xp-list.html:113
+msgid "ending exp"
+msgstr ""
+
+#: views/xp-list.html:111 views/xp-list.html:73
+msgid "ending level"
+msgstr ""
+
+#: views/xp-list.html:75
+msgid "ending xp"
+msgstr ""
+
+#: views/item-list.html:21 views/item-list.html:23
+msgid "for"
+msgstr ""
+
+#: views/settings.html:48
+msgid "for adventurers"
+msgstr ""
+
+#: views/settings.html:55
+msgid "for monsters"
+msgstr ""
+
+#: views/job-list.html:38
+msgid "hp"
+msgstr ""
+
+#: views/job-list.html:39
+msgid "hp@{{ max_level }}"
+msgstr ""
+
+#: views/one-team.html:6
+msgid "last is companion (exclude him) ?"
+msgstr ""
+
+#: views/job-list.html:44
+msgid "matk"
+msgstr ""
+
+#: views/job-list.html:45
+msgid "matk@{{ max_level }}"
+msgstr ""
+
+#: views/job-list.html:46
+msgid "mdef"
+msgstr ""
+
+#: views/job-list.html:47
+msgid "mdef@{{ max_level }}"
+msgstr ""
+
+#: views/item-list.html:20
+msgid "need"
+msgstr ""
+
+#: views/character-list.html:48 views/job-list.html:14
+msgid "no element filter"
+msgstr ""
+
+#: views/item-list.html:4
+msgid "no item filter"
+msgstr ""
+
+#: views/character-list.html:59 views/job-list.html:5
+msgid "no weapon filter"
+msgstr ""
+
+#: views/xp-list.html:112
+msgid "starting exp"
+msgstr ""
+
+#: views/xp-list.html:110 views/xp-list.html:72
+msgid "starting level"
+msgstr ""
+
+#: views/xp-list.html:74
+msgid "starting xp"
+msgstr ""
+
+#: views/item-list.html:19
+msgid "stock"
+msgstr ""
+
+#: views/cps-list.html:2 views/daily-bonus-list.html:2
+#: views/item-drop-list.html:2
+msgid "today is bonus day number {{ difference }}"
+msgstr ""
+
+#: views/item-list.html:24
+msgid "where?"
+msgstr ""
+
+#: views/character-list.html:264
+msgid "{{ __total_coins() / (8000 * 1.15 * 2 * nb_run_per_day(20)) | ceil  }} week-end (with Zeera j3@65)"
+msgstr ""
+
+#: views/character-list.html:271
+msgid "{{ __total_coins() / (8000 * 1.15 * 3 * nb_run_per_day(20)) | ceil  }} week-end (with timezone change and Zeera j3@65)"
+msgstr ""
+
+#: views/character-list.html:260
+msgid "{{ __total_coins() / (8000 * 2 * nb_run_per_day(20)) | ceil  }} week-end"
+msgstr ""
+
+#: views/character-list.html:267
+msgid "{{ __total_coins() / (8000 * 3 * nb_run_per_day(20)) | ceil  }} week-end (with timezone change)"
+msgstr ""
+
+#: views/character-drop.html:2
+msgid "{{ char_name }} drops from"
+msgstr ""
+
+#: views/quick-stats.html:9
+msgid "{{ have_character.true_keys() }} characters / {{ characters.length }} :\n\t  {{ have_character.true_keys() / characters.length * 100 | number: 0 }}%"
+msgstr ""
+
+#: views/quick-stats.html:91
+msgid "{{ item.name }}"
+msgstr ""
+
+#: views/item-drop.html:2
+msgid "{{ name }} drops from"
+msgstr ""
+
+#: views/item-character-detail.html:2
+msgid "{{ name }} needed for"
+msgstr ""
+
+#: views/quick-stats.html:51
+msgid "{{ total_coins(characters, have_character, boost) | number }} coins for Pact of Fellowship"
+msgstr ""
+
+#: views/quick-stats.html:48
+msgid "{{ total_energy(characters, have_character, boost)| number }} energy for Pact of Truth"
+msgstr ""

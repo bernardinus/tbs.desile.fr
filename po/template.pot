@@ -1,0 +1,3026 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: front/views/one-team.html:102
+#: front/views/xp-list.html:141
+msgid "#run"
+msgstr ""
+
+#: front/views/xp-list.html:81
+msgid "#run@{{ level60_opts.level.ref }}"
+msgstr ""
+
+#: front/views/character-list.html:293
+msgid "- To collect {{ __total_coins() | number }} coins, you can do {{ __total_coins() / coins_cc3 | ceil | number }} runs in Hunting Zone 3 \"Attack of the Coin Creeps\""
+msgstr ""
+
+#: front/views/character-list.html:313
+msgid "- To collect {{ __total_energy() | number }} energy, you can wait {{ __total_energy_duration() }}."
+msgstr ""
+
+#: front/views/dummy-character-translation.html:372
+msgid "1AOO"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:369
+msgid "1AOO MarkⅠ"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:410
+msgid "1AOO MarkⅡ"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:373
+msgid "2BOO"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:370
+msgid "2BOO MarkⅠ"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:411
+msgid "2BOO MarkⅡ"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:374
+msgid "3COO"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:371
+msgid "3COO MarkⅠ"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:412
+msgid "3COO MarkⅡ"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:381
+msgid "54B2"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:423
+msgid "6ZOO"
+msgstr ""
+
+#: front/views/quick-start.html:95
+msgid "<a href=\"#/items\">Items</a>"
+msgstr ""
+
+#: front/views/stage-list.html:31
+msgid ""
+"<button class=\"btn btn-default btn-xs\" ng-click=\"sort_change('coin')\">\n"
+"                Coins\n"
+"            </button>"
+msgstr ""
+
+#: front/views/stage-list.html:40
+msgid ""
+"<button class=\"btn btn-default btn-xs\" ng-click=\"sort_change('coin_stam')\">\n"
+"                Coins / stamina\n"
+"            </button>"
+msgstr ""
+
+#: front/views/stage-list.html:27
+msgid ""
+"<button class=\"btn btn-default btn-xs\" ng-click=\"sort_change('exp')\">\n"
+"                Exp.\n"
+"            </button>"
+msgstr ""
+
+#: front/views/stage-list.html:44
+msgid ""
+"<button class=\"btn btn-default btn-xs\" ng-click=\"sort_change('exp_day')\">\n"
+"                Exp / day\n"
+"            </button>"
+msgstr ""
+
+#: front/views/stage-list.html:36
+msgid ""
+"<button class=\"btn btn-default btn-xs\" ng-click=\"sort_change('exp_stam')\">\n"
+"                Exp. / stamina\n"
+"            </button>"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:263
+msgid "???"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:8
+msgid "A'merpact"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:27
+msgid "A'misandra"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:420
+msgid "AOO"
+msgstr ""
+
+#: front/views/mz-edit.html:36
+#: front/views/stage-edit.html:32
+msgid "Add"
+msgstr ""
+
+#: front/views/mz-edit.html:24
+#: front/views/stage-edit.html:20
+msgid "Add new run"
+msgstr ""
+
+#: front/views/character-list.html:15
+#: front/views/xp-list.html:21
+msgid "Adventurer"
+msgstr ""
+
+#: front/views/character-list.html:10
+#: front/views/xp-list.html:17
+msgid "Adventurer and/or Monster"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:448
+msgid "Aerobomb"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:188
+msgid "Aeropede"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:37
+msgid "Alika"
+msgstr ""
+
+#: front/views/character-list.html:49
+#: front/views/xp-list.html:28
+#: front/views/xp-list.html:3
+msgid "All"
+msgstr ""
+
+#: front/index.html:222
+msgid "All Characters"
+msgstr ""
+
+#: front/index.html:238
+msgid "All Items"
+msgstr ""
+
+#: front/index.html:211
+msgid "All Stages"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:473
+msgid "Alphascorp"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:29
+msgid "Amazora"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:465
+msgid "Ambrosia"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:59
+msgid "Amethyst Flame"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:28
+msgid "Amimari"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:26
+msgid "Amina"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:315
+msgid "Analyzer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:283
+msgid "Ancient Key"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:127
+#: front/views/dummy-character-translation.html:267
+msgid "Androclops"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:30
+msgid "Animaton"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:187
+msgid "Antenna Orbling"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:34
+msgid "Apollo"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:341
+msgid "Aquafeeder"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:202
+#: front/views/dummy-character-translation.html:83
+msgid "Arachnobot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:394
+msgid "Arachnochip"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:395
+msgid "Arachnochip EX"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:203
+msgid "Arachnolings"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:163
+#: front/views/dummy-character-translation.html:65
+msgid "Archer"
+msgstr ""
+
+#: front/views/character-list.html:38
+#: front/views/job-list.html:6
+msgid "Arrow"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:510
+msgid "Artemis"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:35
+msgid "Asclepius"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:255
+#: front/views/dummy-character-translation.html:90
+msgid "Assassin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:254
+msgid "Assassin Poseur"
+msgstr ""
+
+#: front/views/mz-list.html:5
+msgid "Average XP"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:471
+msgid "BN"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:421
+msgid "BOO"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:186
+#: front/views/dummy-character-translation.html:30
+msgid "Ba'gunar"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:101
+#: front/views/dummy-character-translation.html:462
+msgid "Bahamut"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:470
+msgid "Bahamut Omega"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:3
+msgid "Bahl"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:155
+msgid "Bajanna"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:73
+msgid "Balmung"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:523
+msgid "Basilisk"
+msgstr ""
+
+#: front/views/stage-list.html:24
+msgid "Battle"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:246
+msgid "Beambot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:175
+#: front/views/dummy-character-translation.html:73
+msgid "Beastfolk Archer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:125
+#: front/views/dummy-character-translation.html:177
+msgid "Beastfolk Healer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:116
+#: front/views/dummy-character-translation.html:178
+msgid "Beastfolk Hero"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:174
+#: front/views/dummy-character-translation.html:72
+msgid "Beastfolk Knight"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:119
+#: front/views/dummy-character-translation.html:176
+msgid "Beastfolk Mage"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:173
+#: front/views/dummy-character-translation.html:71
+msgid "Beastfolk Warrior"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:5
+msgid "Benevolent Fang"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:114
+msgid "Blade Falcon"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:105
+#: front/views/dummy-character-translation.html:192
+msgid "Blastosaur"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:247
+msgid "Bludgeonbot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:343
+msgid "Boltspew"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:194
+msgid "Bomb"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:112
+#: front/views/dummy-character-translation.html:217
+msgid "Bomborg"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:159
+#: front/views/dummy-character-translation.html:515
+msgid "Bone"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:52
+msgid "Bonna"
+msgstr ""
+
+#: front/views/cps-list.html:3
+#: front/views/daily-bonus-list.html:3
+#: front/views/item-drop-list.html:6
+msgid "Bonus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:483
+msgid "Boombomber"
+msgstr ""
+
+#: front/views/character-list.html:14
+#: front/views/xp-list.html:20
+msgid "Both"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:31
+msgid "Burbaba"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:237
+msgid "Burnbot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:238
+msgid "Burnbot Redux"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:472
+msgid "CB"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:422
+msgid "COO"
+msgstr ""
+
+#: front/index.html:215
+msgid "CPS"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:50
+msgid "Caladbolg"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:51
+msgid "Caladcholg"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:150
+msgid "Camellia"
+msgstr ""
+
+#: front/views/account-create.html:38
+msgid "Cancel"
+msgstr ""
+
+#: front/views/xp-list.html:55
+msgid "Cap Job 1"
+msgstr ""
+
+#: front/views/xp-list.html:59
+msgid "Cap Job 2"
+msgstr ""
+
+#: front/views/xp-list.html:63
+msgid "Cap Job 3"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:333
+msgid "Carnelibean"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:454
+msgid "Casting Puppet"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:75
+msgid "Celestial Bow"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:132
+#: front/views/dummy-character-translation.html:336
+msgid "Celestial Dragon"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:214
+msgid "Cerberus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:474
+msgid "Cerberus's Head"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:258
+msgid "Chainer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:514
+msgid "Chaos"
+msgstr ""
+
+#: front/index.html:208
+#: front/index.html:210
+msgid "Chapters"
+msgstr ""
+
+#: front/views/skill-list.html:17
+msgid "Character"
+msgstr ""
+
+#: front/views/settings.html:80
+msgid "Character list"
+msgstr ""
+
+#: front/index.html:220
+#: front/views/quick-start.html:6
+msgid "Characters"
+msgstr ""
+
+#: front/views/job-list.html:24
+msgid "Characters you have"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:143
+#: front/views/dummy-character-translation.html:318
+msgid "Chargebot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:311
+msgid "Chargebot (Beta)"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:491
+msgid "Chiton"
+msgstr ""
+
+#: front/views/character-list.html:46
+#: front/views/xp-list.html:25
+msgid "Class"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:7
+msgid "Claw of Fate"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:53
+msgid "Cobalt Goblet"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:79
+msgid "Codex Runicus"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:58
+msgid "Coin Boost"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:444
+msgid "Coin Creep"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:447
+msgid "Coin Creep Bomber"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:450
+msgid "Coin Creep Fighter"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:445
+msgid "Coin Creep Gorger"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:446
+msgid "Coin Creep Mage"
+msgstr ""
+
+#: front/views/character-list.html:112
+msgid "Coin<br>needed"
+msgstr ""
+
+#: front/views/settings.html:42
+msgid "Coins in CC3"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:489
+msgid "Conchio"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:368
+msgid "Craggy Leviathan"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:386
+msgid "Crasher"
+msgstr ""
+
+#: front/views/account-create.html:39
+msgid "Create"
+msgstr ""
+
+#: front/views/account-create.html:4
+#: front/views/login.html:33
+msgid "Create account"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:377
+msgid "Cryobird"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:284
+msgid "Cryocell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:288
+msgid "Cryoplatelet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:268
+msgid "Cryosaurus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:102
+#: front/views/dummy-character-translation.html:340
+msgid "Cryowisp"
+msgstr ""
+
+#: front/views/one-team.html:95
+#: front/views/xp-list.html:135
+#: front/views/xp-list.html:75
+msgid "Current level"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:350
+msgid "Cursed Claw"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:256
+#: front/views/dummy-character-translation.html:87
+msgid "Cyberclops"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:204
+#: front/views/dummy-character-translation.html:84
+msgid "Cybergolem"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:200
+msgid "Cybermummy"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:220
+msgid "Cyberscorp"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:222
+msgid "Cyberwyrm"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:33
+msgid "Czekras"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:48
+msgid "Daiana"
+msgstr ""
+
+#: front/index.html:214
+#: front/views/quick-start.html:34
+msgid "Daily Bonus"
+msgstr ""
+
+#: front/views/quick-start.html:37
+msgid "Daily Bonus is {{ daily_bonus.label() }}."
+msgstr ""
+
+#: front/views/dummy-character-translation.html:278
+msgid "Dark Ampcell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:276
+msgid "Dark Archercell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:354
+msgid "Dark Dragon"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:29
+msgid "Dark Matter"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:275
+msgid "Dark Mechacell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:140
+#: front/views/dummy-character-translation.html:349
+msgid "Dark Pegawyrm"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:139
+#: front/views/dummy-character-translation.html:384
+msgid "Dark Petrifier"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:18
+msgid "Dark Ring"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:277
+msgid "Dark Sparker"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:228
+#: front/views/dummy-character-translation.html:80
+msgid "Dark Tortoise"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:274
+msgid "Darkbot"
+msgstr ""
+
+#: front/views/character-list.html:25
+#: front/views/job-list.html:15
+msgid "Darkness"
+msgstr ""
+
+#: front/views/history-import.html:16
+msgid "Date"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:70
+msgid "Death"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:44
+msgid "Defender"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:380
+msgid "Defense Amp"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:487
+msgid "Delphinus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:117
+#: front/views/dummy-character-translation.html:182
+msgid "Devil Bat"
+msgstr ""
+
+#: front/views/stage-list.html:23
+msgid "Difficulty"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:56
+msgid "Disarmer"
+msgstr ""
+
+#: front/index.html:253
+msgid "Disclaimer"
+msgstr ""
+
+#: front/views/history-import.html:28
+#: front/views/mz-edit.html:44
+#: front/views/stage-edit.html:44
+#: front/views/user-data-import.html:17
+msgid "Dismiss"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:9
+msgid "Djugan"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:115
+#: front/views/dummy-character-translation.html:165
+msgid "Dracorin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:505
+msgid "Draugr"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:266
+msgid "Drillasaurus"
+msgstr ""
+
+#: front/views/character-list.html:117
+msgid "Drop from"
+msgstr ""
+
+#: front/index.html:213
+#: front/index.html:225
+#: front/index.html:239
+msgid "Drops"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:516
+msgid "Dís"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:327
+msgid "EM Generator"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:57
+msgid "EXP Boost"
+msgstr ""
+
+#: front/views/mz-edit.html:2
+msgid "Edit Metal Zone {{ stage_ref }}"
+msgstr ""
+
+#: front/views/stage-edit.html:2
+msgid "Edit Stage {{ stage_ref }}"
+msgstr ""
+
+#: front/index.html:224
+msgid "Eidolons"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:14
+msgid "Eileen"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:497
+msgid "Einheri"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:248
+msgid "Electropede"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:147
+#: front/views/dummy-character-translation.html:379
+msgid "Electrosapper"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:366
+msgid "Electroseizer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:216
+msgid "Electrotick"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:221
+msgid "Electrowatt"
+msgstr ""
+
+#: front/views/character-list.html:21
+msgid "Element"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:418
+msgid "Elemental Spinner"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:7
+msgid "Ellvern"
+msgstr ""
+
+#: front/views/one-team.html:99
+msgid "Ending XP"
+msgstr ""
+
+#: front/views/one-team.html:97
+msgid "Ending level"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:82
+msgid "Energy"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:323
+msgid "Energy Aspirator"
+msgstr ""
+
+#: front/views/character-list.html:115
+msgid "Energy<br>needed"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:301
+msgid "Enerzerk"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:511
+msgid "Erinys"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:96
+msgid "Ethereal"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:37
+msgid "Excalibur"
+msgstr ""
+
+#: front/views/stage-edit.html:10
+msgid "Exp"
+msgstr ""
+
+#: front/views/mz-list.html:6
+msgid "Exp / day"
+msgstr ""
+
+#: front/views/mz-edit.html:28
+#: front/views/stage-edit.html:24
+msgid "Exp."
+msgstr ""
+
+#: front/index.html:231
+msgid "Explore"
+msgstr ""
+
+#: front/index.html:251
+msgid "Export local data"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:468
+msgid "Falak"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:459
+msgid "Fell Drake"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:467
+msgid "Fell Drake Redux"
+msgstr ""
+
+#: front/views/character-list.html:26
+#: front/views/job-list.html:16
+msgid "Fire"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:15
+msgid "Fire Ring"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:332
+msgid "Firespew"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:494
+msgid "Fisheye"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:262
+msgid "Flail"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:455
+msgid "Flame Puppet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:404
+msgid "Flame Spawn"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:230
+msgid "Flame Urchin"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:42
+msgid "Flame of Indra"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:144
+#: front/views/dummy-character-translation.html:317
+msgid "Flamebot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:313
+msgid "Flamebot (Beta)"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:46
+msgid "Flamedrake Spear"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:136
+#: front/views/dummy-character-translation.html:329
+msgid "Floralpede"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:9
+msgid "Forlorn Stone"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:286
+msgid "Freeze Sparker"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:496
+msgid "Freki"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:456
+msgid "Frost Puppet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:190
+msgid "Fungibird"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:475
+msgid "GEN"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:36
+msgid "Gae Bolg"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:40
+msgid "Gaea"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:23
+msgid "Gaiga"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:265
+msgid "Gaoler"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:292
+msgid "Gas Bomb"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:13
+msgid "Gatz"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:25
+msgid "Gegonago"
+msgstr ""
+
+#: front/views/item-list.html:99
+msgid "Generate screenshot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:245
+msgid "Gigaworm"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:39
+msgid "Gigojago"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:449
+msgid "Golden Coin Creep"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:427
+msgid "Golden Runner"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:229
+#: front/views/dummy-character-translation.html:81
+msgid "Golem"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:166
+msgid "Gorf"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:485
+msgid "Gormandizer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:5
+msgid "Grace"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:48
+msgid "Green Ring"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:387
+msgid "Grim Leaker"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:21
+msgid "Gugba"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:32
+msgid "Gungnir"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:43
+msgid "Gyros"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:157
+msgid "Harold"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:80
+msgid "Harpe"
+msgstr ""
+
+#: front/views/character-list.html:95
+#: front/views/eidolon-list.html:7
+msgid "Have ?"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:67
+msgid "Healer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:208
+msgid "Heat Sparker"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:253
+msgid "Hell Bat"
+msgstr ""
+
+#: front/index.html:254
+msgid "Help"
+msgstr ""
+
+#: front/index.html:247
+msgid "History"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:183
+msgid "Horned Slug"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:81
+msgid "Hotarumaru"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:406
+msgid "Hover Zapper"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:503
+msgid "Hugin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:521
+msgid "Hypnotoad"
+msgstr ""
+
+#: front/views/character-list.html:27
+#: front/views/job-list.html:17
+msgid "Ice"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:285
+msgid "Ice Archercell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:346
+msgid "Ice Golem"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:378
+msgid "Ice Razor"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:16
+msgid "Ice Ring"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:376
+msgid "Ice Slammer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:403
+msgid "Ice Spawn"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:287
+msgid "Ice Urchin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:517
+msgid "Idis"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:196
+msgid "Impalebot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:264
+msgid "Impalebot Redux"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:357
+msgid "Impaler"
+msgstr ""
+
+#: front/views/history-import.html:2
+#: front/views/user-data-import.html:2
+msgid "Import user data"
+msgstr ""
+
+#: front/views/login.html:27
+msgid "In either case, you should save it."
+msgstr ""
+
+#: front/views/dummy-item-translation.html:84
+msgid "Item"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:83
+msgid "Item21"
+msgstr ""
+
+#: front/index.html:236
+#: front/views/stage-list.html:49
+msgid "Items"
+msgstr ""
+
+#: front/views/character-list.html:101
+msgid "J1 level"
+msgstr ""
+
+#: front/views/character-list.html:104
+msgid "J2 level"
+msgstr ""
+
+#: front/views/character-list.html:107
+msgid "J3 level"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:382
+msgid "Jade Guardian"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:148
+msgid "Jaguna"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:434
+msgid "Jelly"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:60
+msgid "Jennish"
+msgstr ""
+
+#: front/views/skill-list.html:18
+msgid "Job 1"
+msgstr ""
+
+#: front/views/skill-list.html:19
+msgid "Job 2"
+msgstr ""
+
+#: front/views/skill-list.html:20
+msgid "Job 3"
+msgstr ""
+
+#: front/views/character-list.html:99
+#: front/views/eidolon-list.html:8
+msgid "Job unlocked"
+msgstr ""
+
+#: front/views/xp-list.html:153
+msgid "Job {{ job.level }}"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:435
+msgid "Jumbo Pudding"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:17
+msgid "Ka'pori"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:24
+msgid "Kana"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:42
+msgid "Kem"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:64
+msgid "Knight"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:65
+msgid "Knight of Bows"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:71
+msgid "Knight of Chalices"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:72
+msgid "Knight of Pentacles"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:64
+msgid "Knight of Spears"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:63
+msgid "Knight of Swords"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:66
+msgid "Knight of Wands"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:36
+msgid "Koko"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:41
+msgid "Korin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:108
+#: front/views/dummy-character-translation.html:398
+msgid "Kraken"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:399
+msgid "Kraken's Tentacle"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:151
+#: front/views/dummy-character-translation.html:463
+msgid "Kujata"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:6
+msgid "Kuscah"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:522
+msgid "Kydoimos"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:525
+msgid "Lamia"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:321
+msgid "Laser Unit H"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:322
+msgid "Laser Unit V"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:342
+msgid "Lazulibean"
+msgstr ""
+
+#: front/views/job-list.html:32
+msgid "Level"
+msgstr ""
+
+#: front/views/skill-list.html:5
+msgid "Level Cap"
+msgstr ""
+
+#: front/views/xp-list.html:4
+#: front/views/xp-list.html:41
+msgid "Level after 70"
+msgstr ""
+
+#: front/index.html:228
+msgid "Levelling"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:490
+#: front/views/dummy-character-translation.html:98
+msgid "Leviathan"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:495
+msgid "Leviathan Omega"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:58
+msgid "Lewto"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:106
+#: front/views/dummy-character-translation.html:405
+msgid "Lich"
+msgstr ""
+
+#: front/views/character-list.html:28
+#: front/views/job-list.html:18
+msgid "Lightning"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:17
+msgid "Lightning Ring"
+msgstr ""
+
+#: front/views/daily-bonus-list.html:15
+#: front/views/item-drop-list.html:27
+msgid "Limit stage list"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:499
+msgid "Lindworm"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:170
+#: front/views/dummy-character-translation.html:70
+msgid "Lizardfolk Archer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:124
+#: front/views/dummy-character-translation.html:172
+msgid "Lizardfolk Healer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:146
+#: front/views/dummy-character-translation.html:179
+msgid "Lizardfolk Hero"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:169
+#: front/views/dummy-character-translation.html:69
+msgid "Lizardfolk Knight"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:118
+#: front/views/dummy-character-translation.html:171
+msgid "Lizardfolk Mage"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:168
+#: front/views/dummy-character-translation.html:68
+msgid "Lizardfolk Warrior"
+msgstr ""
+
+#: front/views/settings.html:50
+msgid "Locale"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:308
+msgid "Lock-On"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:319
+msgid "Lock-On 333"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:320
+msgid "Lock-On 333+"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:314
+msgid "Lock-On 555"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:309
+msgid "Lock-On+"
+msgstr ""
+
+#: front/views/login.html:34
+msgid "Login"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:25
+msgid "Lore Particle"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:57
+msgid "Lunaken"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:56
+msgid "Lunato"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:477
+msgid "MAGICM"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:478
+msgid "MAGICS"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:476
+msgid "MAGICT"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:12
+msgid "Ma'curi"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:47
+msgid "Maelstrom Bow"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:66
+msgid "Mage"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:259
+msgid "Magic Muzzler"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:212
+msgid "Magma Cluster"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:206
+msgid "Magma Eye"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:210
+#: front/views/dummy-character-translation.html:85
+msgid "Magma Mummy"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:225
+msgid "Magma Slug"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:512
+msgid "Malocchio"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:40
+msgid "Manmer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:231
+msgid "Mantle Mammoth"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:209
+msgid "Mantle Slime"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:131
+#: front/views/dummy-character-translation.html:207
+msgid "Mantle Tortoise"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:215
+#: front/views/dummy-character-translation.html:86
+msgid "Mantledrake"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:74
+msgid "Maralme"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:107
+#: front/views/dummy-character-translation.html:401
+msgid "Marilith"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:33
+msgid "Masamune"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:507
+msgid "Mayuk"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:129
+#: front/views/dummy-character-translation.html:198
+msgid "Mech Orbling"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:389
+msgid "Mechabird"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:294
+msgid "Mechacell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:128
+#: front/views/dummy-character-translation.html:250
+msgid "Mechaclops"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:223
+msgid "Mechadrake"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:282
+msgid "Mechadrake Redux"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:113
+#: front/views/dummy-character-translation.html:218
+msgid "Mechanic"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:271
+#: front/views/dummy-character-translation.html:89
+msgid "Mecharose"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:299
+msgid "Mechavirus 1567"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:280
+#: front/views/dummy-character-translation.html:93
+msgid "Mechavirus 3721"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:290
+msgid "Mechavirus 9643"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:135
+#: front/views/dummy-character-translation.html:397
+msgid "Mediscanner"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:293
+#: front/views/dummy-character-translation.html:94
+msgid "Megacell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:345
+#: front/views/dummy-character-translation.html:99
+msgid "Mermaid"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:428
+msgid "Metal Gorf"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:424
+msgid "Metal Orbling"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:429
+msgid "Metal Orbling King"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:426
+msgid "Metal Orbling Mage"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:425
+msgid "Metal Runner"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:52
+msgid "Metal Ticket"
+msgstr ""
+
+#: front/index.html:212
+#: front/views/xp-list.html:114
+msgid "Metal Zone"
+msgstr ""
+
+#: front/views/xp-list.html:10
+msgid "Metal Zone 1"
+msgstr ""
+
+#: front/views/xp-list.html:9
+msgid "Metal Zone 2"
+msgstr ""
+
+#: front/views/xp-list.html:8
+msgid "Metal Zone 3"
+msgstr ""
+
+#: front/views/xp-list.html:7
+msgid "Metal Zone 4"
+msgstr ""
+
+#: front/views/xp-list.html:6
+msgid "Metal Zone 5"
+msgstr ""
+
+#: front/views/xp-list.html:5
+msgid "Metal Zone 6"
+msgstr ""
+
+#: front/views/one-team.html:94
+msgid "Metal Zone {{ zone }}"
+msgstr ""
+
+#: front/views/xp-list.html:134
+msgid "Metal Zone {{ zones[$index] }}"
+msgstr ""
+
+#: front/views/xp-list.html:180
+msgid "Metal Zones 3, 4, 5 &amp; 6:"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:46
+msgid "Metupí"
+msgstr ""
+
+#: front/views/character-list.html:16
+#: front/views/xp-list.html:22
+msgid "Monster"
+msgstr ""
+
+#: front/views/stage-list.html:48
+msgid "Monsters"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:21
+msgid "Moon Tears"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:242
+#: front/views/dummy-character-translation.html:88
+msgid "Mothbot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:243
+msgid "Mothbot Queen"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:180
+msgid "Mudtoad"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:337
+msgid "Mudwing"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:502
+msgid "Munin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:298
+msgid "N Cell"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:76
+msgid "Naegling"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:44
+msgid "Nakupí"
+msgstr ""
+
+#: front/views/character-list.html:94
+#: front/views/eidolon-list.html:6
+#: front/views/item-list.html:28
+msgid "Name"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:244
+msgid "Nanoworm"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:508
+msgid "Nanuk"
+msgstr ""
+
+#: front/views/xp-list.html:123
+#: front/views/xp-list.html:48
+msgid "Nb char. in team"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:385
+msgid "Nebulator"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:352
+msgid "Necromancer"
+msgstr ""
+
+#: front/views/one-team.html:100
+#: front/views/xp-list.html:140
+msgid "Need XP"
+msgstr ""
+
+#: front/views/xp-list.html:80
+msgid "Need xp"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:359
+msgid "Negator X"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:466
+msgid "Neo Bahamut"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:493
+msgid "Neo Leviathan"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:504
+msgid "Neo Odin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:519
+msgid "Norn"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:38
+msgid "O'pari"
+msgstr ""
+
+#: front/views/history-import.html:29
+#: front/views/item-character-detail.html:15
+#: front/views/item-drop.html:10
+#: front/views/mz-edit.html:43
+#: front/views/stage-char-drop.html:14
+#: front/views/stage-drop.html:10
+#: front/views/stage-edit.html:41
+#: front/views/user-data-import.html:18
+msgid "OK"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:486
+msgid "Oceanus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:272
+msgid "Oculus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:104
+#: front/views/dummy-character-translation.html:500
+msgid "Odin"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:506
+msgid "Odin Omega"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:10
+msgid "Olber"
+msgstr ""
+
+#: front/views/one-team.html:6
+msgid "One is an OP carrier"
+msgstr ""
+
+#: front/index.html:229
+msgid "One team at a time"
+msgstr ""
+
+#: front/views/character-list.html:72
+msgid "Only P.o.F, not 100% yet"
+msgstr ""
+
+#: front/views/character-list.html:68
+msgid "Only P.o.T, not 100% yet"
+msgstr ""
+
+#: front/views/settings.html:21
+msgid "Only adventurers by default"
+msgstr ""
+
+#: front/views/character-list.html:62
+#: front/views/skill-list.html:9
+msgid "Only characters you have"
+msgstr ""
+
+#: front/views/settings.html:28
+msgid "Only characters you have by default"
+msgstr ""
+
+#: front/views/character-list.html:79
+msgid "Only droppable"
+msgstr ""
+
+#: front/views/daily-bonus-list.html:33
+#: front/views/item-drop-list.html:14
+#: front/views/item-list.html:15
+msgid "Only items you need"
+msgstr ""
+
+#: front/views/settings.html:35
+msgid "Only items you need by default"
+msgstr ""
+
+#: front/views/job-list.html:26
+msgid "Only jobs you have"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:133
+#: front/views/dummy-character-translation.html:356
+msgid "Onyx Dragon"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:160
+msgid "Orbling"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:28
+msgid "Orichalcum"
+msgstr ""
+
+#: front/index.html:250
+msgid "Overwrite local data"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:302
+msgid "Oxsecian Airgrunt"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:416
+msgid "Oxsecian Arrowbot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:307
+msgid "Oxsecian Battery"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:414
+msgid "Oxsecian Bladebot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:393
+msgid "Oxsecian Blitzer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:310
+msgid "Oxsecian Bomb"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:363
+msgid "Oxsecian Bomber"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:364
+msgid "Oxsecian Bomber EX"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:362
+msgid "Oxsecian Fighter"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:419
+msgid "Oxsecian Fighter EX"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:407
+msgid "Oxsecian Gas Bomb"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:304
+msgid "Oxsecian Grunt"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:324
+msgid "Oxsecian Grunt SP"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:303
+msgid "Oxsecian Guard"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:325
+msgid "Oxsecian Guard SP"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:375
+msgid "Oxsecian Gunner"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:326
+msgid "Oxsecian Gunner SP"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:392
+msgid "Oxsecian Lancer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:396
+msgid "Oxsecian RPS"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:391
+msgid "Oxsecian Raider"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:316
+msgid "Oxsecian Sniper"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:415
+msgid "Oxsecian Spearbot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:383
+msgid "Oxsecian Stormer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:409
+msgid "Oxsecian Stormer SP"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:413
+msgid "Oxsecian Striker"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:312
+msgid "Oxsecian Trapper"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:408
+msgid "Oxsecian Worm"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:31
+msgid "Oxsecium"
+msgstr ""
+
+#: front/views/character-list.html:110
+msgid "P.o.F"
+msgstr ""
+
+#: front/views/character-list.html:109
+msgid "P.o.T"
+msgstr ""
+
+#: front/views/quick-start.html:47
+msgid "Pacts"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:43
+msgid "Pahrl"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:62
+msgid "Palpa"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:458
+msgid "Papa Puppet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:137
+#: front/views/dummy-character-translation.html:365
+msgid "Paralypede"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:480
+msgid "Particle Hoarder"
+msgstr ""
+
+#: front/index.html:223
+msgid "Party Sorter"
+msgstr ""
+
+#: front/views/account-create.html:16
+#: front/views/login.html:17
+msgid "Password"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:100
+#: front/views/dummy-character-translation.html:331
+msgid "Pegawyrm"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:8
+msgid "Pelt of Knowledge"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:273
+msgid "Pepropé"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:524
+msgid "Perentie"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:251
+msgid "Phantasmal Lens"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:130
+#: front/views/dummy-character-translation.html:205
+msgid "Phi Orbling"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:335
+#: front/views/dummy-item-translation.html:45
+msgid "Phoenix"
+msgstr ""
+
+#: front/views/character-list.html:29
+#: front/views/job-list.html:19
+msgid "Physical"
+msgstr ""
+
+#: front/views/character-list.html:280
+msgid "Picture : all characters"
+msgstr ""
+
+#: front/views/character-list.html:284
+msgid "Picture : only adventurers"
+msgstr ""
+
+#: front/views/character-list.html:288
+msgid "Picture : only monsters"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:452
+msgid "Piercing Puppet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:59
+msgid "Piz'fer"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:41
+msgid "Planet's Heart"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:306
+msgid "Pneumatobot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:305
+msgid "Pneumatobot (Beta)"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:197
+msgid "Power Pyramid"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:300
+msgid "Powercell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:453
+msgid "Projectile Puppet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:430
+msgid "Pudding"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:55
+msgid "Pupropu"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:54
+msgid "Pupropé"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:154
+msgid "Pupru"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:257
+msgid "Pyrosaurus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:224
+msgid "Pyrotoad"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:103
+#: front/views/dummy-character-translation.html:334
+msgid "Pyrowisp"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:492
+msgid "Qarn"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:20
+msgid "R'zonand"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:34
+msgid "Ra'prow"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:78
+msgid "Raikiri"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:22
+msgid "Rainbow Tears"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:296
+msgid "Ramcell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:481
+msgid "Rarity Hoarder"
+msgstr ""
+
+#: front/views/quick-start.html:112
+msgid "Rebirth"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:142
+#: front/views/dummy-character-translation.html:213
+msgid "Red Starwhip"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:226
+msgid "Redguard"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:281
+#: front/views/dummy-character-translation.html:92
+msgid "Regenercell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:153
+msgid "Rejin"
+msgstr ""
+
+#: front/index.html:252
+msgid "Reset local data"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:361
+msgid "Restorator Z"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:330
+msgid "Rhinosaurus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:16
+msgid "Rikken"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:199
+msgid "Robotick"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:211
+msgid "Rockburn"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:227
+msgid "Rockfreeze"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:60
+msgid "Rune"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:433
+msgid "Runny Pudding"
+msgstr ""
+
+#: front/views/mz-edit.html:7
+#: front/views/stage-edit.html:7
+msgid "Runs"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:297
+msgid "S Cell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:19
+msgid "S'naip"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:164
+#: front/views/dummy-character-translation.html:76
+msgid "Sabertooth"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:111
+#: front/views/dummy-character-translation.html:185
+msgid "Sabertooth King"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:460
+msgid "Sacred Flame"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:4
+msgid "Samatha"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:45
+msgid "Samupí"
+msgstr ""
+
+#: front/index.html:249
+msgid "Schedule"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:249
+msgid "Scrap Golem"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:241
+msgid "Scrap Slime"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:23
+msgid "Sea Tears"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:353
+msgid "Seed"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:488
+msgid "Selena"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:3
+msgid "Serenity Shoot"
+msgstr ""
+
+#: front/index.html:246
+msgid "Settings"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:18
+msgid "Sh'berdan"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:49
+msgid "Sha'plar"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:269
+msgid "Shackler"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:351
+msgid "Shadow Slug"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:513
+msgid "Shadowfeeder"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:11
+msgid "Sheena"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:10
+msgid "Shell of Madness"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:289
+msgid "Shieldcell"
+msgstr ""
+
+#: front/index.html:230
+#: front/views/character-list.html:97
+msgid "Skill Boost"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:195
+msgid "Slashbot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:252
+msgid "Slashbot Redux"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:348
+#: front/views/dummy-character-translation.html:97
+msgid "Slasher"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:451
+msgid "Slashing Puppet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:138
+#: front/views/dummy-character-translation.html:328
+msgid "Slime Slug"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:482
+msgid "Slimebomber"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:193
+msgid "Slugosaur"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:295
+msgid "Snipercell"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:339
+msgid "Snowspew"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:461
+msgid "Soma"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:50
+msgid "Sorman"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:417
+msgid "Space Debris"
+msgstr ""
+
+#: front/views/character-list.html:39
+#: front/views/job-list.html:7
+msgid "Spear"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:167
+#: front/views/dummy-character-translation.html:75
+msgid "Spinetrich"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:390
+msgid "Spiny Leviathan"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:24
+msgid "Spirit Particle"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:20
+msgid "Spirit Tears"
+msgstr ""
+
+#: front/views/character-list.html:41
+#: front/views/job-list.html:9
+msgid "Staff"
+msgstr ""
+
+#: front/views/stage-list.html:22
+msgid "Stage"
+msgstr ""
+
+#: front/views/xp-list.html:43
+msgid "Stage for levelling after 70"
+msgstr ""
+
+#: front/views/mz-list.html:4
+#: front/views/stage-list.html:25
+msgid "Stamina"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:431
+msgid "Star Pudding"
+msgstr ""
+
+#: front/views/one-team.html:98
+msgid "Starting XP"
+msgstr ""
+
+#: front/views/settings.html:12
+msgid "Starting date"
+msgstr ""
+
+#: front/views/one-team.html:96
+msgid "Starting level"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:141
+#: front/views/dummy-character-translation.html:338
+msgid "Starwhip"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:261
+msgid "Stonefiend"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:122
+#: front/views/dummy-character-translation.html:234
+msgid "Stonefolk Archer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:126
+#: front/views/dummy-character-translation.html:235
+msgid "Stonefolk Healer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:121
+#: front/views/dummy-character-translation.html:233
+msgid "Stonefolk Knight"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:123
+#: front/views/dummy-character-translation.html:236
+msgid "Stonefolk Mage"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:120
+#: front/views/dummy-character-translation.html:232
+msgid "Stonefolk Warrior"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:149
+msgid "Suoh"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:152
+#: front/views/dummy-character-translation.html:464
+msgid "Suzaku"
+msgstr ""
+
+#: front/views/character-list.html:40
+#: front/views/job-list.html:8
+msgid "Sword"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:6
+msgid "Tail of Insight"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:479
+msgid "Tear Hoarder"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:432
+msgid "Teddy Pudding"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:201
+msgid "Teksura"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:400
+msgid "Tentacle Clone"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:360
+msgid "Terminator Y"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:13
+msgid "Terra Bowstring"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:49
+msgid "Terra Fragment"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:12
+msgid "Terra Spearbronze"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:14
+msgid "Terra Staffwood"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:11
+msgid "Terra Swordsteel"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:61
+msgid "The Emperor"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:62
+msgid "The Hierophant"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:68
+msgid "The Moon"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:67
+msgid "The Sun"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:69
+msgid "The Tower"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:145
+#: front/views/dummy-character-translation.html:358
+msgid "Thornasaurus"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:344
+msgid "Thunder Horn"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:109
+#: front/views/dummy-character-translation.html:402
+msgid "Tiamat"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:367
+msgid "Time Analyzer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:240
+msgid "Time Devourer"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:55
+msgid "Time Extension"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:469
+msgid "Time Spire"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:484
+msgid "Timebomber"
+msgstr ""
+
+#: front/index.html:248
+msgid "Timezone"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:438
+msgid "Tin Artillery"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:442
+msgid "Tin Darkcaster"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:441
+msgid "Tin Electrocaster"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:436
+msgid "Tin Fencer"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:439
+msgid "Tin Flamecaster"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:440
+msgid "Tin Frostcaster"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:443
+msgid "Tin King"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:437
+msgid "Tin Knight"
+msgstr ""
+
+#: front/views/one-team.html:124
+msgid "Total runs"
+msgstr ""
+
+#: front/views/xp-list.html:173
+msgid "Total:"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:239
+msgid "Toxic Bomborg"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:291
+msgid "Toxic Cannon"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:270
+msgid "Toxoid"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:388
+msgid "Transporter"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:54
+msgid "Trident"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:219
+msgid "Trilobot"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:184
+#: front/views/dummy-character-translation.html:79
+msgid "Triscorp"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:74
+msgid "Tyrfing"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:47
+msgid "U'nasag"
+msgstr ""
+
+#: front/views/xp-list.html:119
+msgid "Use OP carrier"
+msgstr ""
+
+#: front/views/history-import.html:8
+#: front/views/user-data-import.html:8
+msgid "User data"
+msgstr ""
+
+#: front/views/account-create.html:9
+#: front/views/login.html:10
+msgid "Username"
+msgstr ""
+
+#: front/views/settings.html:4
+msgid "Username (for screenshot)"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:134
+#: front/views/dummy-character-translation.html:347
+#: front/views/dummy-item-translation.html:39
+msgid "Vajra"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:520
+msgid "Valkyrie"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:509
+msgid "Vampire Bat"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:77
+msgid "Varunastra"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:77
+msgid "Velraine"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:260
+#: front/views/dummy-character-translation.html:91
+msgid "Vial Chucker"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:457
+msgid "Volt Puppet"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:518
+msgid "Völva"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:501
+msgid "Wailing Wall"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:27
+msgid "Warped Particle"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:162
+#: front/views/dummy-character-translation.html:63
+msgid "Warrior"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:279
+#: front/views/dummy-character-translation.html:95
+msgid "Wastecell"
+msgstr ""
+
+#: front/views/character-list.html:34
+msgid "Weapon"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:161
+msgid "Wee Orbling"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:498
+msgid "Weeper"
+msgstr ""
+
+#: front/views/stage-drop.html:2
+msgid "What drops from {{ stage_ref }}"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:19
+msgid "White Ring"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:110
+#: front/views/dummy-character-translation.html:181
+msgid "White Sabertooth"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:191
+#: front/views/dummy-character-translation.html:78
+msgid "Whitewyrm"
+msgstr ""
+
+#: front/views/stage-char-drop.html:2
+msgid "Who drops from {{ stage_ref }}"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:4
+msgid "Wisdom Flower"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:26
+msgid "Wish Particle"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:189
+#: front/views/dummy-character-translation.html:82
+msgid "Wyvern"
+msgstr ""
+
+#: front/views/settings.html:96
+msgid "XP list"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:156
+msgid "Y'apkar"
+msgstr ""
+
+#: front/views/login.html:26
+msgid "You already have local data, they will be erased by data stored on server, unless it's your first time login."
+msgstr ""
+
+#: front/views/dummy-character-translation.html:355
+msgid "Young Onyx Dragon"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:15
+msgid "Yukken"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:158
+msgid "Yulia"
+msgstr ""
+
+#: front/views/dummy-item-translation.html:38
+msgid "Yumiharizuki"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:51
+msgid "Zafitte"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:32
+msgid "Zan"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:53
+msgid "Zeera"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:35
+msgid "Zenzoze"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:61
+msgid "Zerro"
+msgstr ""
+
+#: front/views/dummy-character-translation.html:22
+msgid "Zuzu"
+msgstr ""
+
+#: front/views/item-list.html:32
+msgid "all"
+msgstr ""
+
+#: front/views/job-list.html:36
+msgid "atk"
+msgstr ""
+
+#: front/views/job-list.html:37
+msgid "atk@{{ max_level }}"
+msgstr ""
+
+#: front/views/one-team.html:101
+msgid "avg xp"
+msgstr ""
+
+#: front/views/job-list.html:38
+msgid "def"
+msgstr ""
+
+#: front/views/job-list.html:39
+msgid "def@{{ max_level }}"
+msgstr ""
+
+#: front/views/mz-list.html:7
+msgid "edit"
+msgstr ""
+
+#: front/views/xp-list.html:139
+msgid "ending exp"
+msgstr ""
+
+#: front/views/xp-list.html:137
+#: front/views/xp-list.html:77
+msgid "ending level"
+msgstr ""
+
+#: front/views/xp-list.html:79
+msgid "ending xp"
+msgstr ""
+
+#: front/views/item-list.html:31
+#: front/views/item-list.html:33
+msgid "for"
+msgstr ""
+
+#: front/views/settings.html:63
+msgid "for adventurers"
+msgstr ""
+
+#: front/views/settings.html:70
+msgid "for monsters"
+msgstr ""
+
+#: front/views/job-list.html:34
+msgid "hp"
+msgstr ""
+
+#: front/views/job-list.html:35
+msgid "hp@{{ max_level }}"
+msgstr ""
+
+#: front/views/job-list.html:40
+msgid "matk"
+msgstr ""
+
+#: front/views/job-list.html:41
+msgid "matk@{{ max_level }}"
+msgstr ""
+
+#: front/views/job-list.html:42
+msgid "mdef"
+msgstr ""
+
+#: front/views/job-list.html:43
+msgid "mdef@{{ max_level }}"
+msgstr ""
+
+#: front/views/item-list.html:30
+msgid "need"
+msgstr ""
+
+#: front/views/character-list.html:24
+#: front/views/job-list.html:14
+msgid "no element filter"
+msgstr ""
+
+#: front/views/character-list.html:37
+#: front/views/job-list.html:5
+msgid "no weapon filter"
+msgstr ""
+
+#: front/views/character-list.html:85
+msgid "reset filters"
+msgstr ""
+
+#: front/views/xp-list.html:82
+msgid "stamina"
+msgstr ""
+
+#: front/views/xp-list.html:138
+msgid "starting exp"
+msgstr ""
+
+#: front/views/xp-list.html:136
+#: front/views/xp-list.html:76
+msgid "starting level"
+msgstr ""
+
+#: front/views/xp-list.html:78
+msgid "starting xp"
+msgstr ""
+
+#: front/views/item-list.html:29
+msgid "stock"
+msgstr ""
+
+#: front/views/cps-list.html:2
+#: front/views/daily-bonus-list.html:2
+#: front/views/item-drop-list.html:3
+msgid "today is bonus day number {{ difference }}"
+msgstr ""
+
+#: front/views/item-list.html:34
+msgid "where?"
+msgstr ""
+
+#: front/views/character-list.html:300
+msgid "{{ __total_coins() / (coins_cc3 * 1.15 * 2 * nb_run_per_day(20)) | ceil  }} week-end (with Zeera j3@65)"
+msgstr ""
+
+#: front/views/character-list.html:307
+msgid "{{ __total_coins() / (coins_cc3 * 1.15 * 3 * nb_run_per_day(20)) | ceil  }} week-end (with timezone change and Zeera j3@65)"
+msgstr ""
+
+#: front/views/character-list.html:296
+msgid "{{ __total_coins() / (coins_cc3 * 2 * nb_run_per_day(20)) | ceil  }} week-end"
+msgstr ""
+
+#: front/views/character-list.html:303
+msgid "{{ __total_coins() / (coins_cc3 * 3 * nb_run_per_day(20)) | ceil  }} week-end (with timezone change)"
+msgstr ""
+
+#: front/views/character-drop.html:2
+msgid "{{ char_name }} drops from"
+msgstr ""
+
+#: front/views/quick-start.html:9
+msgid ""
+"{{ have_character.count() }} characters / {{ characters.length }} :\n"
+"                        {{ have_character.count() / characters.length * 100 | number: 0 }}%"
+msgstr ""
+
+#: front/views/quick-start.html:102
+msgid "{{ item.name }}"
+msgstr ""
+
+#: front/views/item-drop.html:2
+msgid "{{ name }} drops from"
+msgstr ""
+
+#: front/views/item-character-detail.html:2
+msgid "{{ name }} needed for"
+msgstr ""
+
+#: front/views/quick-start.html:53
+msgid "{{ total_coins(characters) | number }} coins for Pact of Fellowship"
+msgstr ""
+
+#: front/views/quick-start.html:50
+msgid "{{ total_energy(characters)| number }} energy for Pact of Truth"
+msgstr ""
+
+#: front/views/quick-start.html:120
+#: front/views/quick-start.html:127
+msgid "{{ value.name }}"
+msgstr ""

@@ -1,0 +1,199 @@
+<div class="row">
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#/characters" translate>Characters</a></h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item" translate>
+                        {{ have_character.count() }} characters / {{ characters.length }} :
+                        {{ have_character.count() / characters.length * 100 | number: 0 }}%
+                    </li>
+                </ul>
+                <table class="table table-condensed">
+                    <tr>
+                        <th>Class</th>
+                        <th>You have</th>
+                        <th></th>
+                        <th><small>SB 100%</small></th>
+                    </tr>
+                    <tr ng-repeat="_class in classed_characters | orderBy: 'ordre'">
+                        <td class="text-center">{{ _class.name }}</td>
+                        <td class="text-center">{{ _class.have }} / {{ _class.count }}</td>
+                        <td class="text-center"><small>{{ _class.have / _class.count * 100 | number:0 }}%</small></td>
+                        <td class="text-center">{{ _class.sb }} / {{ _class.have }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#/daily-bonus" translate>Daily Bonus</a></h3>
+                </div>
+                <div class="panel-body">
+                    <span translate>Daily Bonus is {{ daily_bonus.label() }}.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#/daily-bonus" translate>Buddies</a></h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item" translate>
+                        &infin; energy &amp; coins for Buddies
+                    </li>
+                </ul>
+                <table class="table table-condensed">
+                    <tr>
+                        <th>Buddies</th><td class="text-right"><small>need &infin; rolls</small></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        <div class="progress" style="margin-bottom: 0;">
+                            <div class="progress-bar progress-bar-success" role="progressbar" 
+                                aria-valuenow="0" 
+                                aria-valuemin="0" aria-valuemax="100" 
+                                style="width: 0%; min-width: 2em;">
+                                0%
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Items for evolution</th>
+                    </tr>
+                    <tr ng-repeat="(ref, value) in needed_evolution.items track by ref | objectOrderBy: 'name'">
+                        <td translate>{{ value.name }}</td>
+                        <td class="text-right"> {{ value.count - have_items[item.ref] | positive_or_zero | number }} </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" translate>Pacts</h3>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" translate>
+                    {{ total_energy(characters)| number }} energy for Pact of Truth
+                </li>
+                <li class="list-group-item" translate>
+                    {{ total_coins(characters) | number }} coins for Pact of Fellowship
+                </li>
+            </ul>
+            <table class="table table-condensed">
+                <div ng-if="pact_total['truth'] > 0">
+                <tr>
+                    <th colspan="2">Truth</th><td class="text-right"><small>need {{ pact_total['truth'] }} rolls</small></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                    <div class="progress" style="margin-bottom: 0;">
+                        <div class="progress-bar" role="progressbar" 
+                            aria-valuenow="{{ 100 * (pact_overall_total.truth - pact_total.truth) / pact_overall_total.truth }}" 
+                            aria-valuemin="0" aria-valuemax="100" 
+                            style="width: {{ 100 * (pact_overall_total.truth - pact_total.truth) / pact_overall_total.truth }}%; min-width: 2em;">
+                            {{ 100 * (pact_overall_total.truth - pact_total.truth) / pact_overall_total.truth | number:0}}%
+                        </div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <th>Class</th>
+                    <th>needed rolls</th>
+                    <th>Dupes chance</th>
+                </tr>
+                <tr ng-repeat="t in classed_truth | filter: filter_need_zero | orderBy: 'ordre'">
+                    <td style="width: 30%;">{{ t.name }}</td>
+                    <td style="width: 40%;" class="text-center">{{ t.need }} <small>({{ t.need / pact_total['truth'] * 100 | number:0 }}%)</small></td>
+                    <td style="width: 30%;" class="text-center">{{ ((t.have - t.sb) / (t.exists - t.sb)) * 100 | number:0 }}%</td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td><td class="text-center">{{ pact_truth_dupes() * 100 | number:0 }}%</td>
+                </tr>
+                </div>
+                <div ng-if="pact_total['fship'] > 0">
+                <tr>
+                    <th colspan="2">Fellowship</th><td class="text-right"><small>need {{ pact_total['fship'] }} rolls</small></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                    <div class="progress" style="margin-bottom: 0;">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" 
+                            aria-valuenow="{{ 100 * (pact_overall_total.fship - pact_total.fship) / pact_overall_total.fship }}" 
+                            aria-valuemin="0" 
+                            aria-valuemax="100" 
+                            style="width: {{ 100 * (pact_overall_total.fship - pact_total.fship) / pact_overall_total.fship }}%; min-width: 2em;">
+                            {{ 100 * (pact_overall_total.fship - pact_total.fship) / pact_overall_total.fship | number:0}}%
+                        </div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <th>Class</th>
+                    <th>needed rolls</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="t in classed_fship | filter: filter_need_zero | orderBy: 'ordre'">
+                    <td>{{ t.name }}</td>
+                    <td class="text-center">{{ t.need }} <small>({{ t.need / pact_total['fship'] * 100 | number:0 }}%)</td>
+                    <td class="text-center"><!--{{ t.need / pact_total['fship'] * 100 | number:0 }}%--></td>
+                </tr>
+                </div>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" translate><a href="#/items">Items</a></h3>
+                </div>
+                <div class="panel-body" ng-if="items.length == 0">
+                    None missing
+                </div>
+                <table class="table table-condensed" ng-if="items.length > 0">
+                    <tr ng-repeat="item in items" ng-if="item_needed[item.ref] - have_items[item.ref] > 0">
+                        <td translate>{{ item.name }}</td>
+                        <td class="text-right"> {{ item_needed[item.ref] - have_items[item.ref] | positive_or_zero | number }} </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" translate>Rebirth</h3>
+                </div>
+                <table class="table table-condensed">
+                    <!--tr><th colspan="2">Characters</th></tr-->
+                    <tr>
+                        <th colspan="2">Items</th>
+                    </tr>
+                    <tr ng-repeat="(ref, value) in needed_rebirth.items track by ref">
+                        <td translate>{{ value.name }}</td>
+                        <td class="text-right"> {{ value.count | number }} </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Monsters</th>
+                    </tr>
+                    <tr ng-repeat="(ref, value) in needed_rebirth.monsters">
+                        <td translate>{{ value.name }}</td>
+                        <td class="text-right"> {{ value.reason }} </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<h2 translate></h2>

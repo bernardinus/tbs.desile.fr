@@ -1,0 +1,12 @@
+<h2>Rebirth : <a href="#/explore/character/{{ rebirth.src_ref }}">{{ rebirth.src_name }}</a> &#8669; <a href="#/explore/character/{{ rebirth.dst_ref }}">{{ rebirth.dst_name }}</a></h2>
+
+<h3>Items</h3>
+<ul>
+    <li ng-repeat="item in rebirth.items | orderBy: 'count'">{{ item.count | number:0 }} {{ item.item_name}}</li>
+</ul>
+
+<h3>Monsters</h3>
+<ul>
+    <li ng-repeat="monster in rebirth.monsters | orderBy: 'monster_name'">Level {{ monster.level }} {{ monster.monster_name }}</li>
+</ul>
+

@@ -1,0 +1,6 @@
+<h2>Who has {{ skill.name }} ?</h2>
+<ul>
+  <li ng-repeat="char in skill.who_has">
+    <a href="#/explore/character/{{ char.character_ref }}">{{ char.character_name }} Job {{ char.level }}@{{ char.master_at_level }}</a> <small>({{ range_str(char) }}, {{ emit_str(char) }})</small>
+  </li>
+</ul>

@@ -1,0 +1,110 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body > .container,
+body > .container-fluid {
+    padding: 60px 15px 0;
+}
+
+body {
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: #d8d8d8;
+    padding: 4px;
+    bottom: 0px; 
+    position: absolute; 
+    left: 0px; 
+    width: 100%;
+}
+
+#version {
+    padding-top: 0.5em;
+}
+
+/* small devices */
+@media (min-width: 768px) {
+    body > .container,
+    body > .container-fluid {
+	padding: 60px 15px 0;
+    }
+}
+/* medium devices */
+@media (min-width: 992px) {
+    body > .container,
+    body > .container-fluid {
+	padding: 60px 15px 0;
+    }
+}
+
+/* large devices */
+@media (min-width: 1200px) {
+    body > .container, body > .container-fluid {
+	padding: 60px 15px 0;
+    }
+}
+
+/* Table */
+
+.table th {
+    text-align: center;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    /*padding: 1px;*/
+    font-size: 12px;
+}
+
+.table .form-control, .form-control-sm {
+    height: 24px;
+    font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+.table-hover tbody tr:hover {
+    border-left: 2px solid #444;
+    border-right: 2px solid #444;
+    z-index: 9999;
+}
+
+.text-middle {
+    vertical-align: middle !important;
+}
+
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control {
+    background-color: #ddd;
+}
+
+.navbar-btn {
+    /*background-color: #222;*/
+    /*color: white;*/
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* Sticky Table Headers */
+/*.sticky-header th {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}*/
+
+.tableFloatingHeaderOriginal th {
+    background-color: #fff;
+    border-bottom: 1px solid #DDD;
+}
+
+.tableFloatingHeaderOriginal th table th {
+    border-bottom: 0 none;
+}

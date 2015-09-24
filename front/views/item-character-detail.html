@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <h3 class="modal-title" translate>{{ name }} is needed by </h3>
+</div>
+
+<div class="modal-body" style="word-wrap: break-word;">
+    <h4 ng-if="jobs.length > 0">Jobs</h4>
+    <ul ng-repeat="job in jobs" ng-if="jobs.length > 0">
+        <li>
+            <span>{{ job.name }}</span>
+            <small><span ng-repeat="need in job.needs">({{ need[1] | number }} for Job {{ need[0] }}) </span></small>
+        </li>
+    </ul>
+    <h4 ng-if="rebirths.length > 0">Rebirths</h4>
+    <ul ng-repeat="rebirth in rebirths" ng-if="rebirths.length > 0">
+        <li>
+            <span>{{ rebirth.name }}</span>
+            <small><span ng-repeat="need in rebirth.needs">({{ need[1] | number }} for {{ need[0] }}) </span></small>
+        </li>
+    </ul>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()" translate>
+        OK
+    </button>
+</div>

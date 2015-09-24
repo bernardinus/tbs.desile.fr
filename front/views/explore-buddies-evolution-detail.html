@@ -1,0 +1,8 @@
+<h2>
+    Evolution : 
+        <a href="#/explore/buddy/{{ details.from_ref }}">{{ details.from_name }}</a> 
+        &#8669; 
+        <a href="#/explore/buddy/{{ details.to_ref }}">{{ details.to_name }}</a></h2>
+<ul>
+    <li ng-repeat="item in items | orderBy: 'count'">{{ item.count}} {{ item.name}}</li>
+</ul>

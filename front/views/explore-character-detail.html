@@ -1,0 +1,92 @@
+<h1>{{ details.detail.name }}</h1>
+
+<!--h2>Detail</h2-->
+<p>
+    {{ details.detail.class_ref }} Class {{ details.detail.adventurer == "0" ? "Monster": "Adventurer" }}
+</p>
+<ul>
+    <li>
+        {{ details.detail.pact_of_truth == '1' ? 'In': 'Not in' }} Pact of Truth
+    </li>
+    <li>
+        {{ details.detail.pact_of_fellowship == '1' ? 'In': 'Not in' }} Pact of Fellowship
+    </li>
+</ul>
+<!--p>{{ details.detail }}</p-->
+
+<h2>Jobs</h2>
+<div class="-row">
+    <div class="-col-sm-4" ng-repeat="job in details.jobs | orderBy: level">
+        <div class="row">
+            <span class="col-sm-1"> <img src="pictures/characters/64x64/character-{{ job.ref }}.png" class="img-thumbnail" style="min-width: 64px; width: 64px; height: 64px;"/> </span>
+            <div class="col-sm-6">
+                <h3>{{ job.level }}. {{ job.name }}</h3>
+            </div>
+        </div>
+        <div class="row character-profile">
+            <div class="col-sm-10 col-sm-offset-1">
+                <p  ng-repeat="p in job.profile">
+                    {{ p }}
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-7">
+                <div class="row">
+                    <h4 class="col-sm-12">Skills</h4>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table">
+                            <tr ng-repeat="skill in details.skills" ng-if="skill.job_ref == job.ref">
+                                <td>{{ skill.master_at_level }}</td>
+                                <td><a href="#/explore/skill/{{ skill.ref }}">{{ skill.name }}</a></td>
+                                <td>{{ skill.desc }}<small ng-if="skill.better_desc"><br/>{{ skill.better_desc }}</small></td>
+                                <td>{{ emit_str(skill) }}</td>
+                                <td>{{ range_string(skill) }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <h4 class="col-sm-12">Stats</h4>
+                </div>
+                <div class="row">
+                    <table class="table">
+                        <tr>
+                            <th>Level</th>
+                            <th>HP</th>
+                            <th>ATK</th>
+                            <th>MATK</th>
+                            <th>DEF</th>
+                            <th>MDEF</th>
+                            <th>XP</th>
+                        </tr>
+                        <tr ng-repeat="stat in job.stats">
+                            <td>{{ stat.level }}</td>
+                            <td style="text-align: center;">{{ stat.hp   | number:0 }}</td>
+                            <td style="text-align: center;">{{ stat.atk  | number:0 }}</td>
+                            <td style="text-align: center;">{{ stat.matk | number:0 }}</td>
+                            <td style="text-align: center;">{{ stat.def  | number:0 }}</td>
+                            <td style="text-align: center;">{{ stat.mdef | number:0 }}</td>
+                            <td style="text-align: right;">{{ stat.xp   | number:0 }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="col-sm-offset-1" ng-show="{{ job.level != 1 }}">Items needed</h4>
+        <div class="row">
+
+            <ul class="col-sm-offset-1" style="list-style-type: none;">
+                <li ng-repeat="item in details.items | orderBy: 'item_qty':true" ng-if="item.job_ref == job.ref">
+                    {{ item.item_qty }} {{ item.item_name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

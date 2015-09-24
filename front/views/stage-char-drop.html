@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h3 class="modal-title" translate>Who drops from {{ stage_ref }}</h3>
+</div>
+
+<div class="modal-body" style="word-wrap: break-word;">
+  <ul>
+    <li ng-repeat="char in drops track by char.character_ref">
+      {{ char.name }}<span ng-if="char.percent" style="font-size: 0.8em;"> ({{ char.percent * 100 }}%)</span>
+    </li>
+  </ul>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="ok()" translate>OK</button>
+</div>

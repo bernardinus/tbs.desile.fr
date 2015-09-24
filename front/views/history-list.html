@@ -1,0 +1,119 @@
+<div class="row" ng-if="unauthorized">
+    <p class="alert alert-danger">
+        You need to log in
+    </p>
+</div>
+
+<div class="row" ng-if="one_month && ! unauthorized">
+    <div class="col-sm-1">
+        <a href="#/history/{{ previous_month }}">
+        <button class="btn btn-default">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+        </button> </a>
+    </div>
+    <div class="col-sm-10 text-center">
+        <h3 style="margin: 0;">{{ this_month }} <small>{{ total_boost | number:1 }} energy</small></h3>
+    </div>
+    <div class="col-sm-1 pull-right">
+        <a href="#/history/{{ next_month }}">
+        <button class="btn btn-default">
+            <span class="glyphicon glyphicon-arrow-right"></span>
+        </button> </a>
+    </div>
+</div>
+
+<h2 ng-repeat-start="event in history | reverse " ng-if="! unauthorized"><a href="#/history/{{event.from}}/{{event.to}}" id="{{event.from}}-{{event.to}}"><span>From {{ event.from }} to {{ event.to }}</span></a><small>(day {{ to_day_n(event.to) }})</small></h2>
+
+<div class="row">
+    <div class="col-sm-4">
+        <h3>New character</h3>
+        <ul>
+            <li ng-repeat="char in event.diff.have_character | orderBy: 'name'">
+                You acquired {{ names[char.name] }}
+            </li>
+        </ul>
+        <p ng-if="event.diff.have_character.length == 0">
+            None
+        </p>
+    </div>
+
+    <div class="col-sm-4">
+        <h3>Jobs</h3>
+        <p ng-if="event.diff.job_level.length == 0">
+            Nothing
+        </p>
+        <ul>
+            <li ng-repeat="mod in event.diff.job_level | orderBy: ['n', 'name']">
+                {{ names[mod.name] }} get job {{ mod.n }}
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-sm-4">
+        <h3>Skill boost <small>{{ event.sum_boost | number:1 }} energy</small></h3>
+        <p ng-if="event.diff.boost.length == 0">
+            None
+        </p>
+        <table class="table table-condensed">
+            <tr ng-repeat="mod in event.diff.boost | orderBy: 'name'">
+                <td>{{ names[mod.name] }}</td>
+                <td class="text-center">{{ mod.old }}%</td>
+                <td class="text-center">to</td>
+                <td class="text-center">{{ mod.n }}%</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <h3>Job 1</h3>
+        <p ng-if="event.diff.job1_level.length == 0">
+            Nothing
+        </p>
+        <table class="table table-condensed">
+            <tr ng-repeat="job in event.diff.job1_level">
+                <td>{{ names[job.name] }}</td>
+                <td class="text-center">level {{ job.old }}</td>
+                <td class="text-center">to</td>
+                <td class="text-center">level {{ job.n }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-sm-4">
+        <h3>Job 2</h3>
+        <p ng-if="event.diff.job2_level.length == 0">
+            Nothing
+        </p>
+        <table class="table table-condensed">
+            <tr ng-repeat="mod in event.diff.job2_level">
+                <td>{{ names[mod.name] }}</td>
+                <td class="text-center">level {{ mod.old }}</td>
+                <td class="text-center">to</td>
+                <td class="text-center">level {{ mod.n }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-sm-4">
+        <h3>Job 3</h3>
+        <p ng-if="event.diff.job3_level.length == 0">
+            Nothing
+        </p>
+        <table class="table table-condensed">
+            <tr ng-repeat="mod in event.diff.job3_level">
+                <td>{{ names[mod.name] }}</td>
+                <td class="text-center">level {{ mod.old }}</td>
+                <td class="text-center">to</td>
+                <td class="text-center">level {{ mod.n }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<hr ng-repeat-end />
+
+<!--div class="row" ng-if="! unauthorized" style="margin-top: 1em; margin-bottom: 1em;">
+<button class="btn btn-default" ng-click="import()" ng-if="! two_dates">Import saved .json</button>
+</div-->

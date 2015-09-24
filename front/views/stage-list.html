@@ -1,0 +1,95 @@
+<div class="row" ng-if="chapter">
+    <div class="col-sm-4">
+        <span class="pull-left" ng-if="chapter.num > 1"> <a href="#/chapter/{{ (chapter.num | parseInt) - 1 }}">
+            <button class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+            </button> </a> </span>
+    </div>
+    <div class="col-sm-4 text-center">
+        <h3 style="margin-top: 0;">{{ chapter.num }}. {{ chapter.title }}</h3>
+    </div>
+    <div class="col-sm-4">
+        <span class="pull-right" ng-if="chapter.num < last_chapter"> <a href="#/chapter/{{ (chapter.num | parseInt) + 1 }}">
+            <button class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+            </button> </a> </span>
+    </div>
+</div>
+
+<table class="table table-striped table-condensed table-hover" sticky-table-header>
+    <thead>
+        <tr>
+            <th translate>Stage</th>
+            <th translate>Difficulty</th>
+            <th translate>Battle</th>
+            <th translate>Stamina</th>
+            <!-- user data -->
+            <th translate>
+            <button class="btn btn-default btn-xs" ng-click="sort_change('exp')">
+                Exp.
+            </button></th>
+            <th translate>
+            <button class="btn btn-default btn-xs" ng-click="sort_change('coin')">
+                Coins
+            </button></th>
+            <th><!-- edit --></th>
+            <th translate>
+            <button class="btn btn-default btn-xs" ng-click="sort_change('exp_stam')">
+                Exp. / stamina
+            </button></th>
+            <th translate>
+            <button class="btn btn-default btn-xs" ng-click="sort_change('coin_stam')">
+                Coins / stamina
+            </button></th>
+            <th translate>
+            <button class="btn btn-default btn-xs" ng-click="sort_change('exp_day')">
+                Exp / day
+            </button></th>
+            <th translate>Monsters</th>
+            <th translate>Items</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="stage in stages | orderBy: sort_opts.fn:sort_opts.desc">
+            <td class="text-center">{{ stage.ref }}</td>
+            <td class="text-center">{{ stage.difficulty }}</td>
+            <td class="text-center">{{ stage.battle }}</td>
+            <td class="text-center">{{ stage.stamina }}</td>
+            <!-- user data -->
+            <td class="text-center">{{ stage.exp() | number }}</td>
+            <td class="text-center">{{ stage.coin | number }}</td>
+            <td class="text-center">
+                <button class="btn btn-default btn-xs" ng-click="edit(stage.ref)">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                </button>
+            </td>
+            <td class="text-center"><!-- exp/stam -->    {{ stage.exp_stam() | number:0 }} </td>
+            <td class="text-center"><!-- coins/stam -->  {{ stage.coin_stam | number: 0 }} </td>
+            <td class="text-center"><!-- exp per day --> {{ stage.exp_day() | number: 0 }} </td>
+            <td class="text-center"><!-- Monster Drop -->
+                <button class="btn btn-default btn-xs"
+                    ng-click="who_drop_from(stage.ref)"
+                    ng-if="char_drop[stage.ref] && char_drop[stage.ref] != 0"
+                    ng-mouseenter="char_drop_pop(stage.ref)"
+                    popover="{{ popover_ }}"
+                    popover-placement="left"
+                    popover-trigger="mouseenter">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                </button>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-if="! char_drop[stage.ref] || char_drop[stage.ref] == 0"> </span>
+            </td>
+            <td class="text-center"><!-- Item Drop -->
+                <button class="btn btn-default btn-xs"
+                    ng-click="what_drop_from(stage.ref)"
+                    ng-if="stage_drop[stage.ref] && stage_drop[stage.ref] != 0"
+                    ng-mouseenter="stage_drop_pop(stage.ref)"
+                    popover="{{ popover_ }}"
+                    popover-placement="left"
+                    popover-trigger="mouseenter">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                </button>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-if="! stage_drop[stage.ref] || stage_drop[stage.ref] == 0"> </span>
+            </td>
+        </tr>
+    </tbody>
+</table>

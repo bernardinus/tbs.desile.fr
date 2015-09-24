@@ -1,0 +1,235 @@
+/* Navbar */
+#upload {
+    font-size: 0.8em;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* Character - Element */
+
+.element-Dark {
+    background-color: #e9aEf5 !important;
+}
+
+.element-Fire {
+    background-color: #fac2b9 !important;
+}
+
+.element-Ice {
+    background-color: #b8e6f5 !important;
+}
+
+.element-Thunder {
+    background-color: #FDFab9 !important;
+}
+
+.element-Heal {
+    background-color: #e8FFF3 !important;
+    
+}
+
+.element-Status {
+    /*background-color: #dff0d8 !important;*/
+    background-color: #c9ffb3 !important;
+}
+
+.element-Dark input[type='number']:focus {
+    border-color: #604F66;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(96, 79, 102, 0.6);
+    outline: 0 none;
+}
+
+.element-Fire input[type='number']:focus {
+    border-color: #661715;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 23, 21, 0.6);
+    outline: 0 none;
+}
+
+.element-Ice input[type='number']:focus {
+    border-color: #1E4166;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(30, 65, 102, 0.6);
+    outline: 0 none;
+}
+
+.element-Thunder input[type='number']:focus {
+    border-color: #665011;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 80, 17, 0.6);
+    outline: 0 none;
+}
+
+.element-Heal input[type='number']:focus {
+    border-color: #646566;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(100, 100, 100, 0.6);
+    outline: 0 none;
+}
+
+.element-Status input[type='number']:focus {
+    border-color: #37661D;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(55, 102, 29, 0.6);
+    outline: 0 none;
+}
+
+/* Character - Weapon */
+.element-weapon-container {
+    position: relative !important;
+}
+
+.weapon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.weapon-Arrow {
+    background-image: url(../images/icon_arrow-16.png);
+}
+
+.weapon-Magic {
+    background-image: url(../images/icon_magic-16.png);
+}
+.weapon-Spear {
+    background-image: url(../images/icon_spear-16.png);
+}
+.weapon-Sword {
+    background-image: url(../images/icon_sword-16.png);
+}
+
+/* Character - Class */
+.class-ss { font-weight: bold; }
+
+.class-s {}
+
+.class-a { font-weight: bold; }
+
+.class-b {}
+
+.class-c { font-weight: bold; }
+
+.class-d {}
+
+.char-have-true {
+	text-decoration: underline;
+}
+
+.skill-boost-100 {
+    border-color: #292;
+    background-color: #efe;
+}
+
+.level-90 {
+    border: 0px solid transparent;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Item - Item Type */
+.item-type-race {
+    text-shadow: #444 0.1em 0.1em 0.2em;
+}
+
+.item-type-weapon {
+    text-shadow: red 0.1em 0.1em 0.2em;
+}
+
+.item-type-elemental {
+    text-shadow: green 0.1em 0.1em 0.2em;
+}
+
+.item-type-tears {
+    text-shadow: blue 0.1em 0.1em 0.2em;
+}
+
+.item-type-particle {
+    text-shadow: purple 0.1em 0.1em 0.2em;
+}
+
+.item-type-ore {
+    text-shadow: orange 0.1em 0.1em 0.2em;
+}
+
+.item-type-legendary-weapon {
+    text-shadow: yellow 0.1em 0.1em 0.2em;
+}
+
+.item-type-other {
+    text-shadow: pink 0.1em 0.1em 0.2em;
+}
+
+/* Item */
+.item-need-true {
+	color: red;
+}
+
+.item-need-false, .all-item-need-false {
+	color: green;
+}
+
+tr.daily-bonus td {
+    font-weight: bold;
+}
+
+/* Job */
+.job-have-char-false { text-decoration: line-through; }
+.job-have-job-false { text-decoration: line-through; }
+
+/* Skill list */
+.skill-capped {
+    color: #aaa;
+}
+
+/* XP-List */
+.xp-not-yet {
+    font-style: italic;
+    color: #666;
+}
+
+/* explore characters */
+.character-profile {
+    padding-top: 1em;
+    /*padding-left: 2em;
+    padding-right: 2em;*/
+   margin-bottom: 1em;
+}
+
+.character-profile p {
+    text-indent: 2em;
+    margin-bottom: 0em;
+}
+
+/* fullcalendar schedule */
+/*.mz   { border-color: #382128;}*/
+.mz-1 { background-color: #943341; border-color: #943341; }
+.mz-2 { background-color: #aa3567; border-color: #aa3567; }
+.mz-3 { background-color: #995d77; border-color: #995d77; }
+.mz-4 { background-color: #e5478b; border-color: #e5478b; }
+.mz-5 { background-color: #864e5f; border-color: #864e5f; }
+.mz-6 { background-color: #633a47; border-color: #633a47; }
+.mz-king { 
+    /*font-weight: bold; */
+    text-decoration: underline;
+}
+
+.event-daily-quest {
+    background-color: #00cb3e;
+    border-color: #00a934;
+}
+
+.event-item-2x {
+    background-color: #e8af00;
+    border-color: #c09100;
+}
+
+.tz-item {
+    color: #e8af00;
+}
+
+.event-monster-2x {
+    background-color: #00c3e0;
+    border-color: #009cb3;
+}
+
+.tz-monster {
+    color: #00a3e0;
+}

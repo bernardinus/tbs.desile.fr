@@ -1,0 +1,44 @@
+<p>Current skill boost : {{ char_boost }} %</p>
+<p>Skills can activate in phase: {{ phases.sort().join(', ') }}</p>
+<p><b>Best base job is <u>{{ best_base_job.ref }}</u></b></p>
+
+<ul style="list-style-type: none;">
+  <li ng-repeat="job in jobs">
+    {{ job.level }}. {{ job.name }}
+    <ul style="list-style-type: none;">
+      <li ng-repeat="skill in job.skills | orderBy: 'master_at_level'">
+          <small>{{ skill.master_at_level }}</small>. phase {{ skill.phase }} 
+            - {{ skill.name }} 
+            - activation: {{ skill.emit_ratio }}% (base: {{ skill.base_emit_ratio }}%) 
+            - P(skill-up) = {{ skill.p_sup * 100 | number:0 }}%
+      </li>
+      <li>P(skill-up) = {{ job.p_skill_up.sum * 100 | number:0 }}%</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Suggested additional skills: </p>
+<ul>
+  <li ng-repeat="skill in suggested_skills | orderBy: [job.ref, 'master_at_level']">
+    {{ skill.job.ref }}@{{ skill.master_at_level }} 
+        - phase {{ skill.phase }} 
+        - {{ skill.name }} ({{ skill.base_emit_ratio }}%) 
+        - P(skill-up) = {{ skill.p_sup * 100 | number:0 }}%
+  </li>
+</ul>
+<p>which gives a P(skill-up) = {{ suggested_p_skill_up.sum * 100 | number:0 }}%.</p> 
+<p>To reach 100% SB, you will need {{ n_activations | number:0 }} pincer attacks, 
+    which is {{ n_activations / 5 | number:0 }} runs in 1-4 
+    or {{ n_activations / 7 | number:0 }} runs in 1-5.</p>
+
+
+
+<div style="display: none;">
+<h2>Pincer</h2>
+<p>P(skill-up per pincer) = {{ suggested_p_skill_up.sum * 100 | number:2 }}%</p>
+<p>P(1 or 2 skill-up in 1 run 1-4) = {{ binomial_dist['1-4'] * 100 | number:2 }}%</p>
+<p>P(1 or 2 skill-up in 1 run 1-5) = {{ binomial_dist['1-5'] * 100 | number:2 }}%</p>
+
+<p>{{ n_success['1-4'] | number:0 }} runs in 1-4 for 100% skill-boost</p>
+<p>{{ n_success['1-5'] | number:0 }} runs in 1-5 for 100% skill-boost</p>
+</div>

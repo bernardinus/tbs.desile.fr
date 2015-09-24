@@ -1,0 +1,49 @@
+<div class="row" style="margin-bottom: 1em;">
+    <div class="col-sm-3 col-sm-offset-2"><small>today is bonus day number {{ difference }}</small></div>
+    <div class="col-sm-1"><small>Bonus</small></div>
+    <div class="col-sm-4">
+        <select class="form-control form-control-sm" ng-options="item.label() for item in all_bonuses" ng-model="selected_bonus">
+        </select>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 1em;">
+    <div class="col-sm-2 col-sm-offset-2"><small>#negotiator activation</small></div>
+    <div class="col-sm-2">
+        <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_ng" ng-change="change_nb_ng()"/>
+    </div>
+    <div class="col-sm-2"><small>#negotiator pro activation</small></div>
+    <div class="col-sm-2">
+        <input type="number" min="0" max="6" class="form-control form-control-sm" ng-model="nb_ng_pro" ng-change="change_nb_ng_pro()"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <table class="table table-condensed table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Levels</th>
+      <th>Current SB</th>
+      
+    </tr>
+            <tr ng-repeat="values in characters | orderBy: 'name'">
+                <td>{{ values.name }}</td>
+                <td>
+                  <table style="width: 100%">
+                    <tr ng-repeat="stage in values.stages | filter: filter_zero_exp | orderBy: sort_expected:true"
+            ng-class="{ 'daily-bonus': dailyBonusConcerned(stage) }">
+                            <td style="width: 33%;">{{ stage.stage_ref }}:</td> 
+                            <td style="width: 20%;" class="text-right">{{ stage.expected() * 100 | number:1 }}%</td> 
+                <td class="text-right">
+                  <small>{{ stage.stamina_cost() | number:0 }} stamina</small>
+                  <small>( avg: {{ stage.avg_stamina_cost() | number:0 }} sta.)</small>
+                                                  </td>
+            </tr>
+                    </table>
+                </td>
+        <td class="text-center">{{ values.current_sb() }} %</td>
+            </tr>
+        </table>
+      </div>
+</div>

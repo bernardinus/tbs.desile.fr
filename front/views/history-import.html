@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h3 class="modal-title" translate>Import user data</h3>
+</div>
+
+<div class="modal-body" style="">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="user_data_file" class="col-sm-3 control-label" translate>User data</label>
+            <div class="col-sm-9">
+                <input id="user_data_file" type="file" fileread="user_data_file" filename="user_filename" onchange="angular.element(this).scope().file_changed(this)" />
+            </div>
+        </div>
+    </form>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="user_data_file" class="col-sm-3 control-label" translate>Date</label>
+            <div class="col-sm-9">
+                <input id="user_data_file" type="date" class="form-control form-control" ng-model="file_date" placeholder="YYYY-MM-DD" />
+            </div>
+        </div>
+    </form>
+    <p class="alert alert-success" ng-if="success">{{ success }}</p>
+    <p class="alert alert-warning" ng-if="warning">{{ warning }}</p>
+    <p class="alert alert-danger"  ng-if="error">{{ error }}</p>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-default" ng-click="dismiss()" translate>Dismiss</button>
+  <button class="btn btn-primary" ng-click="ok()" translate>OK</button>  
+</div>

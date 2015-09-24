@@ -1,0 +1,7 @@
+<div class="row" ng-repeat="row in skills track by $index" style="margin-top: 0.5em; margin-bottom: 0.5em;">
+    <div class="col-sm-{{ 12 / nb_col }}" ng-repeat="skill in row track by skill.ref">
+        <a class="btn btn-default col-sm-12" href="#/explore/skill/{{ skill.ref }}" ng-if="skill.name">
+            {{ skill.name }}
+        </a>
+    </div>
+</div>

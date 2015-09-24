@@ -1,0 +1,42 @@
+<form name="newAccountForm" class="form-horizontal" role="form" novalidate ng-submit="submit(user)">
+
+  <div class="modal-header">
+    <h3 class="modal-title" translate>Create account</h3>
+  </div>
+  
+  <div class="modal-body" style="">
+    <div class="form-group">
+      <label for="user_data_file" class="col-sm-3 control-label" translate>Username</label>
+      <div class="col-sm-9">
+    <input type="text" class="form-control" placeholder="Enter your username" ng-model="user.name" required />
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="user_data_file" class="col-sm-3 control-label"  translate>Password</label>
+      <div class="col-sm-9">
+    <input type="password" class="form-control" placeholder="Enter your password" ng-model="user.password" required />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+    <div ng-model="user.captcha" re-captcha></div>
+      </div>
+    </div>
+    
+    <p class="alert alert-success" ng-if="success">{{ success }}</p>
+    <p class="alert alert-warning" ng-if="warning">{{ warning }}</p>
+    <p class="alert alert-danger"  ng-if="error">{{ error }}</p>
+    
+    <div ng-if="debug">
+      <p>username: {{ username }}</p>
+      <p>password: {{ password }}</p>
+    </div>
+  </div>
+  
+  <div class="modal-footer">
+    <button class="btn btn-default" ng-click="dismiss()" translate>Cancel</button>
+    <button class="btn btn-primary" type="submit" ng-disabled="newAccountForm.$invalid" translate>Create</button>  
+  </div>
+
+</form>
