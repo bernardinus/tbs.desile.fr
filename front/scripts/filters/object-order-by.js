@@ -17,7 +17,7 @@ angular.module('tbsApp').filter('objectOrderBy', function () {
         filtered.sort(function (a, b) {
             return (a[field] > b[field] ? 1 : -1);
         });
-        if(reverse) filtered.reverse();
+        if(reverse){ filtered.reverse(); }
         return filtered;
     };
   });

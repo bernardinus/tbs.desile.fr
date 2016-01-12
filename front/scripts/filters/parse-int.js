@@ -9,8 +9,8 @@
  * Filter in the tbsApp.
  */
 angular.module('tbsApp').filter('parseInt', function () {
-    return function(input, arg) {
-        if(input != undefined){
+    return function(input) {
+        if(input !== undefined){
             return parseInt(input);
         }
     };

@@ -26,16 +26,16 @@ angular.module('tbsApp').controller('AccountCreateCtrl', function ($scope, $moda
             url: 'api/index.php/account_exists',
             method: 'GET',
             params: { username: user.name }
-        }).success(function(data, status, headers, config){
-            if(data.count == 0){
+        }).success(function(data){
+            if(data.count === 0){
                 $http.post('api/index.php/account_create', {
                     username: user.name,
                     password: md5.createHash(user.password),
                     recaptcha: user.captcha
-                }).success(function(data){
+                }).success(function(){
                     $scope.error   = undefined;
                     $scope.warning = undefined;
-                    $scope.success = "Account created";
+                    $scope.success = 'Account created';
                     setTimeout(function(){
                         $modalInstance.close(true);
                     }, 1000);
@@ -44,9 +44,9 @@ angular.module('tbsApp').controller('AccountCreateCtrl', function ($scope, $moda
                     $scope.error = data.message;
                 });
             } else {
-                $scope.warning = "This account name already exists.";
+                $scope.warning = 'This account name already exists.';
             }
-        }).error(function(data, status, headers, config){
+        }).error(function(data){
             $scope.error = data.message;
         });
     };

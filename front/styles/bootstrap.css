@@ -94,6 +94,10 @@ fieldset[disabled] .form-control {
     margin-right: 8px;
 }
 
+.img-thumbnail {
+    padding: 0;
+}
+
 /* Sticky Table Headers */
 /*.sticky-header th {
     background-color: #fff;

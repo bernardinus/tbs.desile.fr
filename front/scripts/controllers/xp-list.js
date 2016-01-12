@@ -10,7 +10,7 @@
 angular.module('tbsApp').controller('XpListCtrl', function($scope, $routeParams, $location, RJob, RStage, UserData, XpAverage, MetalZone, $filter, InGame) {
     var have_char = UserData.get('have_character', {});
     var job_levels = UserData.get('job_level', {});
-    var adv_default = localStorage['adv_default'] ? angular.fromJson(localStorage['adv_default']) : false;
+    var adv_default = UserData.get('adv_default', false);
     $scope.settings = UserData.get('settings_xp_list', {
         update_on : 'default'
     });
@@ -20,14 +20,14 @@ angular.module('tbsApp').controller('XpListCtrl', function($scope, $routeParams,
         3 : UserData.get('job3_level', {})
     };
     $scope.exclude_from_levelling = UserData.get('exclude_from_levelling', []);
-    if($scope.exclude_from_levelling.length == 1 && $scope.exclude_from_levelling[0] == ''){
+    if($scope.exclude_from_levelling.length === 1 && $scope.exclude_from_levelling[0] === ''){
         $scope.exclude_from_levelling = [];
     }
     $scope.level_ref = $routeParams.level_ref;
 
     $scope.limit_levels = $routeParams.level_ref;
     $scope.change_limit_levels = function(limit_levels) {
-        if (limit_levels == '') {
+        if (limit_levels === '') {
             $location.path('/xp');
         } else {
             $location.path('/xp/' + limit_levels);
@@ -70,12 +70,12 @@ angular.module('tbsApp').controller('XpListCtrl', function($scope, $routeParams,
 
     $scope.jobs = [];
     $scope.mz = {
-        "1" : [],
-        "2" : [],
-        "3" : [],
-        "4" : [],
-        "5" : [],
-        "6" : []
+        '1' : [],
+        '2' : [],
+        '3' : [],
+        '4' : [],
+        '5' : [],
+        '6' : []
     };
     $scope.zones = ['6', '5', '4', '3', '2', '1'];
     $scope.zone_level = [70, 60, 50, 40, 30, 20];
@@ -182,16 +182,16 @@ angular.module('tbsApp').controller('XpListCtrl', function($scope, $routeParams,
                 }
             };
 
-            if (have_char[jobs[i].character_ref] 
-                && (jobs[i].level == 1 || job_levels[jobs[i].character_ref] >= jobs[i].level) 
-                && $scope.exclude_from_levelling.indexOf(jobs[i].character_name) == -1)
-            {
+            if (have_char[jobs[i].character_ref]  && 
+                (jobs[i].level == 1 || job_levels[jobs[i].character_ref] >= jobs[i].level) &&
+                $scope.exclude_from_levelling.indexOf(jobs[i].character_name) == -1
+            ){
                 $scope.jobs.push(jobs[i]);
             }
         }
     });
 
-    $scope.job_level_change = function(level, ref) {
+    $scope.job_level_change = function(level) {
         var key = 'job' + level + '_level';
         UserData.set(key, $scope.job_level[level]);
     };
@@ -214,11 +214,11 @@ angular.module('tbsApp').controller('XpListCtrl', function($scope, $routeParams,
     $scope.filter_mz = function(zone) {
         return function(job) {
             return (job.mz() <= zone) && (job.level_end(zone) > job.level_start(zone));
-        }
+        };
     };
 
-    $scope.filter_adventurer = function(job, index) {
-        if ($scope.f_adventurer == '') {
+    $scope.filter_adventurer = function(job) {
+        if ($scope.f_adventurer === '') {
             return true;
         } else {
             return $scope.f_adventurer == job.adventurer;
@@ -226,7 +226,7 @@ angular.module('tbsApp').controller('XpListCtrl', function($scope, $routeParams,
     };
 
     $scope.filter_class = function(job) {
-        if ($scope.f_class.length == 0 || $scope.f_class[0] == '') {
+        if ($scope.f_class.length === 0 || $scope.f_class[0] === '') {
             return true;
         } else {
             return $scope.f_class.indexOf(job.class_ref) != -1;
@@ -236,7 +236,7 @@ angular.module('tbsApp').controller('XpListCtrl', function($scope, $routeParams,
     $scope.order_need_next = function(zone) {
         return function(job) {
             return job.need_next(zone);
-        }
+        };
     };
 
     $scope.class_xp_not_yet = function(mz, job) {

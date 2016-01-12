@@ -10,7 +10,7 @@
  */
 angular.module('tbsApp').filter('join_comma_space', function () {
     return function (input) {
-        if(input != undefined){
+        if(input !== undefined){
             return input.join(', ');
         }
     };

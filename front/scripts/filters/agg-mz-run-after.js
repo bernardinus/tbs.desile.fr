@@ -14,11 +14,11 @@ angular.module('tbsApp')
         if(jobs.length > 0){
             var runs = [];
             for(var i = 0; i < jobs.length; ++i){
-                runs.push(jobs[i].nb_run(zone))
+                runs.push(jobs[i].nb_run(zone));
             }
             return MetalZone.optimize_nb_run(runs, 6);
         } else {
             return 0;
         }
-    }
+    };
 });

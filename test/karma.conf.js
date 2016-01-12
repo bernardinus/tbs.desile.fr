@@ -59,6 +59,8 @@ module.exports = function(config) {
       'front/components/jstzdetect/jstz.min.js',
       'front/components/jquery-sticky-table-headers/js/jquery.stickytableheaders.js',
       'front/components/vis/dist/vis.min.js',
+      'front/components/re-tree/re-tree.js',
+      'front/components/ng-device-detector/ng-device-detector.js',
       'front/components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

@@ -16,7 +16,7 @@ angular.module('tbsApp')
         if(arg == -1){
         return input.length;
         }
-        if(arg == true){
+        if(arg === true){
         return input.reduce(function(p, c){ return c.have() ? p + 1: p; }, 0);
         }
     }

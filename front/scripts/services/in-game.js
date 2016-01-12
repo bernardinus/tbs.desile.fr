@@ -26,5 +26,6 @@ angular.module('tbsApp').constant('InGame', {
         5: 0.95,
         6: 0.95
     },
+    neg_bonus_max: 19,
     LAST_CHAPTER: 34
 });

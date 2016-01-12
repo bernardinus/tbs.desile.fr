@@ -51,8 +51,6 @@ angular.module('tbsApp').controller('CharacterListCtrl', function($scope, $route
         $scope.filters.adventurer = '1';
     }
 
-    
-
     $scope.characters = [];
 
     RCharacter.all(function(data) {
@@ -233,11 +231,11 @@ angular.module('tbsApp').controller('CharacterListCtrl', function($scope, $route
     };
 
     $scope.__total_energy_duration = function(){
-        var length = $scope.__total_energy() / 5 * 8;
+        var length = $scope.__total_energy() / (5 / 8 + 2 / 7);
         var duration = moment.duration(length, 'days');
         var years  = duration.years();
         var months = duration.months();
-        var days   = duration.days()
+        var days   = duration.days();
         return years + ' years ' + months + ' months and ' + days + ' days';
     };
 

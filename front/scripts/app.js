@@ -17,7 +17,8 @@ angular.module('tbsApp', [
         'angulartics',
         'angulartics.google.analytics',
         'reCAPTCHA',
-        'angular-md5'
+        'angular-md5',
+        'ng.deviceDetector'
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -36,6 +37,7 @@ angular.module('tbsApp', [
             .when('/explore',          { templateUrl: 'views/explore-list.html',     controller: 'ExploreListCtrl' })
             .when('/explore/buddies',  { templateUrl: 'views/explore-buddy-list.html', controller: 'ExploreBuddyListCtrl' })
             .when('/explore/buddy/:ref', { templateUrl: 'views/explore-buddy-detail.html', controller: 'ExploreBuddyDetailCtrl' })
+            .when('/explore/buddy-tharos', { templateUrl: 'views/explore-buddy-tharos.html', controller: 'ExploreBuddyTharosCtrl' })
             .when('/explore/character/:ref', { templateUrl: 'views/explore-character-detail.html', controller: 'ExploreCharacterDetailCtrl' })
             .when('/explore/characters', { templateUrl: 'views/explore-character-list.html', controller: 'ExploreCharacterListCtrl' })
             .when('/explore/skill/:ref', { templateUrl: 'views/explore-skill-detail.html', controller: 'ExploreSkillDetailCtrl' })

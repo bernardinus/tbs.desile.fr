@@ -22,13 +22,13 @@ angular.module('tbsApp').controller('ApplicationCtrl', function ($scope, $rootSc
         $scope.beta_version = false;
     }
 
-    $scope.$on('$locationChangeStart', function (event, next, current) {
+    $scope.$on('$locationChangeStart', function () {
         if($scope.currentUser){
             UserData.dirty_upload();
         }
     });
 
-    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    $rootScope.$on('$routeChangeSuccess', function() {
         $location.hash($routeParams.scrollTo);
         $anchorScroll();
     });

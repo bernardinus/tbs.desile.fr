@@ -58,12 +58,12 @@ angular.module('tbsApp').controller('CharacterListExportTxtCtrl', function($scop
                 name: c.name,
                 boost: b,
                 levels: levels
-            })
+            });
         }
     }
     
     $scope.characters = [];
-    angular.forEach(t_characters, function(value, key){
+    angular.forEach(t_characters, function(value){
         $scope.characters.push(value);
     });
     

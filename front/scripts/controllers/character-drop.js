@@ -9,7 +9,7 @@
  */
 angular.module('tbsApp')
   .controller('CharacterDropCtrl', function ($scope, $modalInstance, RCharacter, drop_from, char_ref) {
-    if(drop_from.length == 0 || drop_from == undefined){
+    if(drop_from.length === 0 || drop_from === undefined){
         $scope.where = [{stage_ref: 'nowhere known', percent: null}];
     } else {
         $scope.where = drop_from ;

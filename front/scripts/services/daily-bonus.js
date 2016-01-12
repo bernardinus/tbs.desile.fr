@@ -8,7 +8,7 @@
  * Service in the tbsApp.
  */
 angular.module('tbsApp').service('DailyBonus', function() {
-    // AngularJS will instantiate a singleton by calling "new" on this function
+    // AngularJS will instantiate a singleton by calling 'new' on this function
     var dailyBonus = {};
 
     dailyBonus.referenceDate = function() {
@@ -39,7 +39,7 @@ angular.module('tbsApp').service('DailyBonus', function() {
         //console.log('index', index);
         var bonus = all[index];
         bonus.label = function() {
-            return this.chapters.length != 0 ? this.name + ' on chapters ' + this.chapters.join(', ') : this.name;
+            return this.chapters.length !== 0 ? this.name + ' on chapters ' + this.chapters.join(', ') : this.name;
         };
         return bonus;
     };
@@ -49,92 +49,92 @@ angular.module('tbsApp').service('DailyBonus', function() {
         var index = this.numberForDate(date);
         var bonus = all[index];
         bonus.label = function() {
-            return this.chapters.length != 0 ? this.name + ' on chapters ' + this.chapters.join(', ') : this.name;
+            return this.chapters.length !== 0 ? this.name + ' on chapters ' + this.chapters.join(', ') : this.name;
         };
         return bonus;
     };
 
     dailyBonus.allBonuses = function() {
         var label = function() {
-            return this.chapters.length != 0 ? this.num + ' - ' + this.name + ' (' + this.chapters + ')' : this.num + ' - ' + this.name;
+            return this.chapters.length !== 0 ? this.num + ' - ' + this.name + ' (' + this.chapters + ')' : this.num + ' - ' + this.name;
         };
         return [{
             num : 1,
-            name : "Items drop rate x 2",
+            name : 'Items drop rate x 2',
             chapters : [4, 9, 14, 19, 24, 29, 34],
             label : label
         }, {
             num : 2,
-            name : "Monsters drop rate x 2",
+            name : 'Monsters drop rate x 2',
             chapters : [6, 11, 16, 21, 26, 31],
             label : label
         }, {
             num : 3,
-            name : "nothing",
+            name : 'nothing',
             chapters : [],
             label : label
         }, {
             num : 4,
-            name : "Items drop rate x 2",
+            name : 'Items drop rate x 2',
             chapters : [5, 10, 15, 20, 25, 30],
             label : label
         }, {
             num : 5,
-            name : "Monsters drop rate x 2",
+            name : 'Monsters drop rate x 2',
             chapters : [2, 7, 12, 17, 22, 27, 32],
             label : label
         }, {
             num : 6,
-            name : "nothing",
+            name : 'nothing',
             chapters : [],
             label : label
         }, {
             num : 7,
-            name : "Items drop rate x 2",
+            name : 'Items drop rate x 2',
             chapters : [6, 11, 16, 21, 26, 31],
             label : label
         }, {
             num : 8,
-            name : "Monsters drop rate x 2",
-            chapters : [3, 8, 13, 18, 23, 28],
+            name : 'Monsters drop rate x 2',
+            chapters : [3, 8, 13, 18, 23, 28, 33],
             label : label
         }, {
             num : 9,
-            name : "nothing",
+            name : 'nothing',
             chapters : [],
             label : label
         }, {
             num : 10,
-            name : "Items drop rate x 2",
+            name : 'Items drop rate x 2',
             chapters : [2, 7, 12, 17, 22, 27, 32],
             label : label
         }, {
             num : 11,
-            name : "Monsters drop rate x 2",
+            name : 'Monsters drop rate x 2',
             chapters : [4, 9, 14, 19, 24, 29, 34],
             label : label
         }, {
             num : 12,
-            name : "nothing",
+            name : 'nothing',
             chapters : [],
             label : label
         }, {
             num : 13,
-            name : "Items drop rate x 2",
-            chapters : [3, 8, 13, 18, 23, 28],
+            name : 'Items drop rate x 2',
+            chapters : [3, 8, 13, 18, 23, 28, 33],
             label : label
         }, {
             num : 14,
-            name : "Monsters drop rate x 2",
+            name : 'Monsters drop rate x 2',
             chapters : [5, 10, 15, 20, 25, 30],
             label : label
         }, {
             num : 15,
-            name : "nothing",
+            name : 'nothing',
             chapters : [],
             label : label
         }];
-    }
+    };
 
     return dailyBonus;
 });

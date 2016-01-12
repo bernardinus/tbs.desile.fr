@@ -38,7 +38,7 @@ angular.module('tbsApp').service('BuddyEvolution', function($resource, $q, UserD
                 if(have_items[key]){
                     needed_evolution.items[key].count -= have_items[key];
                     if(needed_evolution.items[key].count <= 0){
-                        delete needed_evolution.items[key]
+                        delete needed_evolution.items[key];
                     }
                 }
             }

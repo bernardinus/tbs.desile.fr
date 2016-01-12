@@ -18,7 +18,7 @@ angular.module('tbsApp').service('DailyQuest', function() {
          3 : 'Puppet Pandemonium',
          4 : 'Tropical Haze',
          5 : 'Crystal Roundelay',
-         6 : '-',
+         6 : 'Tearjerker Time',
          7 : 'Rarity Rumble',
          8 : 'Sweet Temptation',
          9 : 'Metal Runner Rampage',
@@ -28,7 +28,7 @@ angular.module('tbsApp').service('DailyQuest', function() {
         13 : 'Crystal Roundelay',
         14 : '-',
         15 : 'Metal Runner Rampage',
-        16 : '-',
+        16 : 'Tearjerker Time',
         17 : 'Rarity Rumble',
         18 : 'Tropical Haze',
         19 : 'Particle Hoarder Horde?',
@@ -37,7 +37,7 @@ angular.module('tbsApp').service('DailyQuest', function() {
         22 : 'Sweet Temptation',
         23 : 'Rarity Rumble',
         24 : 'Puppet Pandemonium',
-        25 : '-',
+        25 : 'Tearjerker Time',
         26 : 'Metal Runner Rampage',
         27 : '-',
         28 : 'Crystal Roundelay',
@@ -48,7 +48,7 @@ angular.module('tbsApp').service('DailyQuest', function() {
         var reference = moment('2015-04-30');
         var diff = parseInt(moment.duration(date.diff(reference)).as('days')) % 30;
         return quests[diff];
-    }
+    };
 
     return dq;
 });

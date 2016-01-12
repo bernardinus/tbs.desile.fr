@@ -47,7 +47,7 @@ angular.module('tbsApp').controller('BuddyDropListCtrl', function($scope, RStage
                 }
             });
         }
-        angular.forEach(buddies, function(value, key){
+        angular.forEach(buddies, function(value){
             $scope.buddies.push(value);
         });
     });

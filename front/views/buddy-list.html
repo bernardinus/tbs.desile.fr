@@ -57,7 +57,7 @@
 </accordion>
 
 <div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-12">
 <table class="table table-striped table-condensed" sticky-table-header>
     <thead>
         <tr>
@@ -70,8 +70,14 @@
             <th>BoF</th>
         </tr>
     </thead>
-    <tr ng-repeat="buddy in buddies | filter: filter_all_filters | orderBy: ['-class_order', 'sort_id']" ng-if="buddy.name != 'text'">
-        <td>{{ buddy.rarity }} - {{ buddy.name }}</td>
+    <tr ng-repeat="buddy in buddies | filter: filter_all_filters" ng-if="buddy.name != 'text'">
+        <td>
+            <img src="pictures/characters/32x32/buddy-{{ buddy.ref }}.png" style="width: 24px; height: 24px;" class="img-thumbnail" />
+            <span ng-if="buddy.t_level != 0" style="margin-left: {{ buddy.t_level}}em;">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+            </span>
+            {{ buddy.rarity }} - {{ buddy.name }}
+        </td>
         <td class="text-center">
             <input type="checkbox" ng-model="have_buddies[buddy.ref]" ng-change="toggle_have(buddy.ref)"/>
         </td>
@@ -80,12 +86,12 @@
                 ng-model="qty_buddies[buddy.ref]" ng-change="change_qty(buddy.ref)"/>
         </td>
         <td>
-            <input type="number" class="form-control text-right input-sm" ng-disabled="! have_buddies[buddy.ref]" min="1" max="300" 
+            <input type="number" class="form-control text-right input-sm" min="1" max="300" 
                 ng-model="want_buddies[buddy.ref]" ng-change="change_want(buddy.ref)"/>
         </td>
         <td>
-            <input type="number" class="form-control text-right input-sm" ng-disabled="! have_buddies[buddy.ref]" min="1" max="300" 
-                ng-model="evolve_buddies[buddy.ref]" ng-change="change_evolve(buddy.ref)"/>
+            <input type="number" class="form-control text-right input-sm" min="1" max="300" 
+                ng-model="evolve_buddies[buddy.ref]" ng-change="change_evolve(buddy.ref)" ng-if="buddy.next != null"/>
         </td>
         <td class="text-center">
             <!-- BoT -->
