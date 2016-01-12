@@ -7,7 +7,7 @@
  * # CpsListCtrl
  * Controller of the tbsApp
  */
-angular.module('tbsApp').controller('CpsListCtrl', function($scope, RCps, UserData, DailyBonus) {
+angular.module('tbsApp').controller('CpsListCtrl', function($scope, RCps, UserData, DailyBonus, InGame) {
     $scope.nb_th = UserData.get('item_drop_nb_th', 0);
     $scope.nb_ng = UserData.get('char_drop_nb_ng', 0);
     $scope.nb_ng_pro = UserData.get('char_drop_nb_ng_pro', 0);
@@ -76,7 +76,7 @@ angular.module('tbsApp').controller('CpsListCtrl', function($scope, RCps, UserDa
                         base_percent *= 2;
                     }
                     var bonus = 1 + ($scope.nb_ng * 2) + ($scope.nb_ng_pro * 8);
-                    if(bonus > 18){ bonus = 18; }
+                    if(bonus > InGame.neg_bonus_max){ bonus = InGame.neg_bonus_max; }
                     var base_rate = Math.min(1, base_percent * bonus);
                     var p = Math.pow(1 - base_rate, this.count);
                     var multiple_base = 1 - p;
