@@ -7,7 +7,7 @@
  * # CharacterDropListCtrl
  * Controller of the tbsApp
  */
-angular.module('tbsApp').controller('CharacterDropListCtrl', function($scope, UserData, DailyBonus, RStage) {
+angular.module('tbsApp').controller('CharacterDropListCtrl', function($scope, UserData, DailyBonus, InGame, RStage) {
     $scope.nb_ng = UserData.get('char_drop_nb_ng', 0);
     $scope.nb_ng_pro = UserData.get('char_drop_nb_ng_pro', 0);
     var skill_boosts = UserData.get('boost', {});
@@ -54,7 +54,7 @@ angular.module('tbsApp').controller('CharacterDropListCtrl', function($scope, Us
                         base_percent *= 2;
                     }
                     var bonus = 1 + ($scope.nb_ng * 2) + ($scope.nb_ng_pro * 8);
-                    if(bonus > 18){ bonus = 18; }
+                    if(bonus > InGame.neg_bonus_max){ bonus = InGame.neg_bonus_max; }
                     var base_rate = Math.min(1, base_percent * bonus);
                     var p = Math.pow(1 - base_rate, this.count);
                     var multiple_base = 1 - p;
@@ -95,6 +95,6 @@ angular.module('tbsApp').controller('CharacterDropListCtrl', function($scope, Us
     };
 
     $scope.filter_zero_exp = function(stage) {
-        return stage.expected() != 0;
-    }
+        return stage.expected() !== 0;
+    };
 });
