@@ -17,11 +17,18 @@ Elelyon A moment ago - Elelyon: obviously you approach the optimal solution when
 
 ++ Features ++
 
+- character-list
+    - add sort by rarity
+
 - schedule
     switch day / week
 
 - daily bonus :
     tri ne marche pas.
+
+- job-list
+    http://terrabattleforum.com/threads/suivi-de-progression.4388/page-28#post-91253
+    ajouter possibilité de mettre des multiplicateurs.
 
 - xp-list
     changer le cap job en fonction du nombre de job et/ou aventurier
@@ -31,9 +38,6 @@ Elelyon A moment ago - Elelyon: obviously you approach the optimal solution when
     ne pas mettre que les stages ou les monstres tombent
     filtre seulement les stages avec expected > 0
     en gras les stages avec dailybonus
-
-- skill-boost
-    4 jobs fixes pour le ^, le reste dans les 12 du SS
 
 - item-drops + drops + characters-drops 
     meilleure façon de synthétiser le tout, exemple du 5-8 qui ne donne que des sentient flames

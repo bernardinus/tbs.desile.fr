@@ -106,7 +106,12 @@ module.exports = function(grunt) {
                 options : {
                     port : 9001,
                     middleware : function(connect, options) {
-                        return [connect.static('.tmp'), connect.static('test'), connect().use('/bower_components', connect.static('./bower_components')), connect.static(appConfig.app)].concat(proxyMiddleware(connect, options));
+                        return [
+                            connect.static('.tmp'), 
+                            connect.static('test'), 
+                            connect().use('/bower_components', connect.static('./bower_components')), 
+                            connect.static(appConfig.app)
+                        ].concat(proxyMiddleware(connect, options));
                     }
                 }
             },

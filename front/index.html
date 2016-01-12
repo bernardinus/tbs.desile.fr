@@ -6,9 +6,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css" />
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="components/fullcalendar/dist/fullcalendar.css" />
         <link rel="stylesheet" href="components/vis/dist/vis.min.css" />
         <!-- endbower -->
@@ -61,6 +61,8 @@
         <script src="components/jstzdetect/jstz.min.js"></script>
         <script src="components/jquery-sticky-table-headers/js/jquery.stickytableheaders.js"></script>
         <script src="components/vis/dist/vis.min.js"></script>
+        <script src="components/re-tree/re-tree.js"></script>
+        <script src="components/ng-device-detector/ng-device-detector.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -183,6 +185,7 @@
         <script src="scripts/services/user-history.js"></script>
         <script src="scripts/services/user-roles.js"></script>
         <script src="scripts/services/xp.js"></script>
+        
         <script src="scripts/controllers/stage-layout.js"></script>
         <script src="scripts/controllers/character-list-export-txt.js"></script>
         <script src="scripts/controllers/buddy-list.js"></script>
@@ -199,6 +202,8 @@
         <script src="scripts/controllers/tb-event-list.js"></script>
         <script src="scripts/services/res-tb-event-name.js"></script>
         <script src="scripts/services/res-base.js"></script>
+        <script src="scripts/controllers/explore-buddy-tharos.js"></script>
+        <script src="scripts/services/buddy-data.js"></script>
         <!-- endbuild -->
     </head>
     <body ng-controller="ApplicationCtrl">
@@ -300,7 +305,7 @@
     <footer>
       <div class="container">
             <div class="row">
-                <span class="pull-left" id="version">3.0.0</span>
+                <span class="pull-left" id="version">3.4.x</span>
                 <div ng-controller="FooterCtrl">
                     <div class="pull-right" style="margin-top: .2em;">
                         <a href="#/login" class="pull-right btn btn-default" ng-click="login()"  ng-if="! currentUser">Login</a>
