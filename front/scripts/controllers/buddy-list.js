@@ -7,26 +7,54 @@
  * # BuddyListCtrl
  * Controller of the tbsApp
  */
-angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, RBuddy, UserData) {
-    $scope.have_buddies  = UserData.get('have_buddy', {});
-    $scope.qty_buddies   = UserData.get('qty_buddy',  {});
-    $scope.want_buddies  = UserData.get('want_buddy',  {});
-    $scope.evolve_buddies  = UserData.get('evolve_buddy',  {});
+angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, RBuddy, UserData, deviceDetector) {
+    $scope.have_buddies   = UserData.get('have_buddy',   {});
+    if(jQuery.isArray($scope.have_buddies)){ $scope.have_buddies = {}; }
+    $scope.qty_buddies    = UserData.get('qty_buddy',    {});
+    if(jQuery.isArray($scope.qty_buddies)){ $scope.qty_buddies = {}; }
+    $scope.want_buddies   = UserData.get('want_buddy',   {});
+    if(jQuery.isArray($scope.want_buddies)){ $scope.want_buddies = {}; }
+    $scope.evolve_buddies = UserData.get('evolve_buddy', {});
+    if(jQuery.isArray($scope.evolve_buddies)){ $scope.evolve_buddies = {}; }
     
     /* filters init */
     $scope.filters = {
-        'classes' : [''],
-        'bof_bot' : '',
+        'classes'  : [''],
+        'bof_bot'  : '',
         'only_have': false,
         'only_want': false
     };
     
     RBuddy.all(function(data){
+        var keyed_data = {};
+        
         for(var i = 0; i < data.length; ++i){
             data[i].class_order = parseInt(data[i].class_order);
             data[i].sort_id = parseInt(data[i].sort_id);
+            
+            keyed_data[data[i].ref] = angular.copy(data[i]);
+        }
+        
+        var t_buddies = [];
+        angular.forEach(keyed_data, function(value){
+            value.next = (value.next_ref !== null ? keyed_data[value.next_ref]: null);
+            value.prev = (value.prev_ref !== null ? keyed_data[value.prev_ref]: null);
+            
+            if(value.prev === null){ t_buddies.push(value); }
+        });
+        
+        t_buddies = $filter('orderBy')(t_buddies, ['-class_order', 'sort_id']);
+        var rec_push = function(arr, el, lvl){
+            el.t_level = lvl;
+            arr.push(el);
+            if(el.next !== null){
+                rec_push(arr, el.next, lvl + 1);
+            }
         };
-        $scope.buddies = data;
+        $scope.buddies = [];
+        for(i = 0; i < t_buddies.length; ++i){
+            rec_push($scope.buddies, t_buddies[i], 0);
+        }
     });
     
     $scope.toggle_have = function(ref){
@@ -47,7 +75,7 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, RBuddy, U
     
     $scope.filter_all_filters = function(buddy) {
         var filter_bof_bot = function(buddy) {
-            if ($scope.filters.bof_bot == '') {
+            if ($scope.filters.bof_bot === '') {
                 return true;
             } else if($scope.filters.bof_bot == 'Rare') {
                 return buddy.slot_kind == 'Rare' || buddy.slot_kind == '3';
@@ -59,7 +87,7 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, RBuddy, U
         };
 
         var filter_class = function(buddy) {
-            if ($scope.filters.classes.length == 0 || $scope.filters.classes[0] == '') {
+            if ($scope.filters.classes.length === 0 || $scope.filters.classes[0] === '') {
                 return true;
             } else {
                 return $scope.filters.classes.indexOf(buddy.rarity) != -1;
