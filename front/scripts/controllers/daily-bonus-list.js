@@ -7,7 +7,7 @@
  * # DailyBonusListCtrl
  * Controller of the tbsApp
  */
-angular.module('tbsApp').controller('DailyBonusListCtrl', function($scope, UserData, DailyBonus, ItemCounter, Rebirth, RStage) {
+angular.module('tbsApp').controller('DailyBonusListCtrl', function($scope, UserData, DailyBonus, InGame, ItemCounter, Rebirth, RStage) {
     $scope.nb_th = UserData.get('item_drop_nb_th', 0);
     var __items = {};
     $scope.items = [];
@@ -137,7 +137,7 @@ angular.module('tbsApp').controller('DailyBonusListCtrl', function($scope, UserD
                         base_percent *= 2;
                     }
                     var bonus = 1 + ($scope.nb_ng * 2) + ($scope.nb_ng_pro * 8);
-                    if(bonus > 18){ bonus = 18; }
+                    if(bonus > InGame.neg_bonus_max){ bonus = InGame.neg_bonus_max; }
                     var base_rate = Math.min(1, base_percent * bonus);
                     var p = Math.pow(1 - base_rate, this.count);
                     var multiple_base = 1 - p;
