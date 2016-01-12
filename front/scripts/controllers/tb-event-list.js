@@ -23,6 +23,8 @@ angular.module('tbsApp').controller('TbEventListCtrl', function ($scope, RTBServ
                     ev.isFuture = (ev.start_date > now);
                     ev.isPast = (ev.end_date < now);
                     ev.name = RTBEventName.getNameForKey(ev.key);
+                    // the event stops at 0:00, so it's easier to display the last day 
+                    ev.end_date = ev.end_date.subtract(1, 'day');
                     
                     $scope.events.push(ev);
                 }
