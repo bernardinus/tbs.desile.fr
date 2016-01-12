@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>terra-battle-cross-mobius</title>
+        <meta name="description" content="" />
+        <meta name="author" content="Matthieu DESILE" />
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        <script src="components/vis/dist/vis.js"></script>
+        <link rel="stylesheet" href="components/vis/dist/vis.min.css" />
+
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #mynetwork {
+                width: 100%;
+                height: 100%;
+                /*border: 0px solid lightgray;*/
+            }
+        </style>
+
+        
+
+    </head>
+
+    <body>
+        <div id="mynetwork"></div>
+        <script type="text/javascript">
+            "use strict";
+            // create an array with nodes
+            var nodes = new vis.DataSet([
+                //{ id: 10, label: 'stage 1'  },
+                { id: 20, label: 'stage 1 & 2'  },
+                { id: 30, label: 'stage 3' },
+                { id: 301, label: 'Floor 3 Mog (to unlock path C/D):\nAppear condition: Echo is in your team.\nStay condition: Echo job 2 level 35+', shape: 'text' },
+                { id: 40, label: 'stage 4a' },
+                { id: 45, label: 'stage 4b' },
+                { id: 50, label: 'stage 5a' },
+                { id: 501, label: 'Floor 5a Mog (to unlock path B):\nAppear condition: none (always here)\nStay condition: Echo job 1 level 15+', shape: 'text'},
+                { id: 55, label: 'stage 5b' },
+                { id: 551, label: 'Floor 5b Mog (to unlock path D):\nAppear condition: 2 turns after starting this stage \nAND 7 turns or less to clear the previous 4 stages\nStay condition: Echo job 3 level 35+', shape: 'text' },
+                { id: 60, label: 'stage 6a' },
+                { id: 62, label: 'stage 6b' },
+                { id: 64, label: 'stage 6c' },
+                { id: 66, label: 'stage 6d' },
+                { id: 70, label: 'stage 7a ' },
+                { id: 701, label: 'Ochu, Echo', shape: 'box', color: 'rgb(97, 240, 238)' },
+                { id: 72, label: 'stage 7b' },
+                { id: 721, label: 'Ochu', shape: 'box', color: 'rgb(97, 240, 238)' },
+                { id: 722, label: 'Mantle Loop (5x j2)', shape: 'box', color: '#7BE141' },
+                { id: 74, label: 'stage 7c' },
+                { id: 741, label: 'Tonberry', shape: 'box', color: 'rgb(97, 240, 238)' },
+                { id: 742, label: 'Core Loop (5x j3)', shape: 'box', color: '#7BE141' },
+                { id: 76, label: 'stage 7d' },
+                { id: 761, label: 'Tonberry, Mog', shape: 'box', color: 'rgb(97, 240, 238)' }
+            ]);
+
+            // create an array with edges
+            var edges = new vis.DataSet([
+                // A
+                //{ from: 10, to: 20, arrows:'to' },
+                { from: 20, to: 30, arrows:'to'},
+                { from: 30, to: 301, dashes: true },
+                { from: 301, to: 40, arrows:'to', label: 'A & B' },
+                { from: 40, to: 50, arrows:'to', label: 'A & B' },
+                { from: 50, to: 501, dashes: true },
+                { from: 501, to: 60, arrows:'to', label: 'A' },
+                { from: 60, to: 70, arrows:'to', label: 'A' },
+                { from: 70, to: 701, arrows:'to' },
+                
+                // B
+                { from: 501, to: 62, arrows:'to', label: 'B' },
+                { from: 62, to: 72, arrows:'to', label: 'B' },
+                { from: 72, to: 721, arrows:'to' },
+                { from: 72, to: 722, arrows:'to' },
+                
+                // C
+                { from: 301, to: 45, arrows:'to', label: 'C & D' },
+                { from: 45, to: 55, arrows:'to', label: 'C & D' },
+                { from: 55, to: 551, dashes: true },
+                { from: 551, to: 64, arrows:'to', label: 'C' },
+                { from: 64, to: 74, arrows:'to', label: 'C' },
+                { from: 74, to: 741, arrows:'to'},
+                { from: 74, to: 742, arrows:'to'},
+                
+                // D
+                { from: 551, to: 66, arrows:'to', label: 'D' },
+                { from: 66, to: 76, arrows:'to', label: 'D' },
+                { from: 76, to: 761, arrows:'to'}
+            ]);
+
+            // create a network
+            var container = document.getElementById('mynetwork');
+            var data = {
+                nodes : nodes,
+                edges : edges
+            };
+            var options = {
+                layout: {
+                    hierarchical: {
+                        //direction: 'Up-Down'
+                        //direction: 'Left-Right'
+                        sortMethod: 'directed'
+                    }
+                },
+                edges: {
+                    smooth: false
+                },
+                physics: {
+                    enabled: true,
+                    maxVelocity: 0,
+                    minVelocity: 0,
+                    barnesHut: {
+                        gravitationalConstant: -150,
+                        springLength: 1
+                    }
+                }
+            };
+            var network = new vis.Network(container, data, options);
+        </script>
+    </body>
+</html>
