@@ -1,0 +1,31 @@
+<table class="table table-striped table-condensed">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Max level</th>
+            <th>ATK max</th>
+            <th>DEF max</th>
+            <th>MATK max</th>
+            <th>MDEF max</th>
+            <th style="width: 33%;">Skill</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="buddy in buddies | filter: filter_text | orderBy: ['-class_order', 'sort_id']">
+        <td>
+            <img src="pictures/characters/32x32/buddy-{{ buddy.ref }}.png" class="img-thumbnail" />
+        </td>
+        <td style="vertical-align: middle;">
+            {{ buddy.rarity }} - {{ buddy.name }}
+        </td>
+        <td class="text-center">{{ buddy.max_level }}<br/><small>{{ buddy.exp | number }} XP</small></td>
+        <td style="vertical-align: middle;"><span ng-if="buddy.atk_max > 0">+{{ buddy.atk_max }} ATK</span></td>
+        <td style="vertical-align: middle;"><span ng-if="buddy.def_max > 0">+{{ buddy.def_max }} DEF</span></td>
+        <td style="vertical-align: middle;"><span ng-if="buddy.satk_max > 0">+{{ buddy.satk_max }} MATK</span></td>
+        <td style="vertical-align: middle;"><span ng-if="buddy.sdef_max > 0">+{{ buddy.sdef_max }} MDEF</span></td>
+        <td><span ng-if="buddy.skill_desc != null">{{ buddy.skill_desc }} 
+                <small ng-if="buddy.skill_better_desc != null && buddy.skill_better_desc != ('[official] ' + buddy.skill_desc)"><br/>({{ buddy.skill_better_desc }})</small>
+            </span>
+        </td>
+    </tr>
+</table>
