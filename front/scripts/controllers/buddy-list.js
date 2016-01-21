@@ -22,7 +22,8 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, 
         'classes'  : [''],
         'bof_bot'  : '',
         'only_have': false,
-        'only_want': false
+        'only_want': false,
+        'evolution': false
     };
     
     RBuddy.all(function(data){
@@ -86,6 +87,14 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, 
             }
         };
 
+        var filter_evolution = function(buddy){
+            if($scope.filters.evolution == false){
+                return true;
+            } else {
+                return buddy.next != null || buddy.prev != null;
+            }
+        }
+
         var filter_class = function(buddy) {
             if ($scope.filters.classes.length === 0 || $scope.filters.classes[0] === '') {
                 return true;
@@ -110,6 +119,6 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, 
             }
         };
 
-        return filter_bof_bot(buddy) && filter_class(buddy) && filter_have(buddy) && filter_want(buddy);
+        return filter_bof_bot(buddy) && filter_class(buddy) && filter_have(buddy) && filter_want(buddy) && filter_evolution(buddy);
     };
 });
