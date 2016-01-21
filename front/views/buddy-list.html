@@ -22,6 +22,18 @@
                     </span>
                 </div>
                 <div class="row" style="margin-top: 1em;">
+                    <span class="col-sm-6"><small translate>Only companions you had (like Companion Compendium)</small></span>
+                    <span class="col-sm-6">
+                        <input type="checkbox" ng-model="filters.only_had"/>
+                    </span>
+                </div>
+                <div class="row" style="margin-top: 1em;">
+                    <span class="col-sm-6"><small translate>Only companions you never had</small></span>
+                    <span class="col-sm-6">
+                        <input type="checkbox" ng-model="filters.only_not_had"/>
+                    </span>
+                </div>
+                <div class="row" style="margin-top: 1em;">
                     <span class="col-sm-6"><small translate>Only companions you want</small></span>
                     <span class="col-sm-6">
                         <input type="checkbox" ng-model="filters.only_want"/>
@@ -68,6 +80,7 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>had ?</th>
             <th>have ?</th>
             <th>current stock</th>
             <th># to keep</th>
@@ -83,6 +96,9 @@
                 <span class="glyphicon glyphicon-arrow-right"></span>
             </span>
             {{ buddy.rarity }} - {{ buddy.name }}
+        </td>
+        <td class="text-center">
+            <input type="checkbox" ng-model="had_buddies[buddy.ref]" ng-change="toggle_had(buddy.ref)"/>
         </td>
         <td class="text-center">
             <input type="checkbox" ng-model="have_buddies[buddy.ref]" ng-change="toggle_have(buddy.ref)"/>

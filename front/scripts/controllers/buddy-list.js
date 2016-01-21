@@ -8,13 +8,15 @@
  * Controller of the tbsApp
  */
 angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, RBuddy, UserData, deviceDetector) {
+    $scope.had_buddies   = UserData.get('had_buddy',     {});
     $scope.have_buddies   = UserData.get('have_buddy',   {});
-    if(jQuery.isArray($scope.have_buddies)){ $scope.have_buddies = {}; }
     $scope.qty_buddies    = UserData.get('qty_buddy',    {});
-    if(jQuery.isArray($scope.qty_buddies)){ $scope.qty_buddies = {}; }
     $scope.want_buddies   = UserData.get('want_buddy',   {});
-    if(jQuery.isArray($scope.want_buddies)){ $scope.want_buddies = {}; }
     $scope.evolve_buddies = UserData.get('evolve_buddy', {});
+    if(jQuery.isArray($scope.had_buddies)   ){ $scope.had_buddies    = {}; }
+    if(jQuery.isArray($scope.have_buddies)  ){ $scope.have_buddies   = {}; }
+    if(jQuery.isArray($scope.qty_buddies)   ){ $scope.qty_buddies    = {}; }
+    if(jQuery.isArray($scope.want_buddies)  ){ $scope.want_buddies   = {}; }
     if(jQuery.isArray($scope.evolve_buddies)){ $scope.evolve_buddies = {}; }
     
     /* filters init */
@@ -22,6 +24,8 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, 
         'classes'  : [''],
         'bof_bot'  : '',
         'only_have': false,
+        'only_had':  false,
+        'only_not_had': false,
         'only_want': false,
         'evolution': false
     };
@@ -60,6 +64,10 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, 
     
     $scope.toggle_have = function(ref){
         UserData.set('have_buddy', $scope.have_buddies);
+    };
+    
+    $scope.toggle_had = function(ref){
+        UserData.set('had_buddy', $scope.have_buddies);
     };
     
     $scope.change_qty = function(ref){
@@ -111,6 +119,22 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, 
             }
         };
         
+        var filter_had = function(buddy) {
+            if (!$scope.filters.only_had) {
+                return true;
+            } else {
+                return $scope.had_buddies[buddy.ref];
+            }
+        };
+        
+        var filter_not_had = function(buddy) {
+            if (!$scope.filters.only_not_had) {
+                return true;
+            } else {
+                return ! $scope.had_buddies[buddy.ref];
+            }
+        };
+        
         var filter_want = function(buddy) {
             if (!$scope.filters.only_want) {
                 return true;
@@ -119,6 +143,6 @@ angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, 
             }
         };
 
-        return filter_bof_bot(buddy) && filter_class(buddy) && filter_have(buddy) && filter_want(buddy) && filter_evolution(buddy);
+        return filter_bof_bot(buddy) && filter_class(buddy) && filter_have(buddy) && filter_want(buddy) && filter_evolution(buddy) && filter_had(buddy) && filter_not_had(buddy);
     };
 });
