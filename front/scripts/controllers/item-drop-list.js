@@ -7,7 +7,7 @@
  * # ItemDropListCtrl
  * Controller of the tbsApp
  */
-angular.module('tbsApp').controller('ItemDropListCtrl', function($scope, UserData, DailyBonus, ItemCounter, Rebirth, RStage) {
+angular.module('tbsApp').controller('ItemDropListCtrl', function($scope, UserData, DailyBonus, ItemCounter, Rebirth, RStage, BuddyEvolution) {
     $scope.nb_th = UserData.get('item_drop_nb_th', 0);
     $scope.items = {};
 
@@ -30,67 +30,72 @@ angular.module('tbsApp').controller('ItemDropListCtrl', function($scope, UserDat
         Rebirth.item_list().then(function(rebirths) {
             needed_rebirth = rebirths;
 
-            RStage.items.all(function(data) {
-                var _item = null;
-
-                for (var i = 0; i < data.length; ++i) {
-                    _item = data[i];
-                    if (!$scope.items[_item.item_ref]) {
-                        $scope.items[_item.item_ref] = {
-                            ref : _item.item_ref,
-                            name : _item.item_name,
-                            _stages : {},
-                            stages : [],
-                            needed : function() {
-                                return (($scope.item_needed[this.ref] || 0) + (needed_rebirth.current[this.ref] || 0)) - ($scope.have_items[this.ref] || 0);
+            BuddyEvolution.item_list().then(function(buddies){
+                
+                RStage.items.all(function(data) {
+                    var _item = null;
+    
+                    for (var i = 0; i < data.length; ++i) {
+                        _item = data[i];
+                        if (!$scope.items[_item.item_ref]) {
+                            $scope.items[_item.item_ref] = {
+                                ref : _item.item_ref,
+                                name : _item.item_name,
+                                _stages : {},
+                                stages : [],
+                                needed : function() {
+                                    return (($scope.item_needed[this.ref] || 0) + (needed_rebirth.current[this.ref] || 0) + buddies.needed[this.ref] || 0) - ($scope.have_items[this.ref] || 0);
+                                }
+                            };
+                        }
+                        if (!$scope.items[_item.item_ref]._stages[_item.stage_ref]) {
+                            $scope.items[_item.item_ref]._stages[_item.stage_ref] = {
+                                stage_ref : _item.stage_ref,
+                                stamina : _item.stamina,
+                                chapter_num : parseInt(_item.chapter_num),
+                                drops : [],
+                                expected : function() {
+                                    return this.drops.reduce(function(p, c) {
+                                        return c.expected() + p;
+                                    }, 0);
+                                },
+                                stamina_cost : function() {
+                                    return (1.0 / this.expected()) * this.stamina;
+                                },
+                                average_cost : function() {
+                                    return parseFloat(this.stamina) / this.expected();
+                                },
+                                for_100_stamina : function() {
+                                    return (100.0 / this.stamina) * this.expected();
+                                }
                             }
-                        };
-                    }
-                    if (!$scope.items[_item.item_ref]._stages[_item.stage_ref]) {
-                        $scope.items[_item.item_ref]._stages[_item.stage_ref] = {
-                            stage_ref : _item.stage_ref,
-                            stamina : _item.stamina,
+                        }
+    
+                        $scope.items[_item.item_ref]._stages[_item.stage_ref].drops.push({
+                            count : _item.count,
+                            percent : parseFloat(_item.percent),
                             chapter_num : parseInt(_item.chapter_num),
-                            drops : [],
                             expected : function() {
-                                return this.drops.reduce(function(p, c) {
-                                    return c.expected() + p;
-                                }, 0);
-                            },
-                            stamina_cost : function() {
-                                return (1.0 / this.expected()) * this.stamina;
-                            },
-                            average_cost : function() {
-                                return parseFloat(this.stamina) / this.expected();
-                            },
-                            for_100_stamina : function() {
-                                return (100.0 / this.stamina) * this.expected();
+                                var base_percent = this.percent * 100;
+                                var th_percent = base_percent * (1 + 0.25 * $scope.nb_th);
+                                var rounded_percent = parseInt(parseInt(th_percent * 10) / 10);
+                                if ($scope.selected_bonus.name == 'Items drop rate x 2' && $scope.selected_bonus.chapters.indexOf(this.chapter_num) != -1) {
+                                    rounded_percent *= 2;
+                                }
+                                return (this.count * rounded_percent) / 100;
                             }
-                        }
+                        });
                     }
-
-                    $scope.items[_item.item_ref]._stages[_item.stage_ref].drops.push({
-                        count : _item.count,
-                        percent : parseFloat(_item.percent),
-                        chapter_num : parseInt(_item.chapter_num),
-                        expected : function() {
-                            var base_percent = this.percent * 100;
-                            var th_percent = base_percent * (1 + 0.25 * $scope.nb_th);
-                            var rounded_percent = parseInt(parseInt(th_percent * 10) / 10);
-                            if ($scope.selected_bonus.name == 'Items drop rate x 2' && $scope.selected_bonus.chapters.indexOf(this.chapter_num) != -1) {
-                                rounded_percent *= 2;
-                            }
-                            return (this.count * rounded_percent) / 100;
+                    for (var key1 in $scope.items) {
+                        for (var key2 in $scope.items[key1]._stages) {
+                            $scope.items[key1].stages.push($scope.items[key1]._stages[key2]);
                         }
-                    });
-                }
-                for (var key1 in $scope.items) {
-                    for (var key2 in $scope.items[key1]._stages) {
-                        $scope.items[key1].stages.push($scope.items[key1]._stages[key2]);
+                        delete $scope.items[key1]._stages;
                     }
-                    delete $scope.items[key1]._stages;
-                }
+                });
             });
+
+            
         });
     });
 
