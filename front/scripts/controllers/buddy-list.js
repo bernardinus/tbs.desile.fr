@@ -8,7 +8,7 @@
  * Controller of the tbsApp
  */
 angular.module('tbsApp').controller('BuddyListCtrl', function ($scope, $filter, RBuddy, UserData, deviceDetector) {
-    $scope.had_buddies   = UserData.get('had_buddy',     {});
+    $scope.had_buddies    = UserData.get('had_buddy',    {});
     $scope.have_buddies   = UserData.get('have_buddy',   {});
     $scope.qty_buddies    = UserData.get('qty_buddy',    {});
     $scope.want_buddies   = UserData.get('want_buddy',   {});

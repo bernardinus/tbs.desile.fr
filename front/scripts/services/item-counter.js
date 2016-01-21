@@ -12,15 +12,15 @@ angular.module('tbsApp').service('ItemCounter', function($q, RJob, UserData) {
     return { 
         get: function() {
             var defer = $q.defer();
-            var job_level = UserData.get('job_level', {});
+            var job_level     = UserData.get('job_level', {});
             var eidolon_level = UserData.get('eidolon_level', {});
-            var characters = UserData.get('have_character', {});
-            var eidolons = UserData.get('have_eidolon', {});
+            var characters    = UserData.get('have_character', {});
+            var eidolons      = UserData.get('have_eidolon', {});
             var have = [];
             var result = {
-                item_needed : {},
+                item_needed :         {},
                 item_needed_by_char : {},
-                future_item_needed : {},
+                future_item_needed :  {},
                 future_item_needed_by_char : {}
             };
     

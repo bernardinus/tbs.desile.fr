@@ -18,20 +18,21 @@ angular.module('tbsApp').service('BuddyEvolution', function($resource, $q, UserD
                 'buddy': {},
                 'items': {}
             };
-            var have_buddies = UserData.get('have_buddy', {});
-            var qty_buddies = UserData.get('qty_buddy', {});
-            var have_items = UserData.get('have_items', {});
+            //var have_buddies   = UserData.get('have_buddy', {});
+            var evolve_buddies = UserData.get('evolve_buddy', {});
+            //var qty_buddies  = UserData.get('qty_buddy', {});
+            var have_items   = UserData.get('have_items', {});
             
             for(var i = 0; i < data.length; ++i){
                 var b = data[i];
-                if(have_buddies[b.from_ref]){
+                if(evolve_buddies[b.from_ref] && evolve_buddies[b.from_ref] > 0){
                     if(! needed_evolution.items[b.item_ref]){
                         needed_evolution.items[b.item_ref] = {
                             name: b.item_name, 
                             count: 0
                         };
                     } 
-                    needed_evolution.items[b.item_ref].count += parseInt(b.count) * qty_buddies[b.from_ref];
+                    needed_evolution.items[b.item_ref].count += parseInt(b.count) * evolve_buddies[b.from_ref];
                 }
             }
             for(var key in needed_evolution.items){
