@@ -52,6 +52,16 @@
       <option value="GodBeast" translate>Celestial</option>
     </select>
   </div>
+  <div class="col-sm-2">
+    <select class="form-control input-sm" ng-model="filters.generation">
+      <option value="0" translate>All generations</option>
+      <option value="1" translate>Generation 1</option>
+      <option value="2" translate>Generation 2</option>
+      <option value="3" translate>Generation 3</option>
+      <option value="4" translate>Generation 4</option>
+      
+    </select>
+  </div>
 </div>
 
 <table class="table table-striped table-condensed">
@@ -73,7 +83,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="job in jobs | filter: search | orderBy: order_opts.pred:order_opts.desc" >
+    <tr ng-repeat="job in jobs | filter: search | filter: filter_generation | orderBy: order_opts.pred:order_opts.desc" >
       <td class="element-{{ job.element_ref }}">
     <span style="display: none;">{{$index + 1}}</span>
     <div class="element-weapon-container">

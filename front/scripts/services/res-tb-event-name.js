@@ -77,6 +77,8 @@ angular.module('tbsApp').factory('RTBEventName', function() {
         'sp_ch_2006-2' : '【Lucia】 Leonidas in Arena',
         'sp_ch_2006-3' : '【Lucia】 Storm Witch in Arena',
         
+        'sp_ch_2008-3' : 'Golem Descend in Arena',
+        
         // MZ
         'sp_ch_3000-1' : 'MZ1 in Arena',
         'sp_ch_3000-2' : 'MZ2 in Arena',
@@ -102,6 +104,7 @@ angular.module('tbsApp').factory('RTBEventName', function() {
         'mp_ch_4002-1' : 'Valkyrie in Arena',
         'mp_ch_4003-1' : 'Lamia in Arena',
         'mp_ch_4004-1' : 'Chaos in Arena',
+        'mp_ch_4005-1' : 'Phoenix in Arena',
         
         // Vs
         'mp_ch_5000-1' : 'mp_ch_5000-1',

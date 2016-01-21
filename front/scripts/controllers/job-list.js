@@ -71,6 +71,17 @@ angular.module('tbsApp').controller('JobListCtrl', function($scope, RJob, InGame
         }
     };
 
+    $scope.filters = {
+        generation: '0'
+    };
+
+    $scope.filter_generation = function(job){
+        if($scope.filters.generation == 0){
+            return true;
+        }
+        return job.generation == $scope.filters.generation;
+    }
+
     $scope.order_opts = {
         pred : 'ref',
         desc : true

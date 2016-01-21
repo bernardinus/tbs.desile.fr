@@ -35,6 +35,7 @@ angular.module('tbsApp').controller('CharacterListCtrl', function($scope, $route
         'element_ref' : '',
         'weapon_ref' : '',
         'adventurer' : '',
+        'generation': '0',
         'only_have' : false,
         'only_droppable' : false,
         'pof_100' : false,
@@ -64,6 +65,7 @@ angular.module('tbsApp').controller('CharacterListCtrl', function($scope, $route
 
             data[i].idx = parseInt(data[i].idx);
             data[i].id = parseInt(data[i].id);
+            data[i].generation = parseInt(data[i].generation);
 
             data[i].boost = function(value) {
                 if (angular.isDefined(value)) {
@@ -307,8 +309,19 @@ angular.module('tbsApp').controller('CharacterListCtrl', function($scope, $route
             }
             return $scope.char_drop[char.ref] && $scope.char_drop[char.ref].length > 0;
         };
+        
+        var filter_generation = function(char) {
+            if ($scope.filters.generation == 0) {
+                return true;
+            }
+            return $scope.filters.generation == char.generation;
+        };
 
-        return filter_adventurer(char) && filter_class(char) && filter_element(char) && filter_weapon(char) && filter_have(char) && filter_pof_100(char) && filter_pot_100(char) && filter_not_100(char) && filter_droppable(char);
+        return filter_adventurer(char) && filter_class(char) && 
+            filter_element(char) && filter_weapon(char) && 
+            filter_have(char) && filter_pof_100(char) && 
+            filter_pot_100(char) && filter_not_100(char) && 
+            filter_droppable(char) && filter_generation(char);
     };
 
     $scope.toggle_filter_pot_100 = function() {
