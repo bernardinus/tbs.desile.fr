@@ -141,7 +141,10 @@
     <tbody>
         <tr ng-repeat="character in characters | filter: filter_all_filters | orderBy: sort_opts.pred:sort_opts.desc">
             <td class="char-have-{{ have_character[character.ref] && have_character[character.ref] == true }}">
-                <img style="height: 24px; width: 24px; padding: 0;" ng-src="pictures/characters/32x32/character-{{ character.ref }}-1.png" class="img-thumbnail" /> 
+                <a href="#/explore/character/{{ character.ref }}">
+                    <img style="height: 24px; width: 24px; padding: 0;" class="img-thumbnail"
+                        ng-src="pictures/characters/32x32/character-{{ character.ref }}-1.png" />
+                </a> 
                 <span class="class-{{ character.class_ref }}">{{ character.class_ref }}</span> - {{ character.name | translate }}
             </td>
             <td class="text-center">

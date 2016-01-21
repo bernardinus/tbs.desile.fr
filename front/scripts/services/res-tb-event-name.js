@@ -93,7 +93,8 @@ angular.module('tbsApp').factory('RTBEventName', function() {
         'sp_ch_3000-15' : 'MZK5 in Arena',
         'sp_ch_3000-16' : 'MZK6 in Arena',
         
-        'sp_ch_3001-1' : 'Gormandizer at the Arena!',
+        'sp_ch_3001-1' : 'Gormandizer Hunt: Tears at the Arena!',
+        'sp_ch_3001-2' : 'Gormandizer Hunt: Particles at the Arena!',
         'sp_ch_3002-1' : 'CC1 in Arena',
         'sp_ch_3002-2' : 'CC2 in Arena',
         'sp_ch_3002-3' : 'CC3 in Arena',
