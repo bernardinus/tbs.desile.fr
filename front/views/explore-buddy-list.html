@@ -2,7 +2,7 @@
 <div class="row" ng-repeat="chars in characters track by $index" style="margin-top: 0.5em; margin-bottom: 0.5em;">
     <div class="col-sm-{{ 12 / nb_col }}" ng-repeat="char in chars track by $index">
         <div class="col-sm-4 text-right">
-            <img src="pictures/characters/32x32/buddy-{{ char.ref }}.png" class="img-thumbnail" />
+            <img ng-src="pictures/characters/32x32/buddy-{{ char.ref }}.png" class="img-thumbnail" />
         </div>
         <a class="btn btn-default col-sm-8" href="#/explore/buddy/{{ char.ref }}" ng-if="char.name">
             {{ char.name }} <small>({{ char.rarity }})</small>

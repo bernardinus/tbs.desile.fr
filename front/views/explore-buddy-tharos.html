@@ -13,7 +13,7 @@
     </thead>
     <tr ng-repeat="buddy in buddies | filter: filter_text | orderBy: ['-class_order', 'sort_id']">
         <td>
-            <img src="pictures/characters/32x32/buddy-{{ buddy.ref }}.png" class="img-thumbnail" />
+            <img ng-src="pictures/characters/32x32/buddy-{{ buddy.ref }}.png" class="img-thumbnail" />
         </td>
         <td style="vertical-align: middle;">
             {{ buddy.rarity }} - {{ buddy.name }}

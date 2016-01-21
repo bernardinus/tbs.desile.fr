@@ -18,7 +18,7 @@
 <div class="-row">
     <div class="-col-sm-4" ng-repeat="job in details.jobs | orderBy: level">
         <div class="row">
-            <span class="col-sm-1"> <img src="pictures/characters/64x64/character-{{ job.ref }}.png" class="img-thumbnail" style="min-width: 64px; width: 64px; height: 64px;"/> </span>
+            <span class="col-sm-1"> <img ng-src="pictures/characters/64x64/character-{{ job.ref }}.png" class="img-thumbnail" style="min-width: 64px; width: 64px; height: 64px;"/> </span>
             <div class="col-sm-6">
                 <h3>{{ job.level }}. {{ job.name }}</h3>
             </div>
