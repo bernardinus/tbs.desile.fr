@@ -18,10 +18,8 @@ angular.module('tbsApp').service('BuddyEvolution', function($resource, $q, UserD
                 'buddy': {},
                 'items': {}
             };
-            //var have_buddies   = UserData.get('have_buddy', {});
             var evolve_buddies = UserData.get('evolve_buddy', {});
-            //var qty_buddies  = UserData.get('qty_buddy', {});
-            var have_items   = UserData.get('have_items', {});
+            var have_items     = UserData.get('have_items',   {});
             
             for(var i = 0; i < data.length; ++i){
                 var b = data[i];
@@ -47,6 +45,43 @@ angular.module('tbsApp').service('BuddyEvolution', function($resource, $q, UserD
         }, function(error){
             defer.reject(error);
         });
+        return defer.promise;
+    };
+    
+    evolution.item_list = function(){
+        var defer = $q.defer();
+        RBuddyEvolution.items(
+            function(data){
+                var needed = {};
+                var needed_for = {};
+                
+                var evolve_b = UserData.get('evolve_buddy', {});
+                for(var i = 0; i < data.length; ++i){
+                    if(evolve_b[data[i].from_ref] && evolve_b[data[i].from_ref] > 0){
+                        if(! needed[data[i].item_ref]){
+                            needed[data[i].item_ref] = 0;
+                        }
+                        needed[data[i].item_ref] += parseInt(data[i].count) * evolve_b[data[i].from_ref];
+                        if(! needed_for[data[i].item_ref]){
+                            needed_for[data[i].item_ref] = [];
+                        }
+                        needed_for[data[i].item_ref].push({
+                            count: evolve_b[data[i].from_ref],
+                            from_name: data[i].from_name,
+                            to_name: data[i].to_name,
+                            qty: data[i].count
+                        })
+                    }
+                }
+                defer.resolve({
+                    needed: needed,
+                    needed_for: needed_for
+                });
+            },
+            function(error){
+                defer.reject(error);
+            }
+        );
         return defer.promise;
     };
     

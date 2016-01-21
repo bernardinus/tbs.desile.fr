@@ -17,6 +17,13 @@
             <small><span ng-repeat="need in rebirth.needs">({{ need[1] | number }} for {{ need[0] }}) </span></small>
         </li>
     </ul>
+    <h4 ng-if="buddies.length > 0">Buddies</h4>
+    <ul ng-repeat="buddy in buddies" ng-if="buddies.length > 0">
+        <li>
+            <span>{{ buddy.count }}x {{ buddy.from_name }} -> {{ buddy.to_name }}</span>
+            <small><span>({{ buddy.needs }}) </span></small>
+        </li>
+    </ul>
 </div>
 
 <div class="modal-footer">

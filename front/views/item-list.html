@@ -1,11 +1,18 @@
 <div class="row" style="margin-bottom: 1em; ">
     <span class="col-sm-2 col-sm-offset-2"><small translate>Only items you currently need</small></span>
     <span class="col-sm-2">
-        <input type="checkbox" ng-model="filters.only_needed_items"/>
+        <input type="checkbox" ng-model="filters.only_needed_items" ng-change="toggle_only_needed(filters.only_needed_items)"/>
     </span>
-    <span class="col-sm-2"><small translate>with items you will ever need</small></span>
+    <span class="col-sm-2"><small translate>only items you will ever need</small></span>
     <span class="col-sm-2">
-        <input type="checkbox" ng-model="filters.with_future_items"/>
+        <input type="checkbox" ng-model="filters.only_with_future_items" ng-change="toggle_only_future(filters.only_with_future_items)"/>
+    </span>
+</div>
+
+<div class="row" style="margin-bottom: 1em; ">
+    <span class="col-sm-2 col-sm-offset-2"><small translate>with items you will ever need</small></span>
+    <span class="col-sm-2">
+        <input type="checkbox" ng-model="filters.with_future_items" ng-change="toggle_with_future(filters.with_future_items)" />
     </span>
 </div>
 
@@ -34,15 +41,15 @@
                     </td>
                     <td class="text-center">
                         <!-- current need -->
-                        <span class="item-need-{{ (item_needed[item.ref] + needed_rebirth.current[item.ref]) - have_items[item.ref] > 0 }}"> 
-                            {{ (item_needed[item.ref] + needed_rebirth.current[item.ref]) - have_items[item.ref] | positive_or_zero | number }} 
+                        <span class="item-need-{{ (item_needed[item.ref] + needed_rebirth.current[item.ref] + needed_buddies.needed[item.ref]) - have_items[item.ref] > 0 }}"> 
+                            {{ (item_needed[item.ref] + needed_rebirth.current[item.ref] + needed_buddies.needed[item.ref]) - have_items[item.ref] | positive_or_zero | number }} 
                             /
-                            {{ (item_needed[item.ref] + needed_rebirth.current[item.ref]) || 0 | number}}
+                            {{ (item_needed[item.ref] + needed_rebirth.current[item.ref] + needed_buddies.needed[item.ref]) || 0 | number}}
                         </span>
                     </td>
                     <td class="text-center">
                         <!-- have for -->
-                        <span ng-if="(item_needed[item.ref]  + needed_rebirth.current[item.ref]) - have_items[item.ref] > 0">
+                        <span ng-if="(item_needed[item.ref]  + needed_rebirth.current[item.ref] + needed_buddies.needed[item.ref]) - have_items[item.ref] > 0">
                             <button class="btn btn-default btn-xs"
                                 ng-click="whom_for(item.ref)"
                                 ng-mouseenter="whom_for_pop(item)"
@@ -57,11 +64,11 @@
                     <td class="text-center">
                         <!-- all need -->
                         <span class="all-item-need-{{ (future_item_needed[item.ref] + needed_rebirth.future[item.ref]) 
-                                - (item_needed[item.ref] + needed_rebirth.current[item.ref] 
-                                    - have_items[item.ref] < 0 ? have_items[item.ref] - (needed_rebirth.current[item.ref] + item_needed[item.ref]): 0) > 0 }}">
+                                - (item_needed[item.ref] + needed_rebirth.current[item.ref] + needed_buddies[item.ref]
+                                    - have_items[item.ref] < 0 ? have_items[item.ref] - (needed_rebirth.current[item.ref] + item_needed[item.ref] + needed_buddies.needed[item.ref]): 0) > 0 }}">
                             {{ (future_item_needed[item.ref] + needed_rebirth.future[item.ref]) 
                                 - (item_needed[item.ref] + needed_rebirth.current[item.ref] 
-                                    - have_items[item.ref] < 0 ? have_items[item.ref] - (needed_rebirth.current[item.ref] + item_needed[item.ref]): 0) | positive_or_zero | number }} 
+                                    - have_items[item.ref] < 0 ? have_items[item.ref] - (needed_rebirth.current[item.ref] + item_needed[item.ref] + needed_buddies.needed[item.ref]): 0) | positive_or_zero | number }} 
                             /
                             {{ future_item_needed[item.ref] + needed_rebirth.future[item.ref] || 0 | number}}
                         </span>
@@ -69,8 +76,8 @@
                     <td class="text-center">
                         <!-- future have for -->
                         <span ng-if="(future_item_needed[item.ref] + needed_rebirth.future[item.ref]) 
-                                - (item_needed[item.ref] + needed_rebirth.current[item.ref] 
-                                    - have_items[item.ref] < 0 ? have_items[item.ref] - (needed_rebirth.current[item.ref] + item_needed[item.ref]): 0) > 0">
+                                - (item_needed[item.ref] + needed_rebirth.current[item.ref] + needed_buddies.needed[item.ref]
+                                    - have_items[item.ref] < 0 ? have_items[item.ref] - (needed_rebirth.current[item.ref] + item_needed[item.ref] + needed_buddies.needed[item.ref]): 0) > 0">
                             <button class="btn btn-default btn-xs"
                                 ng-click="future_whom_for(item.ref)"
                                 ng-mouseenter="future_whom_for_pop(item.ref)"

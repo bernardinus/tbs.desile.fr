@@ -7,7 +7,7 @@
  * # ItemListCtrl
  * Controller of the tbsApp
  */
-angular.module('tbsApp').controller('ItemListCtrl', function($scope, $modal, RStage, RItem, UserData, ItemCounter, Rebirth) {
+angular.module('tbsApp').controller('ItemListCtrl', function($scope, $modal, RStage, RItem, UserData, ItemCounter, Rebirth, BuddyEvolution) {
     $scope.items = RItem.all();
 
     $scope.have_items = UserData.get('have_items', {});
@@ -22,25 +22,28 @@ angular.module('tbsApp').controller('ItemListCtrl', function($scope, $modal, RSt
         /* Rebirth items */
         Rebirth.item_list().then(function(rebirths) {
             $scope.needed_rebirth = rebirths;
-    
-            $scope.filter_only_needs = function(item) {
-                if ($scope.filters.only_needed_items == false) {
-                    return true;
-                }
-                if($scope.filters.with_future_items){
-                    return ((($scope.item_needed[item.ref] || 0) 
-                        + ($scope.needed_rebirth.current[item.ref] || 0) 
-                        + ($scope.needed_rebirth.current[item.ref] || 0)) - ($scope.have_items[item.ref] || 0)) > 0;
-                } else {
-                    return ((($scope.item_needed[item.ref] || 0) 
-                        + ($scope.needed_rebirth.current[item.ref] || 0)) - ($scope.have_items[item.ref] || 0)) > 0;
-                }
+            
+            BuddyEvolution.item_list().then(function(buddy_evo){
+                $scope.needed_buddies = buddy_evo;
                 
-            };
+                $scope.filter_only_needs = function(item) {
+                    if ($scope.filters.only_needed_items == false) {
+                        return true;
+                    }
+                    if($scope.filters.with_future_items){
+                        return ((($scope.item_needed[item.ref] || 0) 
+                            + ($scope.needed_rebirth.current[item.ref] || 0)
+                            + ($scope.needed_buddies.needed[item.ref] || 0) 
+                            + ($scope.needed_rebirth.future[item.ref] || 0)) - ($scope.have_items[item.ref] || 0)) > 0;
+                    } else {
+                        return ((($scope.item_needed[item.ref] || 0) 
+                            + ($scope.needed_rebirth.current[item.ref] || 0)
+                            + ($scope.needed_buddies.needed[item.ref] || 0)) - ($scope.have_items[item.ref] || 0)) > 0;
+                    }
+                };
+            });
         });
     });
-    
-    
 
     $scope.item_drop = {};
     RStage.items.all(function(data) {
@@ -98,6 +101,9 @@ angular.module('tbsApp').controller('ItemListCtrl', function($scope, $modal, RSt
                         }
                     }
                     return item_ref; 
+                },
+                buddies: function(){
+                    return $scope.needed_buddies.needed_for[item_ref];
                 }
             }
         });
@@ -115,6 +121,12 @@ angular.module('tbsApp').controller('ItemListCtrl', function($scope, $modal, RSt
                 data.push(key);
             }
         }
+        for(key in $scope.needed_buddies.needed_for[item.ref]){
+            if(data.indexOf($scope.needed_buddies.needed_for[item.ref][key].to_name) == -1){
+                data.push($scope.needed_buddies.needed_for[item.ref][key].to_name);
+            }
+        }
+        
         $scope.popover_ = data.join(', ');
     };
 
@@ -173,9 +185,32 @@ angular.module('tbsApp').controller('ItemListCtrl', function($scope, $modal, RSt
 
     var items_needed_default = UserData.get('items_needed_default', false);
     var items_needed_future_default = UserData.get('items_needed_future_default', false);
+    var only_items_needed_future_default = UserData.get('only_items_needed_future_default', false);
+    
     $scope.filters = {
         only_needed_items : items_needed_default,
         with_future_items: items_needed_future_default,
-        only_needed_monsters : false
+        only_needed_monsters : false,
+        only_with_future_items: only_items_needed_future_default
+    };
+    
+    $scope.toggle_only_needed = function(value){
+        if(value){
+            $scope.filters.only_with_future_items = false;
+        }
+    };
+    
+    $scope.toggle_only_future = function(value){
+        if(value){
+            $scope.filters.only_needed_items = false;
+            $scope.filters.only_with_future_items = false;
+        }
+    };
+    
+    $scope.toggle_with_future = function(value){
+        if(value){
+            $scope.filters.only_needed_items = true;
+            $scope.filters.only_with_future_items = false;
+        }
     };
 });
