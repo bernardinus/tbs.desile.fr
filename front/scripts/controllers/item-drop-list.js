@@ -44,7 +44,7 @@ angular.module('tbsApp').controller('ItemDropListCtrl', function($scope, UserDat
                                 _stages : {},
                                 stages : [],
                                 needed : function() {
-                                    return (($scope.item_needed[this.ref] || 0) + (needed_rebirth.current[this.ref] || 0) + buddies.needed[this.ref] || 0) - ($scope.have_items[this.ref] || 0);
+                                    return (($scope.item_needed[this.ref] || 0) + (needed_rebirth.current[this.ref] || 0) + (buddies.needed[this.ref] || 0)) - ($scope.have_items[this.ref] || 0);
                                 }
                             };
                         }
